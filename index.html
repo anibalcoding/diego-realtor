@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetroRealty Dallas — Jennifer Sullivan, REALTOR®</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="websitephotos/logo-dark.png" alt="Logo"></div>
+    <ul class="nav-links">
+      <li><a href="#sell">Sell</a></li>
+      <li><a href="#neighborhoods">Neighborhoods</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(214) 555-0182</div>
+      <a href="#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Dallas · Fort Worth Metro</div>
+      <h1 class="hero-title">
+        Find Your Place<br>in Dallas —
+        <em>Before Someone<br>Else Does</em>
+      </h1>
+      <p class="hero-sub">Local expert. Zero pressure. Trusted by DFW families to buy, sell, and invest.</p>
+      <div class="hero-ctas">
+        <a href="#sell" class="btn-primary">Get a Free Home Value</a>
+        <a href="#about" class="btn-outline">Meet Diego</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-number">500+</div>
+          <div class="trust-label">Closed transactions</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">4.9★</div>
+          <div class="trust-label">Google rating</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">8 yrs</div>
+          <div class="trust-label">Dallas expertise</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">12 days</div>
+          <div class="trust-label">Avg. days on market</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF BAR ── -->
+<section id="proof">
+  <div class="container">
+    <div class="proof-inner">
+      <div class="proof-item">
+        <div class="proof-stars">★★★★★</div>
+        <div class="proof-number">5.0</div>
+        <div class="proof-label">Google Rating</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-number">500+</div>
+        <div class="proof-label">Closed Transactions</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-number">8 yrs</div>
+        <div class="proof-label">In Dallas Market</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-number">12 days</div>
+        <div class="proof-label">Avg. Days on Market</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <div class="proof-number">98.7%</div>
+        <div class="proof-label">List-to-Sale Ratio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOLD HOMES ── -->
+<section id="sold">
+  <div class="container">
+    <div class="listings-header fade-up">
+      <div class="section-eyebrow" style="justify-content:center;">Recent Sales</div>
+      <h2 class="section-title" style="text-align:center;">Homes Diego Has <em>Closed</em></h2>
+      <p style="color:var(--gray-400); text-align:center; max-width:500px; margin:0 auto; font-size:15px;">Real results for real families across the DFW Metroplex.</p>
+    </div>
+    <div class="listings-grid">
+      <div class="listing-card fade-up">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Sold home">
+          <div class="listing-badge" style="background:var(--gray-800); color:#fff;">Sold</div>
+        </div>
+        <div class="listing-body">
+          <div class="listing-price">$000,000</div>
+          <div class="listing-meta">
+            <span>0 bd</span><span>0 ba</span><span>0,000 sqft</span>
+          </div>
+          <div class="listing-address">Address, City, TX 00000</div>
+          <div class="listing-tags">
+            <span class="listing-tag">DFW</span>
+          </div>
+        </div>
+      </div>
+      <div class="listing-card fade-up" style="transition-delay:.1s">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Sold home">
+          <div class="listing-badge" style="background:var(--gray-800); color:#fff;">Sold</div>
+        </div>
+        <div class="listing-body">
+          <div class="listing-price">$000,000</div>
+          <div class="listing-meta">
+            <span>0 bd</span><span>0 ba</span><span>0,000 sqft</span>
+          </div>
+          <div class="listing-address">Address, City, TX 00000</div>
+          <div class="listing-tags">
+            <span class="listing-tag">DFW</span>
+          </div>
+        </div>
+      </div>
+      <div class="listing-card fade-up" style="transition-delay:.2s">
+        <div class="listing-img">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Sold home">
+          <div class="listing-badge" style="background:var(--gray-800); color:#fff;">Sold</div>
+        </div>
+        <div class="listing-body">
+          <div class="listing-price">$000,000</div>
+          <div class="listing-meta">
+            <span>0 bd</span><span>0 ba</span><span>0,000 sqft</span>
+          </div>
+          <div class="listing-address">Address, City, TX 00000</div>
+          <div class="listing-tags">
+            <span class="listing-tag">DFW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="listings-footer fade-up">
+      <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="btn-navy">View All Sales on Zillow →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEIGHBORHOODS ── -->
+<section id="neighborhoods">
+  <div class="container">
+    <div class="neighborhoods-header fade-up">
+      <div class="section-eyebrow">Explore</div>
+      <h2 class="section-title">Dallas <em>Neighborhoods</em></h2>
+      <p style="color:var(--gray-400); max-width:480px; font-size:15px;">Hyperlocal guides written by your agent — covering schools, walkability, price trends, and what it's actually like to live there.</p>
+    </div>
+    <div class="neighborhoods-grid">
+      <a class="hood-card fade-up" href="https://www.niche.com/places-to-live/n/uptown-dallas-tx/" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Uptown Dallas">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">Uptown</div>
+          <div class="hood-stats">Avg $389K · Walkable · Vibrant</div>
+        </div>
+      </a>
+      <a class="hood-card fade-up" href="https://neighborhoods.dmagazine.com/dallas/park-cities/highland-park/" target="_blank" rel="noopener noreferrer" style="transition-delay:.05s">
+        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80" alt="Highland Park">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">Highland Park</div>
+          <div class="hood-stats">Avg $1.8M · HPISD · Prestige</div>
+        </div>
+      </a>
+      <a class="hood-card fade-up" href="https://neighborhoods.dmagazine.com/dallas/east-dallas/lakewood/" target="_blank" rel="noopener noreferrer" style="transition-delay:.1s">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80" alt="Lakewood">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">Lakewood</div>
+          <div class="hood-stats">Avg $620K · Trails · Character</div>
+        </div>
+      </a>
+      <a class="hood-card fade-up" href="https://neighborhoods.dmagazine.com/dallas/oak-cliff/" target="_blank" rel="noopener noreferrer" style="transition-delay:.15s">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Oak Cliff Dallas">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">Oak Cliff</div>
+          <div class="hood-stats">Avg $310K · Cultural · Up-and-Coming</div>
+        </div>
+      </a>
+      <a class="hood-card fade-up" href="https://neighborhoods.dmagazine.com/dallas/north-dallas/preston-hollow/" target="_blank" rel="noopener noreferrer" style="transition-delay:.2s">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="Preston Hollow">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">Preston Hollow</div>
+          <div class="hood-stats">Avg $2.1M · Estate · Wooded</div>
+        </div>
+      </a>
+      <a class="hood-card fade-up" href="https://neighborhoods.dmagazine.com/dallas/central-dallas/oak-lawn/" target="_blank" rel="noopener noreferrer" style="transition-delay:.25s">
+        <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=600&q=80" alt="Oak Lawn">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">Oak Lawn</div>
+          <div class="hood-stats">Avg $445K · Arts · Inclusive</div>
+        </div>
+      </a>
+      <a class="hood-card fade-up" href="https://www.eastdallasliving.com/" target="_blank" rel="noopener noreferrer" style="transition-delay:.3s">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="East Dallas">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">East Dallas</div>
+          <div class="hood-stats">Avg $380K · Eclectic · Growing</div>
+        </div>
+      </a>
+      <a class="hood-card fade-up" href="https://www.redfin.com/blog/dallas-tx-neighborhoods/knox-henderson/" target="_blank" rel="noopener noreferrer" style="transition-delay:.35s">
+        <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=600&q=80" alt="Knox-Henderson">
+        <div class="hood-overlay"></div>
+        <div class="hood-arrow">→</div>
+        <div class="hood-content">
+          <div class="hood-name">Knox-Henderson</div>
+          <div class="hood-stats">Avg $720K · Dining · Boutique</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SELL SECTION ── -->
+<section id="sell">
+  <div class="container">
+    <div class="sell-inner">
+      <div class="fade-up">
+        <div class="section-eyebrow">Sellers</div>
+        <h2 class="section-title">Thinking of Selling Your <em>Dallas Home?</em></h2>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.75;">Get a free, no-obligation home valuation — not a Zillow estimate. DFW's market moves fast. Know your number before you list.</p>
+        <ul class="sell-list">
+          <li>Free professional home valuation & CMA</li>
+          <li>Comparative market analysis from current sales data</li>
+          <li>Staging & pre-sale prep guidance</li>
+          <li>Professional photography included</li>
+          <li>Aggressive, data-backed negotiation strategy</li>
+          <li>Average 20 days on market in 2026</li>
+          <li>98.7% average list-to-sale price ratio</li>
+        </ul>
+        <div class="market-data">
+          <div class="market-data-label">Dallas market snapshot · Q1 2025</div>
+          <div class="market-data-value">$412,000</div>
+          <div class="market-data-meta">Median home price · Up 6.2% year-over-year</div>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="valuation-form">
+          <h3>Get Your Free Home Value</h3>
+          <p>Backed by market data. Response within 24 hours.</p>
+          <div class="form-field">
+            <label>Property Address</label>
+            <input type="text" placeholder="1234 Maple Ave, Dallas TX 75206">
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label>First Name</label>
+              <input type="text" placeholder="Jane">
+            </div>
+            <div class="form-field">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" placeholder="jane@email.com">
+          </div>
+          <div class="form-field">
+            <label>Phone</label>
+            <input type="tel" placeholder="(214) 555-0000">
+          </div>
+          <button class="btn-primary">Get My Home Value →</button>
+          <p class="form-disclaimer">No spam. No pressure. Your info stays private.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-photo-wrap fade-up">
+        <div class="about-photo">
+          <img src="websitephotos/diego-main.jpg" alt="Diego">
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">8+</div>
+          <div class="about-badge-lbl">Years in DFW</div>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:.1s">
+        <div class="section-eyebrow">Your Agent</div>
+        <h2 class="section-title">Built From <em>Real Experience.</em></h2>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.75; margin-bottom:14px;">Diego's story didn't start in a real estate classroom — it started at 18, when he bought his first rental property. By his third investment, he decided to get his license to level up his own portfolio. Then something shifted: friends and family started asking for his help navigating transactions, and he realized he had a real gift for guiding people through one of the biggest decisions of their lives.</p>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.75; margin-bottom:14px;">He was working at a bank — stable, safe — but walked away to bet on himself. Since October 2018, he's been doing exactly that as the founder of <strong>Cortes &amp; Co. Realty Group</strong>, serving buyers, sellers, and investors across the DFW Metroplex.</p>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.75;">Diego specializes in first-time buyers, new construction, land, and lake &amp; ranch properties. He's bilingual, deeply connected to the Latino community, and takes pride in making the process feel clear, accessible, and personal — no matter who you are or what you do for a living.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="about-stat-num">2018</div>
+            <div class="about-stat-lbl">Licensed since</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">Bilingual</div>
+            <div class="about-stat-lbl">EN &amp; ES</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">Investor</div>
+            <div class="about-stat-lbl">First rental at 18</div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-navy">Work With Diego →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT / BOOK A CALL ── -->
+<section id="contact">
+  <div class="container">
+    <div class="sell-inner">
+      <div class="fade-up">
+        <div class="section-eyebrow">Buyers</div>
+        <h2 class="section-title">Ready to Find Your <em>Dream Home?</em></h2>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.75;">Whether you're buying your first home, looking for new construction, land, or an investment property — Diego will walk you through every step. No pressure, no confusion, just honest guidance from someone who's been in your shoes.</p>
+        <ul class="sell-list">
+          <li>First-time buyer specialist — we'll explain everything</li>
+          <li>New construction & builder negotiation expertise</li>
+          <li>Land, lake & ranch properties across DFW</li>
+          <li>Bilingual service — English &amp; Spanish</li>
+          <li>Available 7 days a week for showings &amp; questions</li>
+          <li>Strong network for off-market opportunities</li>
+          <li>Investor-minded strategy for every transaction</li>
+        </ul>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="valuation-form">
+          <h3>Book a Call With Diego</h3>
+          <p>Free consultation. No obligation. Response within a few hours.</p>
+          <div class="form-row">
+            <div class="form-field">
+              <label>First Name</label>
+              <input type="text" placeholder="John">
+            </div>
+            <div class="form-field">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" placeholder="john@email.com">
+          </div>
+          <div class="form-field">
+            <label>Phone</label>
+            <input type="tel" placeholder="(214) 555-0000">
+          </div>
+          <div class="form-field">
+            <label>What are you looking for?</label>
+            <select>
+              <option value="">Select one…</option>
+              <option>First home</option>
+              <option>New construction</option>
+              <option>Investment property</option>
+              <option>Land / ranch / lake property</option>
+              <option>Relocating to DFW</option>
+              <option>Not sure yet — just exploring</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Anything else Diego should know?</label>
+            <textarea placeholder="Budget range, timeline, preferred areas, questions…" style="width:100%; padding:10px 12px; border:1.5px solid var(--gray-200); border-radius:4px; font-family:var(--font-body); font-size:14px; color:var(--gray-800); resize:vertical; min-height:88px; outline:none;"></textarea>
+          </div>
+          <button class="btn-primary" style="width:100%; justify-content:center; padding:13px; font-size:15px;">Book My Free Call →</button>
+          <p class="form-disclaimer">No spam. No pressure. Your info stays private.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="container">
+    <div class="testimonials-header fade-up">
+      <div class="section-eyebrow" style="justify-content:center;">Client Stories</div>
+      <h2 class="section-title" style="text-align:center;">What Clients <em>Are Saying</em></h2>
+      <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;">
+        <span style="color:#f59e0b; font-size:18px;">★★★★★</span>
+        <span style="font-size:14px; color:var(--gray-400);">5.0 · Verified Google reviews</span>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"What can I say, Diego did an outstanding job since the first step. I was going for an investment house with my parents, so I was looking at a decent house that needed work. Diego made it happen by getting a remodeling financed loan at a good rate. Anything I needed, Diego was a phone call away. If it's your first or second, I recommend Diego."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#dbeafe; color:#1d4ed8;">EG</div>
+          <div>
+            <div class="reviewer-name">Elio Garza</div>
+            <div class="reviewer-meta">Investor · DFW</div>
+          </div>
+        </div>
+        <div class="google-badge">
+          <div class="google-g">G</div>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.1s">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Diego helped my wife and I accomplish our dream of becoming homeowners. We had never looked before, so all this was new to us. Diego made it very easy and was always available for showings because he knows how fast the market can be. Safe to say we found our dream home in a little over a month, and Diego was the main reason for that!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#dcfce7; color:#166534;">AG</div>
+          <div>
+            <div class="reviewer-name">Aaron Gurrusquieta</div>
+            <div class="reviewer-meta">First-Time Buyer · DFW</div>
+          </div>
+        </div>
+        <div class="google-badge">
+          <div class="google-g">G</div>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.2s">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Diego did everything and then some to help me get my dream home. My family and I are forever grateful. The transaction between my parents and I, transferring everything, was a headache but Diego made it happen. I'm happy to call him my realtor. Hardworking, kind and sufficient! Highly recommend."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#ffedd5; color:#c2410c;">AV</div>
+          <div>
+            <div class="reviewer-name">Antonio Vargas</div>
+            <div class="reviewer-meta">Buyer · DFW</div>
+          </div>
+        </div>
+        <div class="google-badge">
+          <div class="google-g">G</div>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.3s">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My husband and I were extremely pleased with the services and dedicated attention we received from our Realtor, Diego Cortes. Despite making such an important investment decision and as first-time home buyers, he made the entire process feel seamless with meaningful guided insight. Not only was he diligent and flexible in helping us find our family home, he made sure to keep us informed of the whole process from start to finish. His approach is exemplary."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#fce7f3; color:#9d174d;">DC</div>
+          <div>
+            <div class="reviewer-name">Diana Castaneda</div>
+            <div class="reviewer-meta">First-Time Buyer · DFW</div>
+          </div>
+        </div>
+        <div class="google-badge">
+          <div class="google-g">G</div>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.4s">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"My husband and I had the pleasure of working with Diego when we purchased our first home. Diego was with us every step of the way and was very knowledgeable of the DFW area! He was very patient with us and easy to work with! Diego was very responsive to us, and available whenever we needed him. Diego works around the clock and will give you what you're looking for!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#ede9fe; color:#6d28d9;">VA</div>
+          <div>
+            <div class="reviewer-name">Vanessa Ayala</div>
+            <div class="reviewer-meta">First-Time Buyer · DFW</div>
+          </div>
+        </div>
+        <div class="google-badge">
+          <div class="google-g">G</div>
+          Verified Google Review
+        </div>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.5s">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"He was great! Diego listened to our needs and wants. He made our dream house turn into reality."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#d1fae5; color:#065f46;">MP</div>
+          <div>
+            <div class="reviewer-name">Martin Perez</div>
+            <div class="reviewer-meta">Buyer · DFW</div>
+          </div>
+        </div>
+        <div class="google-badge">
+          <div class="google-g">G</div>
+          Verified Google Review
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:36px;" class="fade-up">
+      <a href="https://www.google.com/search?sca_esv=236bc161f81c4548&rlz=1C5OZZY_enUS1155US1155&sxsrf=ANbL-n7VHLH1Z65QcRfM_KU9iyIQCIat1g:1777985221038&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qObhrY315yGYbiIw-Wba2JVSYDLOnsw_jyvlupwaNBwvJjSr5IzhWmGCaffSxuENNQcI5klhRRNNGyU_Fm_n3EyZfe0_sZywkzcSf83z6FSzxEs3Zvg%3D%3D&q=Diego+Cortes+Realtor+Reviews&sa=X&ved=2ahUKEwjSgpCMl6KUAxWynGoFHeRpNaoQ0bkNegQIMRAD&biw=998&bih=781&dpr=2" target="_blank" rel="noopener noreferrer" class="btn-navy">Read All Google Reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="websitephotos/logo-white.png" alt="Logo"></div>
+        <p class="footer-about">Dallas's trusted real estate team since 2007. Helping buyers, sellers, and investors make smart moves in one of America's most dynamic markets.</p>
+        <div class="footer-contact-item">📍 3131 McKinney Ave, Dallas, TX 75204</div>
+        <div class="footer-contact-item">📞 (214) 555-0182</div>
+        <div class="footer-contact-item">✉ jennifer@metrorealty.com</div>
+        <div class="footer-social">
+          <div class="social-icon" style="background:#1877f2; color:#fff;">f</div>
+          <div class="social-icon" style="background:#e1306c; color:#fff;">ig</div>
+          <div class="social-icon" style="background:#0a66c2; color:#fff;">in</div>
+          <div class="social-icon" style="background:#ff0000; color:#fff;">yt</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="#">Buyer's Guide</a></li>
+          <li><a href="#">Mortgage Calculator</a></li>
+          <li><a href="#">Relocation Guide</a></li>
+          <li><a href="#">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="#">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="#">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="#">Uptown</a></li>
+          <li><a href="#">Highland Park</a></li>
+          <li><a href="#">Lakewood</a></li>
+          <li><a href="#">Preston Hollow</a></li>
+          <li><a href="#">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MetroRealty · Jennifer Sullivan, REALTOR® · TREC License #547821 · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">DMCA</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── MOBILE STICKY CTA ── -->
+<div id="mobile-cta">
+  <div class="mobile-cta-row">
+    <button class="mobile-btn mobile-btn-green">
+      <span class="mobile-btn-icon">📞</span>
+      Call Now
+    </button>
+    <button class="mobile-btn mobile-btn-outline">
+      <span class="mobile-btn-icon">💰</span>
+      Home Value
+    </button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+ 
+</body>
+</html>
