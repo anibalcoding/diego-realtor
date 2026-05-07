@@ -29,6 +29,13 @@
     console.log('Mobile menu — implement with your framework');
   }
 
+  // Outskirts toggle
+  function toggleOutskirts(btn) {
+    const panel = document.getElementById('outskirts-panel');
+    const isOpen = panel.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+  }
+
   // Save/favorite button interaction
   document.querySelectorAll('.listing-save').forEach(btn => {
     btn.addEventListener('click', (e) => {

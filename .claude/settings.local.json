@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:www.zillow.com)",
+      "WebFetch(domain:www.redfin.com)",
+      "Bash(sips --getProperty pixelWidth --getProperty pixelHeight /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-house-sold-1.webp /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-2.webp /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-3.webp)",
+      "Bash(sips --resampleWidth 800 /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-house-sold-1.webp /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-2.webp /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-3.webp)",
+      "Bash(sips --resampleWidth 800 --out /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-house-sold-1-opt.jpg /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-house-sold-1.webp)",
+      "Bash(sips --resampleWidth 800 --out /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-2-opt.jpg /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-2.webp)",
+      "Bash(sips --resampleWidth 800 --out /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-3-opt.jpg /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-home-sold-3.webp)",
+      "Bash(sips --getProperty pixelWidth /Users/anibalcuevas/Desktop/Diego-realtor-website/websitephotos/diego-house-sold-1-opt.jpg)",
+      "Bash(brew list *)",
+      "Bash(python3 -c \"import subprocess; print\\(subprocess.run\\(['ffmpeg','-version'], capture_output=True\\).returncode\\)\")"
     ]
   }
 }

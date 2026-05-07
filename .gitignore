@@ -1,0 +1,6 @@
+# Large source video files
+*.mov
+*.MOV
+
+# Mac system files
+.DS_Store

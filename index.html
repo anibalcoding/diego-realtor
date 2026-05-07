@@ -34,7 +34,10 @@
 
 <!-- ── HERO ── -->
 <section id="hero">
-  <div class="hero-bg"></div>
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="websitephotos/hero-bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
   <div class="hero-texture"></div>
   <div class="hero-content">
     <div class="hero-left">
@@ -50,7 +53,7 @@
       </div>
       <div class="hero-trust">
         <div class="trust-item">
-          <div class="trust-number">500+</div>
+          <div class="trust-number">100+</div>
           <div class="trust-label">Closed transactions</div>
         </div>
         <div class="trust-item">
@@ -112,54 +115,45 @@
       <p style="color:var(--gray-400); text-align:center; max-width:500px; margin:0 auto; font-size:15px;">Real results for real families across the DFW Metroplex.</p>
     </div>
     <div class="listings-grid">
-      <div class="listing-card fade-up">
+      <a class="listing-card fade-up" href="https://www.zillow.com/homedetails/2202-Lakeshore-Ln-Red-Oak-TX-75154/125231332_zpid/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
         <div class="listing-img">
-          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Sold home">
+          <img src="websitephotos/diego-home-sold-1-opt.jpg" alt="1742 Canterbury Ln, Lewisville">
           <div class="listing-badge" style="background:var(--gray-800); color:#fff;">Sold</div>
         </div>
         <div class="listing-body">
-          <div class="listing-price">$000,000</div>
-          <div class="listing-meta">
-            <span>0 bd</span><span>0 ba</span><span>0,000 sqft</span>
-          </div>
-          <div class="listing-address">Address, City, TX 00000</div>
+          <div class="listing-meta"><span>3 bd</span><span>2 ba</span><span>1,834 sqft</span></div>
+          <div class="listing-address">2202 Lakeshore Ln, Red Oak, TX 75154</div>
           <div class="listing-tags">
-            <span class="listing-tag">DFW</span>
+            <span class="listing-tag">Red Oak</span>
           </div>
         </div>
-      </div>
-      <div class="listing-card fade-up" style="transition-delay:.1s">
+      </a>
+      <a class="listing-card fade-up" href="https://www.zillow.com/homedetails/1742-Canterbury-Ln-Lewisville-TX-75067/27340966_zpid/" target="_blank" rel="noopener noreferrer" style="transition-delay:.1s; text-decoration:none; color:inherit;">
         <div class="listing-img">
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Sold home">
+          <img src="websitephotos/diego-home-sold-2-opt.jpg" alt="2202 Lakeshore Ln, Red Oak">
           <div class="listing-badge" style="background:var(--gray-800); color:#fff;">Sold</div>
         </div>
         <div class="listing-body">
-          <div class="listing-price">$000,000</div>
-          <div class="listing-meta">
-            <span>0 bd</span><span>0 ba</span><span>0,000 sqft</span>
-          </div>
-          <div class="listing-address">Address, City, TX 00000</div>
+          <div class="listing-meta"><span>3 bd</span><span>2 ba</span><span>1,656 sqft</span></div>
+          <div class="listing-address">1742 Canterbury Ln, Lewisville, TX 75067</div>
           <div class="listing-tags">
-            <span class="listing-tag">DFW</span>
+            <span class="listing-tag">Lewisville</span>
           </div>
         </div>
-      </div>
-      <div class="listing-card fade-up" style="transition-delay:.2s">
+      </a>
+      <a class="listing-card fade-up" href="https://www.zillow.com/homedetails/704-Snowy-Orchid-Dr-Desoto-TX-75115/124450883_zpid/" target="_blank" rel="noopener noreferrer" style="transition-delay:.2s; text-decoration:none; color:inherit;">
         <div class="listing-img">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Sold home">
+          <img src="websitephotos/diego-home-sold-3-opt.jpg" alt="704 Snowy Orchid Dr, DeSoto">
           <div class="listing-badge" style="background:var(--gray-800); color:#fff;">Sold</div>
         </div>
         <div class="listing-body">
-          <div class="listing-price">$000,000</div>
-          <div class="listing-meta">
-            <span>0 bd</span><span>0 ba</span><span>0,000 sqft</span>
-          </div>
-          <div class="listing-address">Address, City, TX 00000</div>
+          <div class="listing-meta"><span>4 bd</span><span>2 ba</span><span>2,349 sqft</span></div>
+          <div class="listing-address">704 Snowy Orchid Dr, DeSoto, TX 75115</div>
           <div class="listing-tags">
-            <span class="listing-tag">DFW</span>
+            <span class="listing-tag">DeSoto</span>
           </div>
         </div>
-      </div>
+      </a>
     </div>
     <div class="listings-footer fade-up">
       <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="btn-navy">View All Sales on Zillow →</a>
@@ -249,6 +243,84 @@
         </div>
       </a>
     </div>
+
+    <!-- Outskirts toggle -->
+    <div style="text-align:center; margin-top:40px;" class="fade-up">
+      <button class="outskirts-toggle" onclick="toggleOutskirts(this)">
+        Explore Outskirts of DFW <span class="outskirts-arrow">↓</span>
+      </button>
+    </div>
+
+    <!-- Outskirts grid (hidden by default) -->
+    <div class="outskirts-panel" id="outskirts-panel">
+      <div class="outskirts-label">Outskirts of DFW</div>
+      <div class="neighborhoods-grid">
+        <a class="hood-card" href="https://www.niche.com/places-to-live/duncanville-dallas-tx/" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Duncanville TX">
+          <div class="hood-overlay"></div>
+          <div class="hood-arrow">→</div>
+          <div class="hood-content">
+            <div class="hood-name">Duncanville</div>
+            <div class="hood-stats">Avg $265K · Family-Friendly · Affordable</div>
+          </div>
+        </a>
+        <a class="hood-card" href="https://www.niche.com/places-to-live/desoto-dallas-tx/" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="DeSoto TX">
+          <div class="hood-overlay"></div>
+          <div class="hood-arrow">→</div>
+          <div class="hood-content">
+            <div class="hood-name">DeSoto</div>
+            <div class="hood-stats">Avg $295K · Growing · Spacious</div>
+          </div>
+        </a>
+        <a class="hood-card" href="https://www.niche.com/places-to-live/grand-prairie-dallas-tx/" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Grand Prairie TX">
+          <div class="hood-overlay"></div>
+          <div class="hood-arrow">→</div>
+          <div class="hood-content">
+            <div class="hood-name">Grand Prairie</div>
+            <div class="hood-stats">Avg $280K · Central · Value</div>
+          </div>
+        </a>
+        <a class="hood-card" href="https://www.niche.com/places-to-live/cedar-hill-dallas-tx/" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Cedar Hill TX">
+          <div class="hood-overlay"></div>
+          <div class="hood-arrow">→</div>
+          <div class="hood-content">
+            <div class="hood-name">Cedar Hill</div>
+            <div class="hood-stats">Avg $310K · Lake · Scenic</div>
+          </div>
+        </a>
+        <a class="hood-card" href="https://www.niche.com/places-to-live/forney-kaufman-tx/" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Forney TX">
+          <div class="hood-overlay"></div>
+          <div class="hood-arrow">→</div>
+          <div class="hood-content">
+            <div class="hood-name">Forney</div>
+            <div class="hood-stats">Avg $330K · New Construction · Fast-Growing</div>
+          </div>
+        </a>
+        <a class="hood-card" href="https://www.niche.com/places-to-live/lancaster-dallas-tx/" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Lancaster TX">
+          <div class="hood-overlay"></div>
+          <div class="hood-arrow">→</div>
+          <div class="hood-content">
+            <div class="hood-name">Lancaster</div>
+            <div class="hood-stats">Avg $240K · Affordable · Community</div>
+          </div>
+        </a>
+        <a class="hood-card" href="https://www.niche.com/places-to-live/waxahachie-ellis-tx/" target="_blank" rel="noopener noreferrer">
+          <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?w=600&q=80" alt="Waxahachie TX">
+          <div class="hood-overlay"></div>
+          <div class="hood-arrow">→</div>
+          <div class="hood-content">
+            <div class="hood-name">Waxahachie</div>
+            <div class="hood-stats">Avg $310K · Charming · Small-Town Feel</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -325,7 +397,7 @@
       <div class="fade-up" style="transition-delay:.1s">
         <div class="section-eyebrow">Your Agent</div>
         <h2 class="section-title">Built From <em>Real Experience.</em></h2>
-        <p style="font-size:15px; color:var(--gray-600); line-height:1.75; margin-bottom:14px;">Diego's story didn't start in a real estate classroom — it started at 18, when he bought his first rental property. By his third investment, he decided to get his license to level up his own portfolio. Then something shifted: friends and family started asking for his help navigating transactions, and he realized he had a real gift for guiding people through one of the biggest decisions of their lives.</p>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.75; margin-bottom:14px;">Diego's story didn't start in a real estate classroom — it started at 23, when he bought his first rental property. By his third investment, he decided to get his license to level up his own portfolio. Then something shifted: friends and family started asking for his help navigating transactions, and he realized he had a real gift for guiding people through one of the biggest decisions of their lives.</p>
         <p style="font-size:15px; color:var(--gray-600); line-height:1.75; margin-bottom:14px;">He was working at a bank — stable, safe — but walked away to bet on himself. Since October 2018, he's been doing exactly that as the founder of <strong>Cortes &amp; Co. Realty Group</strong>, serving buyers, sellers, and investors across the DFW Metroplex.</p>
         <p style="font-size:15px; color:var(--gray-600); line-height:1.75;">Diego specializes in first-time buyers, new construction, land, and lake &amp; ranch properties. He's bilingual, deeply connected to the Latino community, and takes pride in making the process feel clear, accessible, and personal — no matter who you are or what you do for a living.</p>
         <div class="about-stats">
