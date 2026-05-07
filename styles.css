@@ -103,7 +103,7 @@
   .nav-logo {
     flex-shrink: 0; display: flex; align-items: center;
   }
-  .nav-logo img { height: 120px; width: auto; display: block; }
+  .nav-logo img { height: 140px; width: auto; display: block; }
 
   .nav-links {
     display: flex; gap: 32px; margin: 0 auto;
@@ -139,17 +139,23 @@
   }
 
   .hero-video {
-    position: absolute; inset: 0; z-index: 0;
-    width: 100%; height: 100%; object-fit: cover;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .hero-overlay {
-    position: absolute; inset: 0; z-index: 1;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
     background: linear-gradient(135deg, rgba(13,27,42,.62) 0%, rgba(13,27,42,.42) 60%, rgba(13,27,42,.55) 100%);
   }
 
   .hero-texture {
-    position: absolute; inset: 0; z-index: 2;
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2;
     background-image: radial-gradient(rgba(201,168,76,.04) 1px, transparent 1px);
     background-size: 32px 32px;
   }
@@ -321,7 +327,7 @@
   .hood-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
   .hood-card:hover img { transform: scale(1.07); }
   .hood-overlay {
-    position: absolute; inset: 0;
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(to top, rgba(13,27,42,.82) 0%, rgba(13,27,42,.15) 60%, transparent 100%);
     transition: background .3s;
   }
@@ -498,7 +504,7 @@
   }
 
   .footer-logo { margin-bottom: 14px; }
-  .footer-logo img { height: 44px; width: auto; display: block; }
+  .footer-logo img { height: 80px; width: auto; display: block; }
   .footer-about { font-size: 13px; color: rgba(255,255,255,.45); line-height: 1.7; margin-bottom: 20px; font-weight: 300; }
   .footer-contact-item { font-size: 13px; color: rgba(255,255,255,.55); margin-bottom: 6px; }
 
