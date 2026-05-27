@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer's Guide | Diego Cortes — Realtor® | DFW</title>
+<meta name="description" content="A complete home buyer's guide for the DFW Metroplex. Step-by-step advice from Diego Cortes, bilingual Realtor® at Cortes & Co. Realty Group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide-hero {
+    background: var(--navy);
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .guide-hero .section-eyebrow { justify-content: center; }
+  .guide-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .guide-hero h1 em { font-style: italic; color: var(--gold); }
+  .guide-hero p {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .guide-body { padding: 72px 0 80px; }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* sticky sidebar */
+  .guide-sidebar {
+    position: sticky;
+    top: 88px;
+  }
+  .sidebar-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+  }
+  .sidebar-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .sidebar-nav a {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-600);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--gray-100);
+    transition: color .2s;
+  }
+  .sidebar-nav a:last-child { border-bottom: none; }
+  .sidebar-nav a:hover { color: var(--gold); }
+  .sidebar-nav a::before { content: '→ '; opacity: .5; }
+
+  .cta-sidebar {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+  }
+  .cta-sidebar p {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .cta-sidebar strong { color: var(--white); }
+  .cta-sidebar .btn-primary { width: 100%; justify-content: center; font-size: 13px; }
+
+  /* main content */
+  .guide-main h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 52px 0 16px;
+    padding-top: 8px;
+  }
+  .guide-main h2:first-child { margin-top: 0; }
+  .guide-main h2 em { font-style: italic; color: var(--gold); }
+  .guide-main p {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .guide-main strong { color: var(--gray-800); }
+
+  /* step cards */
+  .steps-list { display: flex; flex-direction: column; gap: 20px; margin: 24px 0; }
+  .step-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 24px 28px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--gold);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 36px; height: 36px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600; font-size: 14px;
+    flex-shrink: 0;
+  }
+  .step-body h4 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .step-body p { font-size: 14px; color: var(--gray-600); line-height: 1.7; margin: 0; }
+
+  /* tip boxes */
+  .tip-box {
+    background: var(--gold-pale);
+    border: 1.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .tip-box strong { color: var(--navy); }
+
+  /* checklist */
+  .check-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+  .check-list li {
+    font-size: 14px; color: var(--gray-600); padding-left: 24px; position: relative; line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+  }
+
+  /* market callout */
+  .market-callout {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 32px;
+    margin: 28px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .mc-item-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .mc-item-value { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--white); }
+  .mc-item-sub { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+  /* mistake cards */
+  .mistakes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .mistake-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border-top: 3px solid #e85d5d;
+  }
+  .mistake-card h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .mistake-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin: 0; }
+
+  @media (max-width: 900px) {
+    .guide-layout { grid-template-columns: 1fr; }
+    .guide-sidebar { position: static; }
+    .market-callout { grid-template-columns: 1fr 1fr; }
+    .mistakes-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .market-callout { grid-template-columns: 1fr; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="guide-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">DFW Homebuyers</div>
+    <h1>The Complete <em>Buyer's Guide</em></h1>
+    <p>From getting pre-approved to picking up your keys — everything you need to know about buying a home in the Dallas–Fort Worth Metroplex.</p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="guide-body">
+  <div class="container">
+    <div class="guide-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="guide-main">
+
+        <h2 id="overview">Why the DFW Market Requires a <em>Different Approach</em></h2>
+        <p>Dallas–Fort Worth is one of the fastest-moving real estate markets in the country. Homes in desirable neighborhoods regularly receive multiple offers within days of listing, and buyers who aren't prepared lose deals — not because they weren't qualified, but because they weren't ready to act.</p>
+        <p>This guide walks you through every stage of the buying process, from understanding your finances to making a winning offer and closing without surprises. Whether it's your first home or your fifth, the DFW market rewards preparation.</p>
+
+        <div class="market-callout">
+          <div>
+            <div class="mc-item-label">Median Home Price</div>
+            <div class="mc-item-value">$412K</div>
+            <div class="mc-item-sub">DFW · Q1 2026</div>
+          </div>
+          <div>
+            <div class="mc-item-label">Avg. Days on Market</div>
+            <div class="mc-item-value">20</div>
+            <div class="mc-item-sub">In 2026</div>
+          </div>
+          <div>
+            <div class="mc-item-label">YoY Price Growth</div>
+            <div class="mc-item-value">+6.2%</div>
+            <div class="mc-item-sub">Year over year</div>
+          </div>
+        </div>
+
+        <h2 id="steps">The 10-Step Home <em>Buying Process</em></h2>
+        <p>Here's what the journey from "thinking about buying" to "holding the keys" actually looks like in DFW.</p>
+
+        <div class="steps-list">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Assess Your Finances</h4>
+              <p>Before talking to any lender, get a clear picture of your income, monthly debts, credit score, and available savings. A general rule of thumb: your monthly housing costs (mortgage, taxes, insurance) should stay under 28% of your gross monthly income. In DFW, plan for property tax rates between 2% and 2.5% of the home's value annually — higher than many other states.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Get Pre-Approved (Not Just Pre-Qualified)</h4>
+              <p>Pre-qualification is a quick estimate. Pre-approval is a verified commitment — lenders review your actual documents (W-2s, bank statements, tax returns) and issue a formal letter. In DFW's competitive market, most sellers won't entertain an offer without one. Aim to get pre-approved before you start touring homes.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Choose Your Agent</h4>
+              <p>Your buyer's agent represents your interests — at no cost to you (the seller pays the commission). A great agent knows the local market, has relationships with listing agents, and can spot issues before they become expensive surprises. Interview at least two or three agents before committing.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Define Your Priorities</h4>
+              <p>Make two lists: non-negotiables and nice-to-haves. Common non-negotiables include school district, commute time, minimum number of bedrooms, and max monthly payment. Nice-to-haves might be a pool, dedicated office, or specific neighborhood. The DFW market is large — knowing your priorities helps narrow the search fast and avoids decision fatigue.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h4>Tour Homes Strategically</h4>
+              <p>Don't tour 30 homes. Tour 5–10 well-matched ones. Your agent should filter listings based on your criteria and help you evaluate each one objectively. In DFW, good homes move in days — when you find the right one, you need to be ready to act within 24–48 hours.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">6</div>
+            <div class="step-body">
+              <h4>Make an Offer</h4>
+              <p>Your agent will prepare a Texas Real Estate Commission (TREC) contract with your offer price, earnest money, option period, financing terms, and closing timeline. In a competitive situation, your agent may advise escalation clauses, waiving certain contingencies, or flexible closing dates to strengthen your position without overpaying.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">7</div>
+            <div class="step-body">
+              <h4>Use the Option Period Wisely</h4>
+              <p>Texas uses a unique "option period" — typically 7–10 days — during which you pay a small fee (usually $150–$500) for the unrestricted right to terminate. Use this time to get a thorough home inspection. The inspection report guides repair negotiations or can be the basis for walking away entirely.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">8</div>
+            <div class="step-body">
+              <h4>Negotiate Repairs or Credits</h4>
+              <p>After the inspection, you can request the seller make repairs, provide a credit at closing, or reduce the price. Not every item on an inspection report is worth fighting over — your agent helps prioritize what's material vs. cosmetic and how much leverage you have based on the seller's situation.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">9</div>
+            <div class="step-body">
+              <h4>Secure Your Financing &amp; Title</h4>
+              <p>Once under contract, your lender will order an appraisal and begin final underwriting. Simultaneously, a title company verifies there are no liens or ownership disputes on the property. Respond quickly to any document requests — delays here can push your closing date.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">10</div>
+            <div class="step-body">
+              <h4>Close &amp; Get Your Keys</h4>
+              <p>The closing appointment typically takes 60–90 minutes. You'll sign the loan documents, pay closing costs (typically 2–4% of the loan amount for buyers in Texas), and receive the keys. In Texas, closings are handled by a title company or escrow officer — your agent will be there to walk you through everything.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="firsttime">First-Time Buyer <em>Programs in Texas</em></h2>
+        <p>If this is your first home purchase, you may qualify for programs that reduce your down payment requirement or provide closing cost assistance.</p>
+        <ul class="check-list">
+          <li><strong>Texas First Time Home Buyer Program (TDHCA)</strong> — Down payment assistance up to 5% of the loan amount, available for buyers who haven't owned a home in the last 3 years.</li>
+          <li><strong>My First Texas Home</strong> — 30-year fixed-rate mortgages with below-market interest rates plus down payment assistance.</li>
+          <li><strong>FHA Loans</strong> — Federal Housing Administration loans allow down payments as low as 3.5% with a minimum credit score of 580.</li>
+          <li><strong>VA Loans</strong> — For active duty, veterans, and surviving spouses. Zero down payment required, no PMI, and competitive rates.</li>
+          <li><strong>USDA Loans</strong> — Available in qualifying rural and suburban areas of DFW (parts of Forney, Waxahachie, Cedar Hill) with zero down payment.</li>
+          <li><strong>Conventional 97</strong> — Fannie Mae and Freddie Mac both offer 3% down payment options for first-time buyers.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Diego's tip:</strong> Many first-time buyer programs have income limits and purchase price caps that change annually. Before assuming you don't qualify, ask a lender to run the numbers — you may be pleasantly surprised. Diego works with several DFW lenders who specialize in these programs.
+        </div>
+
+        <h2 id="costs">Understanding <em>Closing Costs</em> in Texas</h2>
+        <p>One of the most common surprises for first-time buyers is the total cash required at closing. It's not just the down payment.</p>
+        <ul class="check-list">
+          <li><strong>Down payment</strong> — Typically 3%–20% of the purchase price depending on your loan type.</li>
+          <li><strong>Lender fees</strong> — Origination fees, underwriting fees, discount points (if buying down your rate). Usually 0.5%–1% of the loan amount.</li>
+          <li><strong>Appraisal</strong> — $450–$700 in DFW. Paid upfront, before closing.</li>
+          <li><strong>Title insurance</strong> — Owner's policy and lender's policy. Required in Texas. Usually $1,200–$2,000 depending on price.</li>
+          <li><strong>Property taxes (prorated)</strong> — Texas collects property taxes in arrears, so you'll typically receive a credit from the seller at closing for their portion of the year.</li>
+          <li><strong>Homeowner's insurance</strong> — First year premium often due at closing. Budget $1,500–$2,500/year for a typical DFW home.</li>
+          <li><strong>Prepaid interest</strong> — Interest that accrues between closing and your first mortgage payment.</li>
+          <li><strong>Home inspection</strong> — $350–$550. Paid directly to the inspector, usually before closing.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Total estimate:</strong> Budget 2%–4% of the purchase price in closing costs on top of your down payment. On a $400,000 home with 10% down, that means having $48,000–$56,000 in cash ready — not $40,000.
+        </div>
+
+        <h2 id="mistakes">Common Mistakes <em>DFW Buyers Make</em></h2>
+        <div class="mistakes-grid">
+          <div class="mistake-card">
+            <h4>Making major purchases before closing</h4>
+            <p>Financing a car, furniture, or appliances before your loan closes can change your debt-to-income ratio and jeopardize final loan approval. Hold off until after you have the keys.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Skipping the inspection</h4>
+            <p>In a hot market, some buyers waive inspections to compete. This is almost always a mistake — a $400 inspection can uncover $40,000 in foundation or roof issues that aren't visible during a showing.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Ignoring property taxes</h4>
+            <p>Texas has no state income tax, but property taxes are among the highest in the nation. A $400,000 home may carry $8,000–$10,000 in annual taxes. Always check the exact tax rate for the specific address — it can vary significantly by city and school district.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Falling in love before the inspection</h4>
+            <p>It's natural to get emotionally attached to a home during the tour. But emotional buyers overpay and overlook red flags. Your agent's job is to keep you objective — let them.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Looking at listed price only</h4>
+            <p>The listed price is just the starting point. Factor in HOA fees, estimated taxes, insurance, and any repairs before calculating your true monthly cost. Use the <a href="mortgage-calculator.html" style="color:var(--gold); text-decoration:underline;">mortgage calculator</a> to model the full picture.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Not acting fast enough</h4>
+            <p>DFW's best homes regularly go under contract within 48–72 hours. Delaying to "think about it over the weekend" often means losing the home to another buyer who was ready.</p>
+          </div>
+        </div>
+
+        <h2 id="questions">Questions to Ask <em>At Every Showing</em></h2>
+        <ul class="check-list">
+          <li>How long has the home been on the market, and have there been any price reductions?</li>
+          <li>Why is the seller moving?</li>
+          <li>Are there any known issues with the foundation, roof, or HVAC?</li>
+          <li>What's included in the sale (appliances, fixtures, outdoor equipment)?</li>
+          <li>What is the exact property tax amount for this address?</li>
+          <li>Is the property in a flood zone? (Check FEMA flood maps for DFW.)</li>
+          <li>What are the HOA rules and fees, and what do they cover?</li>
+          <li>How old are the roof, water heater, and HVAC system?</li>
+          <li>What are the neighbors like? What is the neighborhood association activity?</li>
+          <li>Has there been any recent renovation work — and was it permitted?</li>
+        </ul>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="guide-sidebar">
+        <div class="sidebar-card">
+          <h3>Contents</h3>
+          <nav class="sidebar-nav">
+            <a href="#overview">DFW Market Overview</a>
+            <a href="#steps">The 10-Step Process</a>
+            <a href="#firsttime">First-Time Buyer Programs</a>
+            <a href="#costs">Closing Costs</a>
+            <a href="#mistakes">Common Mistakes</a>
+            <a href="#questions">Questions to Ask</a>
+          </nav>
+        </div>
+        <div class="cta-sidebar">
+          <p><strong>Ready to start your search?</strong> Diego offers free, no-pressure consultations for buyers at any stage — first-timer or not.</p>
+          <a href="index.html#contact" class="btn-primary">Book a Free Call →</a>
+        </div>
+        <div class="sidebar-card" style="margin-top:20px;">
+          <h3>Helpful Tools</h3>
+          <nav class="sidebar-nav">
+            <a href="mortgage-calculator.html">Mortgage Calculator</a>
+            <a href="relocation-guide.html">Relocation Guide</a>
+            <a href="new-construction.html">New Construction Guide</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes & Co. Realty Group — DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes & Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">DMCA</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFW Relocation Guide | Diego Cortes — Realtor® | Dallas Fort Worth</title>
+<meta name="description" content="Moving to Dallas–Fort Worth? Diego Cortes' relocation guide covers neighborhoods, cost of living, schools, jobs, and everything you need to settle into DFW.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide-hero {
+    background: var(--navy);
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .guide-hero .section-eyebrow { justify-content: center; }
+  .guide-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .guide-hero h1 em { font-style: italic; color: var(--gold); }
+  .guide-hero p {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .guide-body { padding: 72px 0 80px; }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .guide-sidebar { position: sticky; top: 88px; }
+  .sidebar-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+  }
+  .sidebar-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .sidebar-nav a {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-600);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--gray-100);
+    transition: color .2s;
+  }
+  .sidebar-nav a:last-child { border-bottom: none; }
+  .sidebar-nav a:hover { color: var(--gold); }
+  .sidebar-nav a::before { content: '→ '; opacity: .5; }
+
+  .cta-sidebar {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+  }
+  .cta-sidebar p {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .cta-sidebar strong { color: var(--white); }
+  .cta-sidebar .btn-primary { width: 100%; justify-content: center; font-size: 13px; }
+
+  .guide-main h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 52px 0 16px;
+    padding-top: 8px;
+  }
+  .guide-main h2:first-child { margin-top: 0; }
+  .guide-main h2 em { font-style: italic; color: var(--gold); }
+  .guide-main p {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .guide-main strong { color: var(--gray-800); }
+
+  .stat-bar {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 32px;
+    margin: 28px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .stat-bar-item-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .stat-bar-item-value { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--white); }
+  .stat-bar-item-sub { font-size: 12px; color: rgba(255,255,255,.45); margin-top: 2px; }
+
+  .tip-box {
+    background: var(--gold-pale);
+    border: 1.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .tip-box strong { color: var(--navy); }
+
+  .check-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+  .check-list li {
+    font-size: 14px; color: var(--gray-600); padding-left: 24px; position: relative; line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+  }
+
+  /* neighborhood comparison table */
+  .hood-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 13px; }
+  .hood-table th {
+    background: var(--navy); color: var(--white); padding: 10px 14px;
+    text-align: left; font-weight: 500; font-size: 12px; letter-spacing: .04em;
+  }
+  .hood-table td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); vertical-align: top; }
+  .hood-table tr:last-child td { border-bottom: none; }
+  .hood-table tr:nth-child(even) td { background: var(--cream); }
+  .hood-table td:first-child { font-weight: 600; color: var(--navy); }
+
+  /* cost comparison */
+  .cost-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .cost-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .cost-card-label { font-size: 12px; font-weight: 500; color: var(--gray-400); letter-spacing: .04em; margin-bottom: 4px; }
+  .cost-card-value { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--navy); }
+  .cost-card-sub { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+
+  /* timeline */
+  .reloc-timeline { margin: 24px 0; display: flex; flex-direction: column; gap: 0; }
+  .reloc-step {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 28px;
+    position: relative;
+  }
+  .reloc-step:last-child { padding-bottom: 0; }
+  .reloc-step::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 40px;
+    bottom: 0;
+    width: 2px;
+    background: var(--gray-200);
+  }
+  .reloc-step:last-child::before { display: none; }
+  .reloc-dot {
+    width: 40px; height: 40px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px;
+    color: var(--navy);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .reloc-step-body { padding-top: 8px; }
+  .reloc-step-body h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .reloc-step-body p { font-size: 14px; color: var(--gray-600); line-height: 1.7; margin: 0; }
+
+  /* industry cards */
+  .industry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+  .industry-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+  .industry-icon { font-size: 22px; margin-bottom: 8px; }
+  .industry-name { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .industry-sub { font-size: 12px; color: var(--gray-400); }
+
+  @media (max-width: 900px) {
+    .guide-layout { grid-template-columns: 1fr; }
+    .guide-sidebar { position: static; }
+    .stat-bar { grid-template-columns: 1fr 1fr; }
+    .cost-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .stat-bar { grid-template-columns: 1fr 1fr; }
+    .industry-grid { grid-template-columns: 1fr 1fr; }
+    .cost-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="guide-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">Moving to Texas</div>
+    <h1>Your DFW <em>Relocation Guide</em></h1>
+    <p>Everything you need to know about moving to the Dallas–Fort Worth Metroplex — from neighborhoods and schools to jobs and cost of living.</p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="guide-body">
+  <div class="container">
+    <div class="guide-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="guide-main">
+
+        <h2 id="why">Why People Are Moving to <em>DFW</em></h2>
+        <p>The Dallas–Fort Worth Metroplex isn't just growing — it's been the fastest-growing major metro in the United States for over a decade. In 2023 alone, DFW added more people than any other metro area in the country. And for good reason: strong job market, no state income tax, relatively affordable housing compared to coastal cities, and a quality of life that's hard to match at this price point.</p>
+        <p>Whether you're relocating from California, New York, Chicago, or another Texas city, the adjustment to DFW is almost always a positive one — once you know which part of the metroplex fits your life.</p>
+
+        <div class="stat-bar">
+          <div>
+            <div class="stat-bar-item-label">Population</div>
+            <div class="stat-bar-item-value">7.8M+</div>
+            <div class="stat-bar-item-sub">4th largest metro in the US</div>
+          </div>
+          <div>
+            <div class="stat-bar-item-label">State Income Tax</div>
+            <div class="stat-bar-item-value">0%</div>
+            <div class="stat-bar-item-sub">Texas has none</div>
+          </div>
+          <div>
+            <div class="stat-bar-item-label">Job Growth</div>
+            <div class="stat-bar-item-value">Top 3</div>
+            <div class="stat-bar-item-sub">Metro job growth nationally</div>
+          </div>
+          <div>
+            <div class="stat-bar-item-label">Median Home Price</div>
+            <div class="stat-bar-item-value">$412K</div>
+            <div class="stat-bar-item-sub">vs. $850K+ in LA or NYC</div>
+          </div>
+        </div>
+
+        <h2 id="neighborhoods">Finding the Right <em>Neighborhood</em></h2>
+        <p>DFW covers over 9,000 square miles across two major counties and dozens of cities. "Moving to Dallas" doesn't mean one thing — it means choosing between vastly different communities with different vibes, price points, school districts, and commute times. Here's a quick comparison of the most popular destinations for relocators.</p>
+
+        <div style="overflow-x:auto;">
+          <table class="hood-table">
+            <thead>
+              <tr>
+                <th>City / Area</th>
+                <th>Avg. Home Price</th>
+                <th>Vibe</th>
+                <th>Best For</th>
+                <th>Commute to Dallas CBD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Uptown / Oak Lawn</td>
+                <td>$420K–$700K</td>
+                <td>Urban, walkable, vibrant</td>
+                <td>Young professionals, no kids</td>
+                <td>5–15 min</td>
+              </tr>
+              <tr>
+                <td>Frisco</td>
+                <td>$480K–$700K</td>
+                <td>Master-planned, family-friendly</td>
+                <td>Families, top-rated schools</td>
+                <td>35–50 min</td>
+              </tr>
+              <tr>
+                <td>McKinney</td>
+                <td>$380K–$560K</td>
+                <td>Charming, suburban, growing</td>
+                <td>Families, value seekers</td>
+                <td>40–55 min</td>
+              </tr>
+              <tr>
+                <td>Plano</td>
+                <td>$380K–$580K</td>
+                <td>Corporate corridor, suburban</td>
+                <td>Tech workers, families</td>
+                <td>25–40 min</td>
+              </tr>
+              <tr>
+                <td>Southlake</td>
+                <td>$900K–$1.5M+</td>
+                <td>Upscale, planned, prestigious</td>
+                <td>Executives, luxury buyers</td>
+                <td>25–35 min to Fort Worth</td>
+              </tr>
+              <tr>
+                <td>Arlington</td>
+                <td>$280K–$400K</td>
+                <td>Central, entertainment, sports</td>
+                <td>Value buyers, sports fans</td>
+                <td>30–45 min</td>
+              </tr>
+              <tr>
+                <td>Fort Worth (West Side)</td>
+                <td>$300K–$500K</td>
+                <td>Western character, growing fast</td>
+                <td>Culture seekers, investors</td>
+                <td>25–40 min to FW CBD</td>
+              </tr>
+              <tr>
+                <td>Forney / Rockwall</td>
+                <td>$310K–$430K</td>
+                <td>Lakeside, new construction heavy</td>
+                <td>Affordability + space</td>
+                <td>35–50 min</td>
+              </tr>
+              <tr>
+                <td>Highland Park / HP ISD</td>
+                <td>$1.5M–$3M+</td>
+                <td>Prestigious, old money, trees</td>
+                <td>Luxury buyers, top schools</td>
+                <td>10–20 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tip-box">
+          <strong>Diego's advice for relocators:</strong> Before committing to a neighborhood, spend a weekend driving the area during both morning and evening rush hours. DFW traffic patterns are notoriously unpredictable — a 25-mile commute can take 30 minutes or 90 minutes depending on time and direction.
+        </div>
+
+        <h2 id="costliving">Cost of Living: <em>What to Expect</em></h2>
+        <p>Texas is significantly more affordable than most major coastal metros, but costs have risen over the past five years as more people have moved here. Here's a realistic look at what everyday life costs in DFW.</p>
+
+        <div class="cost-grid">
+          <div class="cost-card">
+            <div class="cost-card-label">Median Home Price</div>
+            <div class="cost-card-value">$412,000</div>
+            <div class="cost-card-sub">DFW Metro · Q1 2026</div>
+          </div>
+          <div class="cost-card">
+            <div class="cost-card-label">Avg. Monthly Rent (2BR)</div>
+            <div class="cost-card-value">$1,750</div>
+            <div class="cost-card-sub">Varies widely by city</div>
+          </div>
+          <div class="cost-card">
+            <div class="cost-card-label">Property Tax Rate</div>
+            <div class="cost-card-value">2.0–2.5%</div>
+            <div class="cost-card-sub">Of assessed value, annually</div>
+          </div>
+          <div class="cost-card">
+            <div class="cost-card-label">State Income Tax</div>
+            <div class="cost-card-value">None</div>
+            <div class="cost-card-sub">Texas has no state income tax</div>
+          </div>
+          <div class="cost-card">
+            <div class="cost-card-label">Avg. Gas Price</div>
+            <div class="cost-card-value">~$2.80</div>
+            <div class="cost-card-sub">Per gallon · varies by month</div>
+          </div>
+          <div class="cost-card">
+            <div class="cost-card-label">Monthly Utilities</div>
+            <div class="cost-card-value">$180–$280</div>
+            <div class="cost-card-sub">Higher in summer (A/C)</div>
+          </div>
+        </div>
+
+        <p>The savings from no state income tax are real — a $120,000 salary in California would typically mean $9,000+ in state taxes. In Texas, that money stays in your pocket. The trade-off is higher property taxes, which is why it's important to calculate your total monthly housing cost before buying, not just the mortgage payment.</p>
+
+        <h2 id="jobs">Major Employers <em>&amp; Industries</em></h2>
+        <p>DFW is home to 24 Fortune 500 company headquarters — more than any other metro area in the US outside of New York. The economy is diverse and recession-resistant, with major clusters in technology, finance, healthcare, logistics, and defense.</p>
+
+        <div class="industry-grid">
+          <div class="industry-card">
+            <div class="industry-icon">💻</div>
+            <div class="industry-name">Technology</div>
+            <div class="industry-sub">AT&T, Texas Instruments, Match Group, Dialexa</div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🏦</div>
+            <div class="industry-name">Finance</div>
+            <div class="industry-sub">Goldman Sachs, Charles Schwab, Comerica</div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">✈️</div>
+            <div class="industry-name">Aviation</div>
+            <div class="industry-sub">American Airlines, Southwest, DFW Airport</div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🏥</div>
+            <div class="industry-name">Healthcare</div>
+            <div class="industry-sub">Baylor Scott & White, UT Southwestern, HCA</div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🛒</div>
+            <div class="industry-name">Retail</div>
+            <div class="industry-sub">JCPenney, 7-Eleven, GameStop HQ</div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🚛</div>
+            <div class="industry-name">Logistics</div>
+            <div class="industry-sub">Amazon, FedEx, UPS, McKesson</div>
+          </div>
+        </div>
+
+        <h2 id="schools">Schools &amp; <em>Education</em></h2>
+        <p>School quality varies enormously across the metroplex, and the school district is one of the most important factors in determining both your children's education and your home's resale value. Here are the most notable districts for relocating families.</p>
+
+        <ul class="check-list">
+          <li><strong>Highland Park ISD (HPISD)</strong> — Consistently ranked among the best in Texas. Located within Dallas city limits. Home prices reflect this: expect $1M+.</li>
+          <li><strong>Frisco ISD</strong> — One of the largest and most highly rated suburban districts. Multiple campuses with strong athletics and academics. Avg. home $500K–$700K.</li>
+          <li><strong>Southlake Carroll ISD</strong> — Famous for academics and football. Highly competitive. Homes typically $900K+.</li>
+          <li><strong>Allen ISD / McKinney ISD</strong> — Strong suburban districts with a range of home prices. Good balance of quality and value.</li>
+          <li><strong>Plano ISD</strong> — Nationally recognized, highly diverse, strong AP and IB programs. Wide range of home prices.</li>
+          <li><strong>Prosper ISD</strong> — Fast-growing, newer campuses, strong test scores. Attractive to buyers seeking newer construction in great school zones.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Important:</strong> Always verify school zoning for a specific address before buying — boundaries can change and don't always follow city lines. Diego can help you confirm which district and campus your prospective home feeds into.
+        </div>
+
+        <h2 id="climate">Climate &amp; <em>What to Know</em></h2>
+        <p>DFW has a humid subtropical climate: hot summers, mild winters, and unpredictable springs. Here's what to expect if you're coming from out of state.</p>
+        <ul class="check-list">
+          <li><strong>Summers are intense</strong> — June through September regularly sees 95–105°F days. Central A/C isn't optional; it's survival. Budget $200–$350/month for electricity in peak summer.</li>
+          <li><strong>Winters are mild but occasionally severe</strong> — Most winters bring a handful of freezing days. However, ice storms (like February 2021) do happen and can be disruptive since the infrastructure isn't built for sustained freezes.</li>
+          <li><strong>Tornado season is real</strong> — DFW sits in Tornado Alley. Spring storms can be severe. Know the warning signs, have a plan, and consider a storm shelter if buying in an area with newer construction.</li>
+          <li><strong>Hail is common</strong> — DFW has some of the highest hail frequency in the US. This impacts home insurance premiums and affects roof replacement cycles.</li>
+          <li><strong>Flooding awareness</strong> — Some DFW neighborhoods sit in FEMA flood plains. Always check flood zone status before making an offer on a home.</li>
+        </ul>
+
+        <h2 id="checklist">Your Pre-Move <em>Checklist</em></h2>
+        <div class="reloc-timeline">
+          <div class="reloc-step">
+            <div class="reloc-dot">3mo</div>
+            <div class="reloc-step-body">
+              <h4>3 Months Before Moving</h4>
+              <p>Research neighborhoods and school districts. Contact Diego to discuss your budget and target areas. Get pre-approved for a mortgage. Plan at least one in-person or virtual scouting trip to DFW.</p>
+            </div>
+          </div>
+          <div class="reloc-step">
+            <div class="reloc-dot">2mo</div>
+            <div class="reloc-step-body">
+              <h4>2 Months Before Moving</h4>
+              <p>Narrow down your top 2–3 neighborhoods. Tour homes in person if possible. Decide whether to buy immediately or rent short-term while you get familiar with the market. Interview movers and request quotes.</p>
+            </div>
+          </div>
+          <div class="reloc-step">
+            <div class="reloc-dot">1mo</div>
+            <div class="reloc-step-body">
+              <h4>1 Month Before Moving</h4>
+              <p>Finalize your moving company. Update your address with the post office, banks, employer, and subscriptions. Give notice to your current landlord if renting. Begin planning your route and logistics for moving day.</p>
+            </div>
+          </div>
+          <div class="reloc-step">
+            <div class="reloc-dot">1wk</div>
+            <div class="reloc-step-body">
+              <h4>1 Week Before Moving</h4>
+              <p>Confirm all utilities are set up at your new address (electricity, gas, internet). Pack essentials bag for first 48 hours. Confirm move-in date with your agent or landlord.</p>
+            </div>
+          </div>
+          <div class="reloc-step">
+            <div class="reloc-dot">✓</div>
+            <div class="reloc-step-body">
+              <h4>After You Arrive</h4>
+              <p>Update your Texas driver's license within 90 days of establishing residency. Register your vehicle with the Texas DMV. Register to vote if you'd like. File for your homestead exemption (saves you money on property taxes — due by April 30 of the year following your purchase).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <strong>Homestead Exemption:</strong> Once you purchase a home and establish it as your primary residence, file for a homestead exemption with the county appraisal district. It reduces your taxable home value by $100,000 (as of 2023 legislation) and caps how fast your assessed value can rise year over year. This is one of the most valuable tax benefits in Texas — don't skip it.
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="guide-sidebar">
+        <div class="sidebar-card">
+          <h3>Contents</h3>
+          <nav class="sidebar-nav">
+            <a href="#why">Why DFW</a>
+            <a href="#neighborhoods">Finding Your Neighborhood</a>
+            <a href="#costliving">Cost of Living</a>
+            <a href="#jobs">Jobs &amp; Industries</a>
+            <a href="#schools">Schools</a>
+            <a href="#climate">Climate</a>
+            <a href="#checklist">Pre-Move Checklist</a>
+          </nav>
+        </div>
+        <div class="cta-sidebar">
+          <p><strong>Moving to DFW?</strong> Diego has helped dozens of out-of-state buyers find the right neighborhood and navigate the Texas buying process remotely.</p>
+          <a href="index.html#contact" class="btn-primary">Book a Free Call →</a>
+        </div>
+        <div class="sidebar-card" style="margin-top:20px;">
+          <h3>Helpful Tools</h3>
+          <nav class="sidebar-nav">
+            <a href="buyers-guide.html">Buyer's Guide</a>
+            <a href="mortgage-calculator.html">Mortgage Calculator</a>
+            <a href="new-construction.html">New Construction Guide</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes & Co. Realty Group — DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes & Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">DMCA</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

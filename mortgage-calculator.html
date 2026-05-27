@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mortgage Calculator | Diego Cortes — Realtor® | DFW</title>
+<meta name="description" content="Use Diego Cortes' free mortgage calculator to estimate your monthly payment, total interest, and loan breakdown for homes across the DFW Metroplex.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ── CALCULATOR PAGE ── */
+  .calc-hero {
+    background: var(--navy);
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .calc-hero .section-eyebrow { justify-content: center; }
+  .calc-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .calc-hero h1 em { font-style: italic; color: var(--gold); }
+  .calc-hero p {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .calc-section {
+    padding: 64px 0 80px;
+  }
+
+  .calc-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* ── INPUT PANEL ── */
+  .calc-inputs {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 36px;
+    box-shadow: var(--shadow-md);
+  }
+  .calc-inputs h2 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 28px;
+  }
+  .input-group {
+    margin-bottom: 22px;
+  }
+  .input-group label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-600);
+    margin-bottom: 8px;
+    letter-spacing: .01em;
+  }
+  .input-group label span {
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 14px;
+  }
+  .input-wrap {
+    position: relative;
+  }
+  .input-prefix {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--gray-400);
+    pointer-events: none;
+  }
+  .input-suffix {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--gray-400);
+    pointer-events: none;
+  }
+  .calc-inputs input[type="number"],
+  .calc-inputs select {
+    width: 100%;
+    padding: 10px 36px 10px 28px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--gray-800);
+    background: var(--cream);
+    outline: none;
+    transition: border-color .2s;
+    -moz-appearance: textfield;
+  }
+  .calc-inputs input[type="number"]::-webkit-inner-spin-button,
+  .calc-inputs input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+  .calc-inputs input[type="number"]:focus,
+  .calc-inputs select:focus { border-color: var(--gold); }
+
+  .calc-inputs input[type="range"] {
+    width: 100%;
+    margin-top: 8px;
+    accent-color: var(--gold);
+    cursor: pointer;
+  }
+
+  .calc-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  /* ── RESULTS PANEL ── */
+  .calc-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .result-card {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 32px;
+    color: var(--white);
+  }
+  .result-card-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .result-payment {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 4vw, 3rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.1;
+  }
+  .result-payment-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,.5);
+    margin-top: 4px;
+  }
+
+  .breakdown-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+  }
+  .breakdown-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+  }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-label { color: var(--gray-600); display: flex; align-items: center; gap: 8px; }
+  .breakdown-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  }
+  .breakdown-value { font-weight: 600; color: var(--navy); }
+
+  .breakdown-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0 0;
+    margin-top: 4px;
+    border-top: 2px solid var(--navy);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* donut chart */
+  .donut-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 16px;
+  }
+  .donut-svg { transform: rotate(-90deg); }
+  .donut-center {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .donut-container {
+    position: relative;
+    width: 160px; height: 160px;
+    flex-shrink: 0;
+  }
+
+  .summary-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+  }
+  .summary-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-600);
+  }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-row strong { color: var(--navy); font-weight: 600; }
+
+  .cta-card {
+    background: var(--gold-pale);
+    border: 1.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+  }
+  .cta-card p {
+    font-size: 14px;
+    color: var(--gray-600);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .cta-card strong { color: var(--navy); }
+
+  /* disclaimer */
+  .calc-disclaimer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray-400);
+    max-width: 700px;
+    margin: 32px auto 0;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .calc-layout { grid-template-columns: 1fr; }
+    .calc-inputs { padding: 24px; }
+    .result-card, .breakdown-card, .summary-card { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="calc-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">DFW Homebuyers</div>
+    <h1>Mortgage <em>Calculator</em></h1>
+    <p>Estimate your monthly payment and total loan cost. Adjust any input to see results instantly.</p>
+  </div>
+</section>
+
+<!-- ── CALCULATOR ── -->
+<section class="calc-section">
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- INPUTS -->
+      <div class="calc-inputs">
+        <h2>Loan Details</h2>
+
+        <div class="input-group">
+          <label>Home Price <span id="lbl-price">$400,000</span></label>
+          <div class="input-wrap">
+            <span class="input-prefix">$</span>
+            <input type="number" id="home-price" value="400000" min="50000" max="5000000" step="5000">
+          </div>
+          <input type="range" id="range-price" min="50000" max="2000000" step="5000" value="400000">
+        </div>
+
+        <div class="input-group">
+          <label>Down Payment <span id="lbl-down">$80,000 (20%)</span></label>
+          <div class="input-wrap">
+            <span class="input-prefix">$</span>
+            <input type="number" id="down-payment" value="80000" min="0" max="5000000" step="1000">
+          </div>
+          <input type="range" id="range-down" min="0" max="100" step="1" value="20">
+        </div>
+
+        <div class="input-group">
+          <label>Interest Rate (Annual) <span id="lbl-rate">6.75%</span></label>
+          <div class="input-wrap">
+            <input type="number" id="interest-rate" value="6.75" min="0.1" max="20" step="0.05" style="padding-left:12px;">
+            <span class="input-suffix">%</span>
+          </div>
+          <input type="range" id="range-rate" min="1" max="15" step="0.05" value="6.75">
+        </div>
+
+        <div class="input-group">
+          <label>Loan Term</label>
+          <select id="loan-term">
+            <option value="30">30-year fixed</option>
+            <option value="20">20-year fixed</option>
+            <option value="15">15-year fixed</option>
+            <option value="10">10-year fixed</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Annual Property Tax <span id="lbl-tax">$5,000</span></label>
+          <div class="input-wrap">
+            <span class="input-prefix">$</span>
+            <input type="number" id="property-tax" value="5000" min="0" max="50000" step="100">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Annual Home Insurance <span id="lbl-ins">$1,800</span></label>
+          <div class="input-wrap">
+            <span class="input-prefix">$</span>
+            <input type="number" id="home-insurance" value="1800" min="0" max="20000" step="50">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Monthly HOA / Other <span id="lbl-hoa">$0</span></label>
+          <div class="input-wrap">
+            <span class="input-prefix">$</span>
+            <input type="number" id="hoa" value="0" min="0" max="5000" step="10">
+          </div>
+        </div>
+
+        <button class="btn-primary calc-btn" onclick="calculate()">Calculate Payment →</button>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="calc-results">
+
+        <!-- Monthly total -->
+        <div class="result-card">
+          <div class="result-card-label">Estimated Monthly Payment</div>
+          <div class="result-payment" id="result-monthly">$2,594</div>
+          <div class="result-payment-sub">Principal & interest + taxes + insurance</div>
+        </div>
+
+        <!-- Breakdown -->
+        <div class="breakdown-card">
+          <h3>Monthly Breakdown</h3>
+          <div class="donut-wrap">
+            <div class="donut-container">
+              <svg class="donut-svg" width="160" height="160" viewBox="0 0 160 160">
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#e0d9cf" stroke-width="22"/>
+                <circle id="arc-pi"  cx="80" cy="80" r="60" fill="none" stroke="#0d1b2a" stroke-width="22" stroke-dasharray="377" stroke-dashoffset="0"/>
+                <circle id="arc-tax" cx="80" cy="80" r="60" fill="none" stroke="#c9a84c" stroke-width="22" stroke-dasharray="377" stroke-dashoffset="0"/>
+                <circle id="arc-ins" cx="80" cy="80" r="60" fill="none" stroke="#e2c07a" stroke-width="22" stroke-dasharray="377" stroke-dashoffset="0"/>
+                <circle id="arc-hoa" cx="80" cy="80" r="60" fill="none" stroke="#9e9484" stroke-width="22" stroke-dasharray="377" stroke-dashoffset="0"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="breakdown-row">
+            <span class="breakdown-label"><span class="breakdown-dot" style="background:#0d1b2a;"></span>Principal & Interest</span>
+            <span class="breakdown-value" id="bd-pi">$2,594</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="breakdown-label"><span class="breakdown-dot" style="background:#c9a84c;"></span>Property Tax</span>
+            <span class="breakdown-value" id="bd-tax">$417</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="breakdown-label"><span class="breakdown-dot" style="background:#e2c07a;"></span>Home Insurance</span>
+            <span class="breakdown-value" id="bd-ins">$150</span>
+          </div>
+          <div class="breakdown-row" id="hoa-row">
+            <span class="breakdown-label"><span class="breakdown-dot" style="background:#9e9484;"></span>HOA / Other</span>
+            <span class="breakdown-value" id="bd-hoa">$0</span>
+          </div>
+          <div class="breakdown-total">
+            <span>Total / Month</span>
+            <span id="bd-total">$3,161</span>
+          </div>
+        </div>
+
+        <!-- Loan summary -->
+        <div class="summary-card">
+          <h3>Loan Summary</h3>
+          <div class="summary-row"><span>Loan Amount</span><strong id="sum-loan">$320,000</strong></div>
+          <div class="summary-row"><span>Down Payment</span><strong id="sum-down">$80,000 (20%)</strong></div>
+          <div class="summary-row"><span>Total Interest Paid</span><strong id="sum-interest">$214,898</strong></div>
+          <div class="summary-row"><span>Total Cost of Loan</span><strong id="sum-total">$534,898</strong></div>
+          <div class="summary-row"><span>Payoff Date</span><strong id="sum-payoff">June 2056</strong></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-card">
+          <p><strong>Ready to take the next step?</strong> Diego can connect you with trusted DFW lenders and help you understand your real buying power — no pressure, just honest guidance.</p>
+          <a href="index.html#contact" class="btn-primary" style="width:100%; justify-content:center; padding:13px; font-size:15px;">Book a Free Call With Diego →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="calc-disclaimer">This calculator is for illustrative purposes only and provides estimates based on the information entered. Actual loan amounts, rates, and payments may vary. Property taxes and insurance estimates may differ from your actual costs. Consult a licensed lender for precise figures. Diego Cortes is not a lender and does not guarantee the accuracy of these calculations.</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes & Co. Realty Group — DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes & Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">DMCA</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  const CIRCUMFERENCE = 2 * Math.PI * 60; // ~376.99
+
+  function fmt(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function calculate() {
+    const price    = parseFloat(document.getElementById('home-price').value)    || 0;
+    const down     = parseFloat(document.getElementById('down-payment').value)  || 0;
+    const annRate  = parseFloat(document.getElementById('interest-rate').value) || 0;
+    const term     = parseInt(document.getElementById('loan-term').value)       || 30;
+    const annTax   = parseFloat(document.getElementById('property-tax').value)  || 0;
+    const annIns   = parseFloat(document.getElementById('home-insurance').value)|| 0;
+    const hoa      = parseFloat(document.getElementById('hoa').value)           || 0;
+
+    const loan = Math.max(price - down, 0);
+    const r    = annRate / 100 / 12;
+    const n    = term * 12;
+
+    let pi = 0;
+    if (r > 0 && n > 0) {
+      pi = loan * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    } else if (n > 0) {
+      pi = loan / n;
+    }
+
+    const monthTax = annTax / 12;
+    const monthIns = annIns / 12;
+    const total    = pi + monthTax + monthIns + hoa;
+
+    const totalPaid     = pi * n;
+    const totalInterest = totalPaid - loan;
+
+    // Payoff date
+    const now = new Date();
+    const payoff = new Date(now.getFullYear(), now.getMonth() + n, 1);
+    const payoffStr = payoff.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    // Update result display
+    document.getElementById('result-monthly').textContent = fmt(total);
+    document.getElementById('bd-pi').textContent   = fmt(pi);
+    document.getElementById('bd-tax').textContent  = fmt(monthTax);
+    document.getElementById('bd-ins').textContent  = fmt(monthIns);
+    document.getElementById('bd-hoa').textContent  = fmt(hoa);
+    document.getElementById('bd-total').textContent = fmt(total);
+
+    const downPct = price > 0 ? ((down / price) * 100).toFixed(1) : 0;
+    document.getElementById('sum-loan').textContent     = fmt(loan);
+    document.getElementById('sum-down').textContent     = `${fmt(down)} (${downPct}%)`;
+    document.getElementById('sum-interest').textContent = fmt(Math.max(totalInterest, 0));
+    document.getElementById('sum-total').textContent    = fmt(Math.max(totalPaid, 0));
+    document.getElementById('sum-payoff').textContent   = payoffStr;
+
+    // Donut chart
+    drawDonut(pi, monthTax, monthIns, hoa, total);
+  }
+
+  function drawDonut(pi, tax, ins, hoa, total) {
+    if (total <= 0) return;
+    const C = CIRCUMFERENCE;
+
+    const piPct  = pi  / total;
+    const taxPct = tax / total;
+    const insPct = ins / total;
+    const hoaPct = hoa / total;
+
+    let offset = 0;
+
+    function setArc(id, pct, prevOffset) {
+      const dash = pct * C;
+      const el = document.getElementById(id);
+      el.style.strokeDasharray  = `${dash} ${C - dash}`;
+      el.style.strokeDashoffset = -prevOffset;
+      return prevOffset + dash;
+    }
+
+    offset = setArc('arc-pi',  piPct,  offset);
+    offset = setArc('arc-tax', taxPct, offset);
+    offset = setArc('arc-ins', insPct, offset);
+    offset = setArc('arc-hoa', hoaPct, offset);
+  }
+
+  // Sync range <-> number inputs
+  function syncPriceRange() {
+    const price = parseFloat(document.getElementById('home-price').value) || 0;
+    document.getElementById('range-price').value = Math.min(price, 2000000);
+    document.getElementById('lbl-price').textContent = fmt(price);
+    // keep down payment % stable
+    const pct = parseFloat(document.getElementById('range-down').value);
+    const newDown = Math.round(price * pct / 100 / 1000) * 1000;
+    document.getElementById('down-payment').value = newDown;
+    document.getElementById('lbl-down').textContent = `${fmt(newDown)} (${pct}%)`;
+    calculate();
+  }
+
+  function syncDownRange() {
+    const price = parseFloat(document.getElementById('home-price').value) || 0;
+    const down  = parseFloat(document.getElementById('down-payment').value) || 0;
+    const pct   = price > 0 ? Math.round((down / price) * 100) : 0;
+    document.getElementById('range-down').value = pct;
+    document.getElementById('lbl-down').textContent = `${fmt(down)} (${pct}%)`;
+    calculate();
+  }
+
+  document.getElementById('range-price').addEventListener('input', function() {
+    const v = parseFloat(this.value);
+    document.getElementById('home-price').value = v;
+    document.getElementById('lbl-price').textContent = fmt(v);
+    syncPriceRange();
+  });
+
+  document.getElementById('range-down').addEventListener('input', function() {
+    const price = parseFloat(document.getElementById('home-price').value) || 0;
+    const pct   = parseFloat(this.value);
+    const down  = Math.round(price * pct / 100 / 1000) * 1000;
+    document.getElementById('down-payment').value = down;
+    document.getElementById('lbl-down').textContent = `${fmt(down)} (${pct}%)`;
+    calculate();
+  });
+
+  document.getElementById('range-rate').addEventListener('input', function() {
+    const v = parseFloat(this.value);
+    document.getElementById('interest-rate').value = v;
+    document.getElementById('lbl-rate').textContent = v + '%';
+    calculate();
+  });
+
+  document.getElementById('home-price').addEventListener('input', syncPriceRange);
+  document.getElementById('down-payment').addEventListener('input', syncDownRange);
+
+  document.getElementById('interest-rate').addEventListener('input', function() {
+    document.getElementById('range-rate').value = this.value;
+    document.getElementById('lbl-rate').textContent = this.value + '%';
+    calculate();
+  });
+
+  document.getElementById('property-tax').addEventListener('input', function() {
+    document.getElementById('lbl-tax').textContent = fmt(this.value);
+    calculate();
+  });
+
+  document.getElementById('home-insurance').addEventListener('input', function() {
+    document.getElementById('lbl-ins').textContent = fmt(this.value);
+    calculate();
+  });
+
+  document.getElementById('hoa').addEventListener('input', function() {
+    document.getElementById('lbl-hoa').textContent = fmt(this.value);
+    calculate();
+  });
+
+  document.getElementById('loan-term').addEventListener('change', calculate);
+
+  // Init on load
+  calculate();
+</script>
+</body>
+</html>

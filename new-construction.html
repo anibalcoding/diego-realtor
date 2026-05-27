@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Construction Guide | Diego Cortes — Realtor® | DFW</title>
+<meta name="description" content="Buying a new construction home in DFW? Diego Cortes walks you through every step — from choosing a builder to closing day — so you're never negotiating alone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide-hero {
+    background: var(--navy);
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .guide-hero .section-eyebrow { justify-content: center; }
+  .guide-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .guide-hero h1 em { font-style: italic; color: var(--gold); }
+  .guide-hero p {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .guide-body { padding: 72px 0 80px; }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .guide-sidebar { position: sticky; top: 88px; }
+  .sidebar-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+  }
+  .sidebar-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .sidebar-nav a {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-600);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--gray-100);
+    transition: color .2s;
+  }
+  .sidebar-nav a:last-child { border-bottom: none; }
+  .sidebar-nav a:hover { color: var(--gold); }
+  .sidebar-nav a::before { content: '→ '; opacity: .5; }
+
+  .cta-sidebar {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+  }
+  .cta-sidebar p {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .cta-sidebar strong { color: var(--white); }
+  .cta-sidebar .btn-primary { width: 100%; justify-content: center; font-size: 13px; }
+
+  .guide-main h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 52px 0 16px;
+    padding-top: 8px;
+  }
+  .guide-main h2:first-child { margin-top: 0; }
+  .guide-main h2 em { font-style: italic; color: var(--gold); }
+  .guide-main p {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .guide-main strong { color: var(--gray-800); }
+
+  .tip-box {
+    background: var(--gold-pale);
+    border: 1.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .tip-box strong { color: var(--navy); }
+
+  .warning-box {
+    background: #fff8f0;
+    border: 1.5px solid #f59e0b;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .warning-box strong { color: #92400e; }
+
+  .check-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+  .check-list li {
+    font-size: 14px; color: var(--gray-600); padding-left: 24px; position: relative; line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+  }
+
+  /* process timeline */
+  .process-timeline { margin: 28px 0; }
+  .process-phase {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .process-phase-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--navy);
+    cursor: pointer;
+  }
+  .phase-num {
+    width: 32px; height: 32px;
+    background: var(--gold);
+    color: var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px;
+    flex-shrink: 0;
+  }
+  .phase-title { font-size: 15px; font-weight: 500; color: var(--white); flex: 1; }
+  .phase-timeline { font-size: 12px; color: var(--gold); white-space: nowrap; }
+  .process-phase-body {
+    padding: 24px;
+  }
+  .process-phase-body p { font-size: 14px; color: var(--gray-600); line-height: 1.75; margin: 0 0 10px; }
+  .process-phase-body p:last-child { margin: 0; }
+
+  /* vs table */
+  .vs-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 13px; }
+  .vs-table th {
+    padding: 11px 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: .04em;
+  }
+  .vs-table th:first-child { background: var(--gray-100); color: var(--gray-600); }
+  .vs-table th:nth-child(2) { background: var(--navy); color: var(--white); }
+  .vs-table th:nth-child(3) { background: var(--gold-pale); color: var(--navy); }
+  .vs-table td { padding: 11px 16px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); vertical-align: top; }
+  .vs-table tr:last-child td { border-bottom: none; }
+  .vs-table td:first-child { font-weight: 500; color: var(--navy); background: var(--cream); }
+
+  /* pitfall cards */
+  .pitfalls-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .pitfall-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border-top: 3px solid #e85d5d;
+  }
+  .pitfall-card h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .pitfall-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin: 0; }
+
+  /* upgrade guide */
+  .upgrade-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .upgrade-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .upgrade-card h4 { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .upgrade-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin: 0; }
+  .upgrade-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+  .badge-do { background: #dcfce7; color: #166534; }
+  .badge-skip { background: #fee2e2; color: #991b1b; }
+
+  @media (max-width: 900px) {
+    .guide-layout { grid-template-columns: 1fr; }
+    .guide-sidebar { position: static; }
+    .pitfalls-grid, .upgrade-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="guide-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">DFW New Builds</div>
+    <h1>Buying <em>New Construction</em><br>in DFW</h1>
+    <p>A step-by-step walkthrough of the new construction process — so you know exactly what to expect from model home to move-in day.</p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="guide-body">
+  <div class="container">
+    <div class="guide-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="guide-main">
+
+        <h2 id="overview">New Construction Is Booming <em>in DFW</em></h2>
+        <p>Dallas–Fort Worth has been one of the most active new construction markets in the United States for years. In 2025 alone, DFW issued more single-family building permits than almost any other metro. Fast-growing cities like Frisco, McKinney, Celina, Forney, Prosper, and Mansfield are ringed with master-planned communities where builders are putting up hundreds of homes per year.</p>
+        <p>The appeal is obvious: brand-new home, builder warranty, modern floor plans, energy-efficient systems, and often the ability to customize finishes to your taste. But the process of buying new construction is fundamentally different from buying a resale — and buyers who walk into a builder's sales office unprepared often leave with regret.</p>
+
+        <div class="warning-box">
+          <strong>The #1 thing to know before visiting a model home:</strong> The builder's sales representative works for the builder — not for you. They are professional salespeople whose job is to sell you upgrades and protect the builder's margins. Bringing your own buyer's agent costs you nothing and levels the playing field completely.
+        </div>
+
+        <h2 id="newvs">New Construction vs. <em>Resale: At a Glance</em></h2>
+
+        <div style="overflow-x:auto;">
+          <table class="vs-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>New Construction</th>
+                <th>Resale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Condition</td>
+                <td>Brand new, builder warranty</td>
+                <td>Varies — inspection required</td>
+              </tr>
+              <tr>
+                <td>Customization</td>
+                <td>Choose finishes, sometimes floor plan</td>
+                <td>What you see is what you get</td>
+              </tr>
+              <tr>
+                <td>Timeline</td>
+                <td>3–12 months to build (can close on spec home faster)</td>
+                <td>30–45 days typical</td>
+              </tr>
+              <tr>
+                <td>Price negotiation</td>
+                <td>Limited — builders rarely move on price; negotiate on upgrades or closing costs</td>
+                <td>Full negotiation on price, repairs, terms</td>
+              </tr>
+              <tr>
+                <td>HOA</td>
+                <td>Almost always required in master-planned communities</td>
+                <td>Varies by neighborhood</td>
+              </tr>
+              <tr>
+                <td>Immediate move-in</td>
+                <td>Only with spec (already-built) homes</td>
+                <td>Typically 30–45 days post-contract</td>
+              </tr>
+              <tr>
+                <td>Hidden surprises</td>
+                <td>Lower risk — new materials, new systems</td>
+                <td>Higher risk — requires thorough inspection</td>
+              </tr>
+              <tr>
+                <td>Taxes &amp; fees</td>
+                <td>Often higher MUD/PID taxes in new communities</td>
+                <td>Standard property taxes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="process">The New Construction <em>Process, Step by Step</em></h2>
+        <p>Here's what the full journey looks like — from walking into a model home to turning the key on closing day.</p>
+
+        <div class="process-timeline">
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">1</div>
+              <div class="phase-title">Research Builders &amp; Communities</div>
+              <div class="phase-timeline">Weeks 1–2</div>
+            </div>
+            <div class="process-phase-body">
+              <p>Start by identifying which cities and communities fit your budget, commute, and lifestyle. DFW has dozens of active master-planned communities. Popular ones include Edgestone at Legacy (Frisco), Star Trail (Prosper), Light Farms (Celina), and Heartland (Forney).</p>
+              <p>Research the builders active in those communities. The major builders in DFW include D.R. Horton, Lennar, Perry Homes, David Weekley, Highland Homes, Coventry Homes, and Pulte. Each has different price points, quality levels, and reputations. Ask your agent for honest feedback on each builder's track record in the specific community you're considering — quality can vary even within the same builder brand.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">2</div>
+              <div class="phase-title">Register Your Agent Before the First Visit</div>
+              <div class="phase-timeline">Before any model home visit</div>
+            </div>
+            <div class="process-phase-body">
+              <p>This is critical. Most builders require that your buyer's agent register you as their client on your very first visit. If you walk into a model home without your agent and then try to add them later, many builders will refuse — which means you'd be unrepresented for the entire transaction.</p>
+              <p>Having Diego registered as your agent costs you nothing. The builder pays the buyer's agent commission from their own margins. You get a professional advocate who knows how to read the builder contract, negotiate upgrades, and push back when needed — at zero additional cost to you.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">3</div>
+              <div class="phase-title">Choose Your Lot &amp; Floor Plan</div>
+              <div class="phase-timeline">Weeks 2–4</div>
+            </div>
+            <div class="process-phase-body">
+              <p>If you're building from scratch (not buying a spec home), you'll select a lot and a base floor plan. Lot selection matters more than most buyers realize: corner lots, lots backing to green space, and lots on quieter cul-de-sacs all carry premiums — but some of those premiums are negotiable. Avoid lots directly behind commercial property, next to retention ponds with poor drainage, or at the end of collector roads.</p>
+              <p>Study the floor plan carefully in person, not just on paper. Walk the framed structure during construction if possible. The builder's model home is staged to make every room look larger — bring a tape measure.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">4</div>
+              <div class="phase-title">Sign the Builder Contract</div>
+              <div class="phase-timeline">Week 3–5</div>
+            </div>
+            <div class="process-phase-body">
+              <p>Builder contracts are written by the builder's lawyers to protect the builder. They are not the standard TREC contracts used in resale transactions — and they are not buyer-friendly by default. Key things to watch:</p>
+              <p><strong>Earnest money:</strong> Builders typically require 1–3% earnest money, and the conditions under which you can get it back are narrower than in resale. Read the termination and refund clauses carefully. <strong>Change orders:</strong> Any modifications after signing can be expensive and may push your closing date. <strong>Closing date flexibility:</strong> Builders often have the right to extend the closing date due to construction delays — without penalty to them. Make sure your own rate lock and living situation can accommodate a delay.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">5</div>
+              <div class="phase-title">Visit the Design Center</div>
+              <div class="phase-timeline">Week 4–6</div>
+            </div>
+            <div class="process-phase-body">
+              <p>After signing, you'll visit the builder's design center to select finishes: flooring, countertops, cabinets, fixtures, paint, and more. This is where buyers often overspend. Design centers are beautifully staged showrooms designed to make upgrades feel necessary. A $2 upgrade per square foot sounds small — across 2,400 sq ft, it's $4,800.</p>
+              <p>Come with a clear budget for upgrades before you arrive. Focus on structural upgrades (larger windows, extended covered patio, 3-car garage, extra bedrooms) that are hard to add later. Skip cosmetic upgrades (cabinet handles, backsplash tile, paint colors) that you can DIY more affordably after closing.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">6</div>
+              <div class="phase-title">Finance Through Your Own Lender</div>
+              <div class="phase-timeline">Weeks 1–6 (ongoing)</div>
+            </div>
+            <div class="process-phase-body">
+              <p>Builders will strongly encourage — sometimes pressure — you to use their in-house or preferred lender. In exchange, they may offer upgrade credits ($5,000–$15,000 is common) or closing cost assistance. This can be a good deal, but not always. The in-house lender's rate may be higher than what you'd get on the open market, which costs you far more over 30 years than a one-time credit.</p>
+              <p>Get a competing quote from an outside lender before accepting any builder incentive tied to their preferred lender. Your agent can help you run the math on whether the credit makes sense after accounting for the rate difference.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">7</div>
+              <div class="phase-title">Walk-Throughs During Construction</div>
+              <div class="phase-timeline">Months 2–8</div>
+            </div>
+            <div class="process-phase-body">
+              <p>Most builders allow buyer walk-throughs at key construction milestones: framing, pre-drywall, and before closing. Attend every one. The pre-drywall walk is especially important — it's your last chance to see the electrical, plumbing, and insulation before the walls go up.</p>
+              <p>Bring a flashlight and a notepad. Note anything that looks off and send a written summary to your builder's representative the same day. Creating a paper trail matters if issues arise later.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">8</div>
+              <div class="phase-title">Independent Home Inspection</div>
+              <div class="phase-timeline">1–2 weeks before closing</div>
+            </div>
+            <div class="process-phase-body">
+              <p>Hire your own independent inspector — not the builder's. "It's brand new" is not a substitute for an inspection. New construction defects are common: improper grading, inadequate insulation, HVAC issues, plumbing connections, missing flashing. New homes can and do have serious problems that the builder will fix if caught before closing but won't acknowledge after.</p>
+              <p>A third-party inspection typically costs $350–$500 and is one of the best investments you can make. Some buyers also hire a structural engineer for an additional review on slab foundations, which is common in DFW.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">9</div>
+              <div class="phase-title">Final Walk-Through &amp; Punch List</div>
+              <div class="phase-timeline">1–3 days before closing</div>
+            </div>
+            <div class="process-phase-body">
+              <p>The final walk-through is your last chance before closing to verify the home is complete and that all previously noted items have been addressed. Bring your inspection report and your list of any outstanding items. Document everything with photos. A "punch list" of incomplete items should be resolved before closing — or you should have a written agreement from the builder committing to a completion timeline with specific dates.</p>
+              <p>Don't close on a home with significant outstanding items and a verbal promise that they'll be fixed. Once you close, you lose your leverage.</p>
+            </div>
+          </div>
+          <div class="process-phase">
+            <div class="process-phase-header">
+              <div class="phase-num">10</div>
+              <div class="phase-title">Closing Day</div>
+              <div class="phase-timeline">Building complete</div>
+            </div>
+            <div class="process-phase-body">
+              <p>Closing on new construction works the same as resale — you'll sign loan documents, pay closing costs, and receive the keys. One difference: make sure you receive all documentation for your builder warranties, appliance manuals, HOA onboarding documents, and any utility setup information.</p>
+              <p>Texas typically requires structural warranties of at least 10 years and workmanship warranties of 1–2 years. Understand exactly what is and isn't covered before you close.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="upgrades">Which Upgrades Are <em>Worth It</em></h2>
+        <p>Design center markups are typically 2–4x what you'd pay on the open market for the same material. Here's a quick guide on what to spend your upgrade budget on and what to skip.</p>
+
+        <div class="upgrade-grid">
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-do">Do It</div>
+            <h4>Structural upgrades</h4>
+            <p>Extra windows, extended patio cover, 3-car garage, bonus room, media room — anything that requires a framing or foundation change. These are impossible to add cheaply later.</p>
+          </div>
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-do">Do It</div>
+            <h4>Electrical upgrades</h4>
+            <p>Extra outlets, pre-wire for ceiling fans in all rooms, EV charger outlet in garage, outdoor outlet placement. Much cheaper to do during construction than after drywall is up.</p>
+          </div>
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-do">Do It</div>
+            <h4>Insulation upgrades</h4>
+            <p>Texas summers are brutal. Upgrading to spray foam in the attic or higher R-value insulation pays back in lower electricity bills quickly. Not glamorous, but valuable.</p>
+          </div>
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-do">Do It</div>
+            <h4>Plumbing rough-ins</h4>
+            <p>If you want an outdoor kitchen, water softener, or extra bathroom someday, rough-in the plumbing now while walls are open. Adding it later means tearing into finished walls.</p>
+          </div>
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-skip">Skip It</div>
+            <h4>Cabinet hardware</h4>
+            <p>Builder pulls cost $5–$15 each from a hardware store. The design center charges $50–$200 each. Buy the builder standard, then replace after closing.</p>
+          </div>
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-skip">Skip It</div>
+            <h4>Backsplash tile</h4>
+            <p>A standard builder backsplash can be retiled for $500–$1,500 by any tile contractor. The design center markup for an upgraded tile is usually $3,000–$6,000 for the same square footage.</p>
+          </div>
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-skip">Skip It</div>
+            <h4>Paint colors</h4>
+            <p>You can repaint a room yourself for $50 in materials. Paying the builder $300–$600 per room for an accent wall color is rarely worth it.</p>
+          </div>
+          <div class="upgrade-card">
+            <div class="upgrade-badge badge-skip">Skip It</div>
+            <h4>Window treatments</h4>
+            <p>Builders rarely offer good value on blinds or shutters. Purchase and install from a third-party vendor after closing for significantly better selection and pricing.</p>
+          </div>
+        </div>
+
+        <h2 id="pitfalls">Common New Construction <em>Pitfalls to Avoid</em></h2>
+
+        <div class="pitfalls-grid">
+          <div class="pitfall-card">
+            <h4>Ignoring MUD and PID taxes</h4>
+            <p>Many new DFW communities are financed through Municipal Utility Districts (MUDs) or Public Improvement Districts (PIDs). These add a separate tax — sometimes 0.5%–1%+ of the home value annually — on top of standard property taxes. They can last 15–30 years. Always ask what the total tax burden is, not just the base county rate.</p>
+          </div>
+          <div class="pitfall-card">
+            <h4>Not shopping lenders</h4>
+            <p>Accepting the builder's preferred lender without comparing rates can cost you tens of thousands over the loan term. The builder's incentive credit is real — but always compare total cost, not just closing day cash.</p>
+          </div>
+          <div class="pitfall-card">
+            <h4>Skipping the independent inspection</h4>
+            <p>The builder has its own inspector who works for them. "It passed city inspection" is not sufficient — city inspectors check for code compliance, not quality of workmanship. Hire your own inspector. Always.</p>
+          </div>
+          <div class="pitfall-card">
+            <h4>Over-upgrading for the neighborhood</h4>
+            <p>Maxing out upgrades in an entry-level community can make your home the most expensive on the block — which hurts resale value and appraisal. Match your upgrade level to the surrounding homes in the community.</p>
+          </div>
+          <div class="pitfall-card">
+            <h4>Not locking your rate in time</h4>
+            <p>New construction timelines slip. If your rate lock expires before closing and rates have risen, you may face a significantly higher payment than you planned. Talk to your lender about float-down lock options for longer build timelines.</p>
+          </div>
+          <div class="pitfall-card">
+            <h4>Assuming the model home = your home</h4>
+            <p>Model homes are fully upgraded showrooms. Every finish in the model is typically a premium upgrade. The base home looks different. Always ask the sales agent to show you a base model or spec home at the standard tier — not just the model.</p>
+          </div>
+        </div>
+
+        <h2 id="warranty">Understanding Your <em>Builder Warranty</em></h2>
+        <p>One of the primary advantages of new construction is the builder warranty. Here's what Texas law requires and what to look for in your builder's specific warranty documents.</p>
+        <ul class="check-list">
+          <li><strong>1-year workmanship warranty</strong> — Covers defects in materials and workmanship. Report any issues promptly during this window — builders are required to respond.</li>
+          <li><strong>2-year systems warranty</strong> — Covers plumbing, electrical, HVAC, and other mechanical systems. If something fails in year two, you have recourse.</li>
+          <li><strong>10-year structural warranty</strong> — Covers major structural defects (foundation, load-bearing walls, roof framing). This is the most valuable protection.</li>
+          <li><strong>Appliance warranties</strong> — Most new-construction appliances come with manufacturer warranties separate from the builder's warranty. Register each appliance individually after closing to activate these.</li>
+          <li><strong>Document every service request in writing</strong> — Call the builder's warranty hotline, but always follow up with an email. Verbal requests have a way of disappearing. Written ones don't.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Pro tip from Diego:</strong> Schedule a warranty inspection about 11 months into ownership — just before your 1-year workmanship warranty expires. Hire the same independent inspector who did your pre-closing inspection. Any issues discovered can be submitted to the builder while you're still under warranty coverage.
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="guide-sidebar">
+        <div class="sidebar-card">
+          <h3>Contents</h3>
+          <nav class="sidebar-nav">
+            <a href="#overview">New Construction in DFW</a>
+            <a href="#newvs">New vs. Resale</a>
+            <a href="#process">Step-by-Step Process</a>
+            <a href="#upgrades">Which Upgrades Are Worth It</a>
+            <a href="#pitfalls">Common Pitfalls</a>
+            <a href="#warranty">Builder Warranty Guide</a>
+          </nav>
+        </div>
+        <div class="cta-sidebar">
+          <p><strong>Diego specializes in new construction.</strong> He knows the builders, the communities, and the contracts — so you don't walk in unprepared.</p>
+          <a href="index.html#contact" class="btn-primary">Book a Free Call →</a>
+        </div>
+        <div class="sidebar-card" style="margin-top:20px;">
+          <h3>Helpful Tools</h3>
+          <nav class="sidebar-nav">
+            <a href="buyers-guide.html">Buyer's Guide</a>
+            <a href="mortgage-calculator.html">Mortgage Calculator</a>
+            <a href="relocation-guide.html">Relocation Guide</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes & Co. Realty Group — DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes & Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">DMCA</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
