@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DMCA Policy — Cortes & Co. Realty Group</title>
+  <meta name="description" content="DMCA Policy for cortesandcorealestate.com — how to report copyright infringement and our response process.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .policy-hero {
+      background: var(--navy);
+      padding: 120px 0 56px;
+      text-align: center;
+    }
+    .policy-hero .section-eyebrow { justify-content: center; }
+    .policy-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .policy-hero h1 em { font-style: italic; color: var(--gold); }
+    .policy-meta {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      margin-top: 8px;
+    }
+    .policy-meta span { color: rgba(255,255,255,.65); }
+
+    .policy-body { padding: 64px 0 80px; }
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .policy-sidebar { position: sticky; top: 88px; }
+    .sidebar-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 20px;
+    }
+    .sidebar-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      margin: 0; padding: 0;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .toc li:last-child { border-bottom: none; }
+    .toc a {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--gray-600);
+      padding: 7px 0;
+      transition: color .2s;
+      line-height: 1.4;
+    }
+    .toc a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .toc a:hover { color: var(--navy); }
+
+    .policy-main > p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .policy-main section {
+      margin-top: 48px;
+      padding-top: 8px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .section-num {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .policy-main h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .policy-main p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .policy-main p:last-child { margin-bottom: 0; }
+    .policy-main ul, .policy-main ol {
+      margin: 12px 0 16px 0;
+      padding-left: 20px;
+    }
+    .policy-main li {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .policy-main li:last-child { margin-bottom: 0; }
+    .policy-main strong { color: var(--gray-800); }
+    .policy-main a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    .policy-main a:hover { color: var(--gold-light); }
+
+    .highlight-box {
+      background: var(--gold-pale);
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    .highlight-box strong { color: var(--navy); }
+    .highlight-box a { color: var(--gold); }
+
+    .warning-box {
+      background: #fff8f0;
+      border: 1.5px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    .warning-box strong { color: #92400e; }
+
+    /* notice template */
+    .notice-template {
+      background: var(--cream);
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+    .nt-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .notice-template ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .notice-template li {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+    .notice-template li:last-child { margin-bottom: 0; }
+    .notice-template strong { color: var(--navy); display: block; margin-bottom: 2px; }
+
+    /* process steps */
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 20px 0;
+    }
+    .process-step {
+      display: flex;
+      gap: 16px;
+      padding-bottom: 20px;
+      position: relative;
+    }
+    .process-step:last-child { padding-bottom: 0; }
+    .process-step::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 36px;
+      bottom: 0;
+      width: 2px;
+      background: var(--gray-200);
+    }
+    .process-step:last-child::before { display: none; }
+    .process-step-num {
+      width: 32px; height: 32px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 13px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .process-step-content {
+      padding-top: 6px;
+      flex: 1;
+    }
+    .process-step-content strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .process-step-content p {
+      font-size: 14px !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* agent / contact card */
+    .agent-card, .contact-card {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 48px;
+    }
+    .agent-card h3, .contact-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .agent-card .sub, .contact-card .sub {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 0;
+    }
+    .agent-card p, .contact-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .agent-card p:last-child, .contact-card p:last-child { margin-bottom: 0; }
+    .agent-card strong, .contact-card strong { color: var(--white) !important; }
+    .agent-card a, .contact-card a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    .agent-card a:hover, .contact-card a:hover { color: var(--gold-light); }
+    .agent-card .divider, .contact-card .divider {
+      width: 40px; height: 2px;
+      background: var(--gold);
+      margin: 20px 0;
+    }
+
+    .policy-disclaimer {
+      font-size: 13px;
+      color: var(--gray-400);
+      text-align: center;
+      margin-top: 32px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .policy-layout { grid-template-columns: 1fr; }
+      .policy-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="policy-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">Legal</div>
+    <h1><em>DMCA</em> Policy</h1>
+    <p class="policy-meta">Effective Date: <span>June 2, 2026</span> &nbsp;·&nbsp; Last Updated: <span>June 2, 2026</span></p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="policy-body">
+  <div class="container">
+    <div class="policy-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="policy-main">
+
+        <p>This DMCA (Digital Millennium Copyright Act) Policy explains how <strong>Cortes & Co. Realty Group</strong> (Diego Cortes, Licensed Texas Real Estate Sales Agent) handles copyright infringement claims related to content appearing on <strong>cortesandcorealestate.com</strong> (the "Site"), and how to report if you believe your copyrighted work has been used on our Site without authorization.</p>
+
+        <!-- 1 -->
+        <section id="overview">
+          <span class="section-num">01</span>
+          <h2>Overview</h2>
+          <p>Cortes & Co. Realty Group respects the intellectual property rights of others and expects users and third parties to do the same. We comply with the provisions of the Digital Millennium Copyright Act (DMCA), 17 U.S.C. § 512, which provides a process for copyright owners to report alleged infringement and for service providers to respond.</p>
+          <p>If you believe that any content on this Site infringes your copyright, please follow the process described in this policy to submit a proper DMCA Takedown Notice to our Designated Copyright Agent.</p>
+        </section>
+
+        <!-- 2 -->
+        <section id="our-content">
+          <span class="section-num">02</span>
+          <h2>Our Intellectual Property</h2>
+          <p>The following content on this Site is owned by or licensed to Cortes & Co. Realty Group and is protected by U.S. copyright law:</p>
+          <ul>
+            <li>Original photography of Diego Cortes and branded imagery</li>
+            <li>Blog articles and written content authored by Diego Cortes or on his behalf</li>
+            <li>The Site's design, layout, and visual identity</li>
+            <li>Neighborhood guide descriptions written for this Site</li>
+            <li>Marketing copy, taglines, and brand messaging</li>
+            <li>The Cortes & Co. Realty Group name and logo</li>
+          </ul>
+          <p>Unauthorized reproduction, distribution, or use of any of these materials without our express written permission is prohibited and may constitute copyright infringement. To request permission to use our content, please contact us using the information in Section 10.</p>
+        </section>
+
+        <!-- 3 -->
+        <section id="third-party-content">
+          <span class="section-num">03</span>
+          <h2>Third-Party Content We Use</h2>
+          <p>This Site includes content sourced from third parties. We use this content in accordance with applicable licenses, terms of service, and copyright law:</p>
+          <ul>
+            <li><strong>MLS Property Listings & Photography:</strong> Property listing data and photographs referenced on this Site may originate from the Multiple Listing Service (MLS). This content is used in compliance with MLS data use policies and is the property of the respective listing brokers and photographers. We do not claim ownership of MLS content.</li>
+            <li><strong>Zillow:</strong> Links to Zillow property listings are external links. We do not reproduce Zillow's content; visitors are directed to Zillow's own platform.</li>
+            <li><strong>Neighborhood Resource Links:</strong> The Site links to neighborhood guides from third-party sources such as D Magazine, Niche, and Redfin. These are outbound links to external sites and we do not reproduce their copyrighted content.</li>
+            <li><strong>Google Maps:</strong> Embedded or referenced maps are provided through Google's licensed APIs.</li>
+            <li><strong>Client Review Content:</strong> Google Reviews displayed on this Site are attributed to verified reviewers and reproduced in accordance with Google's policies.</li>
+          </ul>
+          <p>If you believe any third-party content on this Site has been used improperly, please notify us using the process in Section 4.</p>
+        </section>
+
+        <!-- 4 -->
+        <section id="report-infringement">
+          <span class="section-num">04</span>
+          <h2>How to Report Copyright Infringement</h2>
+          <p>If you are a copyright owner (or authorized to act on behalf of one) and believe that content on cortesandcorealestate.com infringes your copyright, you may submit a DMCA Takedown Notice to our Designated Copyright Agent.</p>
+
+          <div class="highlight-box">
+            <strong>Before submitting a notice,</strong> please verify that the content you believe is infringing actually appears on <strong>cortesandcorealestate.com</strong> and is not simply linked to from an external source. We can only act on content we host or control.
+          </div>
+
+          <p>Your notice must meet the requirements in Section 5 below to be considered valid under the DMCA. Incomplete or deficient notices may not be acted upon.</p>
+          <p>Submit your DMCA Takedown Notice to our Designated Copyright Agent using the contact information in Section 10.</p>
+        </section>
+
+        <!-- 5 -->
+        <section id="notice-requirements">
+          <span class="section-num">05</span>
+          <h2>Requirements for a Valid DMCA Notice</h2>
+          <p>To be valid under 17 U.S.C. § 512(c)(3), your written DMCA Takedown Notice must include all of the following elements:</p>
+
+          <div class="notice-template">
+            <div class="nt-title">Required Elements — DMCA Takedown Notice</div>
+            <ol>
+              <li>
+                <strong>Identification of the copyrighted work</strong>
+                A description or copy of the copyrighted work you claim has been infringed. If multiple works are covered by a single notice, you may provide a representative list.
+              </li>
+              <li>
+                <strong>Identification of the infringing material</strong>
+                The specific URL(s) or location(s) on cortesandcorealestate.com where the allegedly infringing content appears, with sufficient detail for us to locate it.
+              </li>
+              <li>
+                <strong>Your contact information</strong>
+                Your full legal name, mailing address, telephone number, and email address.
+              </li>
+              <li>
+                <strong>Good faith statement</strong>
+                A statement that you have a good faith belief that the use of the material is not authorized by the copyright owner, its agent, or the law.
+              </li>
+              <li>
+                <strong>Accuracy statement</strong>
+                A statement that the information in the notification is accurate, and under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
+              </li>
+              <li>
+                <strong>Physical or electronic signature</strong>
+                Your physical or electronic signature (typing your full name is acceptable as an electronic signature).
+              </li>
+            </ol>
+          </div>
+
+          <p>Notices that are incomplete or do not meet these requirements may not be processed. We reserve the right to request additional information to verify a claim.</p>
+        </section>
+
+        <!-- 6 -->
+        <section id="counter-notice">
+          <span class="section-num">06</span>
+          <h2>Counter-Notification Process</h2>
+          <p>If you believe that content you posted or own was removed or disabled as a result of a DMCA notice that was filed in error or based on misidentification, you may submit a Counter-Notification to our Designated Copyright Agent.</p>
+          <p>A valid Counter-Notification must include:</p>
+
+          <div class="notice-template">
+            <div class="nt-title">Required Elements — Counter-Notification</div>
+            <ol>
+              <li>
+                <strong>Identification of removed content</strong>
+                A description of the material that was removed and the location (URL) where it appeared before removal.
+              </li>
+              <li>
+                <strong>Statement of good faith belief</strong>
+                A statement under penalty of perjury that you have a good faith belief that the material was removed or disabled as a result of mistake or misidentification.
+              </li>
+              <li>
+                <strong>Your contact information</strong>
+                Your full legal name, mailing address, telephone number, and email address.
+              </li>
+              <li>
+                <strong>Consent to jurisdiction</strong>
+                A statement that you consent to the jurisdiction of the Federal District Court for the judicial district in which your address is located (or the Northern District of Texas if your address is outside the U.S.), and that you will accept service of process from the original complainant.
+              </li>
+              <li>
+                <strong>Physical or electronic signature</strong>
+                Your physical or electronic signature.
+              </li>
+            </ol>
+          </div>
+
+          <p>Upon receiving a valid Counter-Notification, we will forward it to the original complainant. If the complainant does not file a court action within 10 to 14 business days, we may restore the removed content at our discretion.</p>
+
+          <div class="warning-box">
+            <strong>Legal Warning:</strong> Submitting a false Counter-Notification may expose you to civil liability under 17 U.S.C. § 512(f). We recommend consulting an attorney before submitting a Counter-Notification.
+          </div>
+        </section>
+
+        <!-- 7 -->
+        <section id="process">
+          <span class="section-num">07</span>
+          <h2>Our Response Process</h2>
+          <p>Upon receiving a complete and valid DMCA Takedown Notice, we will follow this process:</p>
+
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step-num">1</div>
+              <div class="process-step-content">
+                <strong>Review the Notice</strong>
+                <p>We will review the notice to confirm it meets the requirements of 17 U.S.C. § 512(c)(3). Incomplete notices will not be acted upon until corrected.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">2</div>
+              <div class="process-step-content">
+                <strong>Remove or Disable Access</strong>
+                <p>If the notice is valid, we will promptly remove or disable access to the allegedly infringing material from our Site.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">3</div>
+              <div class="process-step-content">
+                <strong>Notify the Uploader</strong>
+                <p>We will notify the person who posted the content (if applicable) that the material has been removed and explain the DMCA counter-notification process.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">4</div>
+              <div class="process-step-content">
+                <strong>Counter-Notice Period</strong>
+                <p>We will allow 10–14 business days for the uploader to submit a Counter-Notification before potentially restoring content.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">5</div>
+              <div class="process-step-content">
+                <strong>Resolution</strong>
+                <p>If no Counter-Notification is received, the content remains removed. If a valid Counter-Notification is received and the complainant does not file court action within the allowed period, we may restore the content.</p>
+              </div>
+            </div>
+          </div>
+
+          <p>We aim to acknowledge receipt of DMCA notices within <strong>3 business days</strong> and to act on valid notices promptly.</p>
+        </section>
+
+        <!-- 8 -->
+        <section id="repeat-infringers">
+          <span class="section-num">08</span>
+          <h2>Repeat Infringer Policy</h2>
+          <p>In accordance with 17 U.S.C. § 512(i), Cortes & Co. Realty Group maintains a policy of terminating, in appropriate circumstances, the accounts or access of users who are determined to be repeat infringers of copyright.</p>
+          <p>We reserve the right to remove any content and terminate access to this Site for any person or entity that repeatedly infringes the intellectual property rights of others.</p>
+        </section>
+
+        <!-- 9 -->
+        <section id="false-claims">
+          <span class="section-num">09</span>
+          <h2>False Claims Warning</h2>
+          <div class="warning-box">
+            <strong>Important Legal Notice:</strong> Under 17 U.S.C. § 512(f), any person who knowingly and materially misrepresents that material or activity is infringing — or that material was removed by mistake or misidentification — may be subject to civil liability for damages, including costs and attorneys' fees. Do not submit a DMCA notice or Counter-Notification if you are not certain of the facts stated therein.
+          </div>
+          <p>We take false copyright claims seriously and reserve the right to pursue legal remedies against any person who submits a knowingly false DMCA notice.</p>
+        </section>
+
+        <!-- 10 -->
+        <section id="designated-agent">
+          <span class="section-num">10</span>
+          <h2>Designated Copyright Agent</h2>
+          <p>All DMCA Takedown Notices and Counter-Notifications must be submitted in writing to our Designated Copyright Agent. Notices sent to any other address or by any other means may not be received or acted upon.</p>
+          <p>Please note that under Section 512 of the DMCA, any notice of claimed infringement must be submitted to our Designated Agent to have legal effect. Contacting us by phone or through the general website contact form is not sufficient for formal DMCA purposes.</p>
+        </section>
+
+        <div class="agent-card">
+          <h3>Designated Copyright Agent</h3>
+          <p class="sub">For DMCA notices and counter-notifications only</p>
+          <div class="divider"></div>
+          <p><strong>Sales Agent:</strong> Diego Cortes, Licensed Texas Real Estate Sales Agent | TREC #0707825</p>
+          <p><strong>Team:</strong> Cortes &amp; Co. Realty Group</p>
+          <p><strong>Sponsoring Broker:</strong> DFW Elite Living, LLC</p>
+          <p><strong>Designated Broker:</strong> Joseph Garcia | TREC License #9008371</p>
+          <p><strong>Broker Address:</strong> 13155 Noel Rd #900, Dallas, TX 75240</p>
+          <p><strong>Phone:</strong> <a href="tel:4696005205">(469) 600-5205</a></p>
+          <p><strong>Website:</strong> <a href="https://cortesandcorealestate.com">cortesandcorealestate.com</a></p>
+          <div class="divider"></div>
+          <p style="font-size:13px; color:rgba(255,255,255,.45);">
+            DMCA notices must be submitted in writing and include all required elements listed in Section 5. Phone inquiries cannot be accepted for formal DMCA purposes. We aim to acknowledge receipt within 3 business days.
+          </p>
+        </div>
+
+        <p class="policy-disclaimer">
+          This DMCA Policy is provided for informational purposes. It does not constitute legal advice. If you have questions about copyright law or your specific situation, please consult a licensed attorney.
+        </p>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="policy-sidebar">
+        <div class="sidebar-card">
+          <h3>Table of Contents</h3>
+          <nav class="toc">
+            <ol>
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#our-content">Our Intellectual Property</a></li>
+              <li><a href="#third-party-content">Third-Party Content We Use</a></li>
+              <li><a href="#report-infringement">How to Report Copyright Infringement</a></li>
+              <li><a href="#notice-requirements">Requirements for a Valid DMCA Notice</a></li>
+              <li><a href="#counter-notice">Counter-Notification Process</a></li>
+              <li><a href="#process">Our Response Process</a></li>
+              <li><a href="#repeat-infringers">Repeat Infringer Policy</a></li>
+              <li><a href="#false-claims">False Claims Warning</a></li>
+              <li><a href="#designated-agent">Designated Copyright Agent</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes & Co. Realty Group — DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes & Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="DMCA.html">DMCA</a>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

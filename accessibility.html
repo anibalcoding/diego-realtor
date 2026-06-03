@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessibility Statement — Cortes & Co. Realty Group</title>
+  <meta name="description" content="Accessibility Statement for cortesandcorealestate.com — Cortes & Co. Realty Group's commitment to WCAG 2.1 AA and ADA compliance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .policy-hero {
+      background: var(--navy);
+      padding: 120px 0 56px;
+      text-align: center;
+    }
+    .policy-hero .section-eyebrow { justify-content: center; }
+    .policy-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .policy-hero h1 em { font-style: italic; color: var(--gold); }
+    .policy-meta {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      margin-top: 8px;
+    }
+    .policy-meta span { color: rgba(255,255,255,.65); }
+
+    .policy-body { padding: 64px 0 80px; }
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .policy-sidebar { position: sticky; top: 88px; }
+    .sidebar-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 20px;
+    }
+    .sidebar-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      margin: 0; padding: 0;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .toc li:last-child { border-bottom: none; }
+    .toc a {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--gray-600);
+      padding: 7px 0;
+      transition: color .2s;
+      line-height: 1.4;
+    }
+    .toc a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .toc a:hover { color: var(--navy); }
+
+    .policy-main > p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .policy-main section {
+      margin-top: 48px;
+      padding-top: 8px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .section-num {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .policy-main h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .policy-main h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 20px 0 10px;
+    }
+    .policy-main p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .policy-main p:last-child { margin-bottom: 0; }
+    .policy-main ul, .policy-main ol {
+      margin: 12px 0 16px 0;
+      padding-left: 20px;
+    }
+    .policy-main li {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .policy-main li:last-child { margin-bottom: 0; }
+    .policy-main strong { color: var(--gray-800); }
+    .policy-main a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    .policy-main a:hover { color: var(--gold-light); }
+
+    .highlight-box {
+      background: var(--gold-pale);
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    .highlight-box strong { color: var(--navy); }
+    .highlight-box a { color: var(--gold); }
+
+    /* conformance grid */
+    .conformance-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .conformance-item {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      border-top: 3px solid var(--gold);
+    }
+    .ci-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 6px;
+    }
+    .ci-value {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* issues table */
+    .issues-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13px;
+    }
+    .issues-table th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+    .issues-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-600);
+      vertical-align: middle;
+    }
+    .issues-table tr:last-child td { border-bottom: none; }
+    .issues-table tr:nth-child(even) td { background: var(--cream); }
+    .issues-table td:first-child { font-weight: 500; color: var(--navy); }
+
+    .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .status-in-progress { background: #fef3c7; color: #92400e; }
+    .status-planned { background: #dbeafe; color: #1e40af; }
+
+    /* contact card */
+    .contact-card {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 48px;
+    }
+    .contact-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .contact-card .sub {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 0;
+    }
+    .contact-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .contact-card strong { color: var(--white) !important; }
+    .contact-card a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    .contact-card a:hover { color: var(--gold-light); }
+    .contact-card .divider {
+      width: 40px; height: 2px;
+      background: var(--gold);
+      margin: 20px 0;
+    }
+
+    @media (max-width: 900px) {
+      .policy-layout { grid-template-columns: 1fr; }
+      .policy-sidebar { position: static; }
+      .conformance-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .conformance-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="policy-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">Legal</div>
+    <h1><em>Accessibility</em> Statement</h1>
+    <p class="policy-meta">Effective Date: <span>June 2, 2026</span> &nbsp;·&nbsp; Last Updated: <span>June 2, 2026</span></p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="policy-body">
+  <div class="container">
+    <div class="policy-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="policy-main">
+
+        <p>Cortes & Co. Realty Group is committed to ensuring that <strong>cortesandcorealestate.com</strong> is accessible to all people, including those with disabilities. We believe that every visitor — regardless of ability — deserves equal access to information about buying, selling, and investing in real estate in the Dallas–Fort Worth area.</p>
+
+        <!-- 1 -->
+        <section id="commitment">
+          <span class="section-num">01</span>
+          <h2>Our Commitment</h2>
+          <p>We are actively working to increase the accessibility of our Site and to ensure that it conforms to applicable accessibility standards. Our goal is to make cortesandcorealestate.com usable by the widest possible audience, including individuals who use assistive technologies such as screen readers, keyboard navigation, voice control software, and other adaptive tools.</p>
+          <p>Accessibility is not a one-time project — it is an ongoing effort. We review and improve our Site's accessibility on a regular basis.</p>
+        </section>
+
+        <!-- 2 -->
+        <section id="standards">
+          <span class="section-num">02</span>
+          <h2>Accessibility Standards</h2>
+          <p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong>, published by the World Wide Web Consortium (W3C). WCAG 2.1 Level AA is the widely accepted benchmark for web accessibility and is referenced in federal legal proceedings under the Americans with Disabilities Act (ADA).</p>
+
+          <div class="conformance-grid">
+            <div class="conformance-item">
+              <div class="ci-label">Target Standard</div>
+              <div class="ci-value">WCAG 2.1 AA</div>
+            </div>
+            <div class="conformance-item">
+              <div class="ci-label">ADA Compliance</div>
+              <div class="ci-value">Title III</div>
+            </div>
+            <div class="conformance-item">
+              <div class="ci-label">Texas Standard</div>
+              <div class="ci-value">Section 508</div>
+            </div>
+            <div class="conformance-item">
+              <div class="ci-label">Current Status</div>
+              <div class="ci-value">In Progress</div>
+            </div>
+          </div>
+
+          <p>WCAG 2.1 is organized around four core principles. An accessible website must be:</p>
+          <ul>
+            <li><strong>Perceivable</strong> — Information and user interface components must be presentable to users in ways they can perceive (e.g., alt text for images, captions for video).</li>
+            <li><strong>Operable</strong> — All functionality must be accessible via keyboard and not require actions users cannot perform (e.g., keyboard navigation, no time limits).</li>
+            <li><strong>Understandable</strong> — Content and operation of the interface must be understandable (e.g., clear labels, readable text, predictable navigation).</li>
+            <li><strong>Robust</strong> — Content must be interpreted reliably by a wide variety of assistive technologies, including current and future user agents.</li>
+          </ul>
+
+          <p>In addition to federal ADA requirements, Texas businesses are encouraged to follow accessibility guidelines consistent with <strong>Section 508 of the Rehabilitation Act</strong> as adopted in Texas state policy.</p>
+        </section>
+
+        <!-- 3 -->
+        <section id="measures">
+          <span class="section-num">03</span>
+          <h2>Measures We Take</h2>
+          <p>To support accessibility on cortesandcorealestate.com, we work toward the following:</p>
+
+          <h3>Text & Content</h3>
+          <ul>
+            <li>Providing descriptive alt text for all meaningful images</li>
+            <li>Using clear, plain-language content throughout the Site</li>
+            <li>Maintaining sufficient color contrast ratios between text and backgrounds</li>
+            <li>Using proper heading hierarchy (H1 → H2 → H3) for logical page structure</li>
+            <li>Avoiding reliance on color alone to convey meaning</li>
+          </ul>
+
+          <h3>Navigation & Interaction</h3>
+          <ul>
+            <li>Ensuring all interactive elements (links, buttons, forms) are accessible via keyboard</li>
+            <li>Providing visible focus indicators for keyboard users</li>
+            <li>Labeling all form fields clearly so screen readers can identify them</li>
+            <li>Ensuring the Site is navigable without requiring a mouse</li>
+          </ul>
+
+          <h3>Multimedia</h3>
+          <ul>
+            <li>Providing text alternatives for non-text content where feasible</li>
+            <li>Working toward captions and transcripts for video content</li>
+            <li>Ensuring any background video (such as the homepage hero video) does not autoplay audio and includes a pause mechanism</li>
+          </ul>
+
+          <h3>Technical</h3>
+          <ul>
+            <li>Using semantic HTML elements to support assistive technology parsing</li>
+            <li>Ensuring the Site is responsive and functional across devices and screen sizes</li>
+            <li>Testing with screen reader software on an ongoing basis</li>
+          </ul>
+        </section>
+
+        <!-- 4 -->
+        <section id="known-issues">
+          <span class="section-num">04</span>
+          <h2>Known Limitations</h2>
+          <p>While we strive for full WCAG 2.1 AA conformance, we acknowledge that some areas of the Site may not yet fully meet all accessibility standards. We are actively working to address these. Known limitations include:</p>
+
+          <div style="overflow-x:auto;">
+            <table class="issues-table" aria-label="Known accessibility limitations and their status">
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>Issue</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Homepage hero video</td>
+                  <td>Background video may not have a visible pause control for all users</td>
+                  <td><span class="status-badge status-in-progress">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td>Neighborhood image carousels</td>
+                  <td>Some image carousel controls may not be fully keyboard accessible</td>
+                  <td><span class="status-badge status-in-progress">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td>Embedded maps</td>
+                  <td>Third-party map embeds (Google Maps) may have limited accessibility</td>
+                  <td><span class="status-badge status-planned">Planned</span></td>
+                </tr>
+                <tr>
+                  <td>PDF documents</td>
+                  <td>Linked TREC PDF forms are third-party documents not under our control</td>
+                  <td><span class="status-badge status-planned">Third-Party</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>If you encounter an accessibility barrier not listed above, please let us know using the contact information in Section 8.</p>
+        </section>
+
+        <!-- 5 -->
+        <section id="assistive">
+          <span class="section-num">05</span>
+          <h2>Assistive Technology Compatibility</h2>
+          <p>cortesandcorealestate.com is designed to be compatible with the following assistive technologies and environments:</p>
+          <ul>
+            <li><strong>Screen Readers:</strong> NVDA, JAWS, VoiceOver (macOS/iOS), TalkBack (Android)</li>
+            <li><strong>Browsers:</strong> Current versions of Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge</li>
+            <li><strong>Keyboard Navigation:</strong> Full Tab/Shift+Tab navigation support</li>
+            <li><strong>Zoom:</strong> The Site is designed to be functional at up to 200% browser zoom without loss of content or functionality</li>
+            <li><strong>Voice Control:</strong> Compatible with Dragon NaturallySpeaking and similar tools</li>
+          </ul>
+          <p>We recommend using the latest version of your preferred browser and assistive technology for the best experience.</p>
+        </section>
+
+        <!-- 6 -->
+        <section id="third-party">
+          <span class="section-num">06</span>
+          <h2>Third-Party Content</h2>
+          <p>Some content and tools embedded on this Site are provided by third parties and may have their own accessibility limitations that are outside our direct control. These include:</p>
+          <ul>
+            <li><strong>Google Maps</strong> — Used for location and neighborhood content. Google provides its own accessibility information at <a href="https://www.google.com/accessibility/" target="_blank">google.com/accessibility</a>.</li>
+            <li><strong>Zillow listing embeds and links</strong> — Zillow's accessibility policy is available at their website.</li>
+            <li><strong>TREC PDF forms</strong> — Required regulatory documents hosted by the Texas Real Estate Commission. Accessibility concerns with these documents should be directed to TREC at <a href="mailto:accessibility@trec.texas.gov">accessibility@trec.texas.gov</a>.</li>
+            <li><strong>Google Analytics / Meta Pixel</strong> — Backend tracking scripts with no visible user interface impact.</li>
+          </ul>
+          <p>We work to select third-party tools that prioritize accessibility and encourage our providers to meet WCAG standards.</p>
+        </section>
+
+        <!-- 7 -->
+        <section id="texas-law">
+          <span class="section-num">07</span>
+          <h2>Texas Legal Requirements</h2>
+          <p>The Americans with Disabilities Act (ADA) requires businesses open to the public — including real estate brokerages — to provide equal access to their services. The U.S. Department of Justice has affirmed that this requirement extends to websites.</p>
+          <p>Texas real estate brokerages are additionally subject to the Texas Real Estate Commission's (TREC) guidance, which encourages brokerages to maintain accessible websites so that all consumers — including those with disabilities — can access real estate services and information.</p>
+          <p>We are committed to meeting our obligations under the ADA and applicable Texas law. If you have been unable to access any part of our Site due to a disability, please contact us immediately so we can provide the information or service through an alternate format.</p>
+
+          <div class="highlight-box">
+            <strong>Alternate Format Requests:</strong> If you are unable to access any content or complete any task on this Site due to a disability, please call us at <a href="tel:4696005205">(469) 600-5205</a> or email us and we will provide the information or assistance by phone, email, or another accessible format within a reasonable timeframe.
+          </div>
+        </section>
+
+        <!-- 8 -->
+        <section id="feedback">
+          <span class="section-num">08</span>
+          <h2>Feedback & Contact</h2>
+          <p>We welcome your feedback on the accessibility of cortesandcorealestate.com. If you experience any barriers, have suggestions for improvement, or need content in an alternate format, please contact us:</p>
+          <ul>
+            <li><strong>Phone:</strong> <a href="tel:4696005205">(469) 600-5205</a></li>
+            <li><strong>Website:</strong> <a href="https://cortesandcorealestate.com/#contact">cortesandcorealestate.com/#contact</a></li>
+          </ul>
+          <p>We aim to respond to accessibility feedback within <strong>5 business days</strong> and to resolve reported issues within a reasonable timeframe depending on the complexity of the fix required.</p>
+        </section>
+
+        <!-- 9 -->
+        <section id="formal-complaint">
+          <span class="section-num">09</span>
+          <h2>Formal Complaints</h2>
+          <p>If you are not satisfied with our response to an accessibility concern, you may file a complaint with the following agencies:</p>
+          <ul>
+            <li>
+              <strong>U.S. Department of Justice (ADA complaints):</strong><br/>
+              ADA National Network: <a href="https://www.ada.gov" target="_blank">www.ada.gov</a> | 1-800-514-0301
+            </li>
+            <li>
+              <strong>Texas Real Estate Commission (TREC):</strong><br/>
+              <a href="https://www.trec.texas.gov" target="_blank">www.trec.texas.gov</a> | (512) 936-3000<br/>
+              Accessibility Coordinator: <a href="mailto:accessibility@trec.texas.gov">accessibility@trec.texas.gov</a><br/>
+              1700 N. Congress Ave., Suite 400, Austin, TX 78701
+            </li>
+          </ul>
+        </section>
+
+        <div class="contact-card">
+          <h3>Contact Our Accessibility Team</h3>
+          <p class="sub">We're here to help — reach out any time.</p>
+          <div class="divider"></div>
+          <p><strong>Sales Agent:</strong> Diego Cortes, Licensed Texas Real Estate Sales Agent | TREC #0707825</p>
+          <p><strong>Team:</strong> Cortes &amp; Co. Realty Group</p>
+          <p><strong>Sponsoring Broker:</strong> DFW Elite Living, LLC | Joseph Garcia</p>
+          <p><strong>Broker TREC #:</strong> 9008371</p>
+          <p><strong>Broker Address:</strong> 13155 Noel Rd #900, Dallas, TX 75240</p>
+          <p><strong>Phone:</strong> <a href="tel:4696005205">(469) 600-5205</a></p>
+          <p><strong>Website:</strong> <a href="https://cortesandcorealestate.com">cortesandcorealestate.com</a></p>
+          <div class="divider"></div>
+          <p style="font-size:13px; color:rgba(255,255,255,.45);">Response time: within 5 business days for accessibility inquiries</p>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="policy-sidebar">
+        <div class="sidebar-card">
+          <h3>Table of Contents</h3>
+          <nav class="toc">
+            <ol>
+              <li><a href="#commitment">Our Commitment</a></li>
+              <li><a href="#standards">Accessibility Standards</a></li>
+              <li><a href="#measures">Measures We Take</a></li>
+              <li><a href="#known-issues">Known Limitations</a></li>
+              <li><a href="#assistive">Assistive Technology Compatibility</a></li>
+              <li><a href="#third-party">Third-Party Content</a></li>
+              <li><a href="#texas-law">Texas Legal Requirements</a></li>
+              <li><a href="#feedback">Feedback & Contact</a></li>
+              <li><a href="#formal-complaint">Formal Complaints</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes & Co. Realty Group — DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes & Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="DMCA.html">DMCA</a>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

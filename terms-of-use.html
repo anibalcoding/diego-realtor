@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Use — Cortes & Co. Realty Group</title>
+  <meta name="description" content="Terms of Use for cortesandcorealestate.com, operated by Cortes & Co. Realty Group, Diego Cortes, Licensed Texas Real Estate Sales Agent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .policy-hero {
+      background: var(--navy);
+      padding: 120px 0 56px;
+      text-align: center;
+    }
+    .policy-hero .section-eyebrow { justify-content: center; }
+    .policy-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .policy-hero h1 em { font-style: italic; color: var(--gold); }
+    .policy-meta {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      margin-top: 8px;
+    }
+    .policy-meta span { color: rgba(255,255,255,.65); }
+
+    .policy-body { padding: 64px 0 80px; }
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .policy-sidebar { position: sticky; top: 88px; }
+    .sidebar-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 20px;
+    }
+    .sidebar-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      margin: 0; padding: 0;
+    }
+    .toc li {
+      counter-increment: toc-counter;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .toc li:last-child { border-bottom: none; }
+    .toc a {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--gray-600);
+      padding: 7px 0;
+      transition: color .2s;
+      line-height: 1.4;
+    }
+    .toc a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .toc a:hover { color: var(--navy); }
+
+    .policy-main > p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .policy-main section {
+      margin-top: 48px;
+      padding-top: 8px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .section-num {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .policy-main h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .policy-main p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .policy-main p:last-child { margin-bottom: 0; }
+    .policy-main ul, .policy-main ol {
+      margin: 12px 0 16px 0;
+      padding-left: 20px;
+    }
+    .policy-main li {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .policy-main li:last-child { margin-bottom: 0; }
+    .policy-main strong { color: var(--gray-800); }
+    .policy-main a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    .policy-main a:hover { color: var(--gold-light); }
+
+    .highlight-box {
+      background: var(--gold-pale);
+      border: 1.5px solid var(--gold);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    .highlight-box strong { color: var(--navy); }
+    .highlight-box a { color: var(--gold); }
+
+    .warning-box {
+      background: #fff8f0;
+      border: 1.5px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    .warning-box strong { color: #92400e; }
+
+    .contact-card {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 48px;
+    }
+    .contact-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .contact-card p {
+      font-size: 14px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .contact-card strong { color: var(--white) !important; }
+    .contact-card a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+    .contact-card a:hover { color: var(--gold-light); }
+    .contact-card .divider {
+      width: 40px; height: 2px;
+      background: var(--gold);
+      margin: 20px 0;
+    }
+
+    @media (max-width: 900px) {
+      .policy-layout { grid-template-columns: 1fr; }
+      .policy-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="policy-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">Legal</div>
+    <h1><em>Terms</em> of Use</h1>
+    <p class="policy-meta">Effective Date: <span>June 2, 2026</span> &nbsp;·&nbsp; Last Updated: <span>June 2, 2026</span></p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="policy-body">
+  <div class="container">
+    <div class="policy-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="policy-main">
+
+        <p>These Terms of Use ("Terms") govern your access to and use of the website located at <strong>cortesandcorealestate.com</strong> (the "Site"), operated by <strong>Cortes & Co. Realty Group</strong>, Diego Cortes, Licensed Texas Real Estate Sales Agent ("we," "us," or "our"). Please read these Terms carefully before using the Site.</p>
+
+        <!-- 1 -->
+        <section id="acceptance">
+          <span class="section-num">01</span>
+          <h2>Acceptance of Terms</h2>
+          <p>By accessing or using this Site — including browsing pages, submitting a contact form, or requesting a home valuation — you agree to be bound by these Terms of Use and our <a href="/privacy-policy">Privacy Policy</a>, which is incorporated herein by reference.</p>
+          <p>If you do not agree to these Terms, please do not use this Site.</p>
+          <p>We reserve the right to update these Terms at any time. Continued use of the Site after changes are posted constitutes your acceptance of the revised Terms.</p>
+        </section>
+
+        <!-- 2 -->
+        <section id="about-site">
+          <span class="section-num">02</span>
+          <h2>About This Site & Our Services</h2>
+          <p>This Site is a marketing and informational website for <strong>Cortes &amp; Co. Realty Group</strong>, a real estate team operated by Diego Cortes, Licensed Texas Real Estate Sales Agent, under the sponsoring broker <strong>DFW Elite Living, LLC</strong> (Designated Broker: Joseph Garcia, TREC License #9008371), serving buyers, sellers, and investors throughout the Dallas–Fort Worth Metroplex.</p>
+          <p>The Site allows visitors to:</p>
+          <ul>
+            <li>Learn about Diego Cortes and Cortes & Co. Realty Group</li>
+            <li>Submit inquiries to speak with a licensed agent</li>
+            <li>Request a free home valuation (Comparative Market Analysis)</li>
+            <li>Explore Dallas–Fort Worth neighborhood information</li>
+            <li>View recently closed transaction examples</li>
+            <li>Access real estate educational content via the Blog</li>
+          </ul>
+          <p>Use of this Site does not create a broker-client or agency relationship. An agency relationship is established only through a signed written agreement with Cortes & Co. Realty Group in accordance with Texas law.</p>
+        </section>
+
+        <!-- 3 -->
+        <section id="not-legal-advice">
+          <span class="section-num">03</span>
+          <h2>No Legal, Financial, or Appraisal Advice</h2>
+          <div class="warning-box">
+            <strong>Important:</strong> The information on this Site — including blog content, neighborhood guides, market statistics, and home valuations — is provided for general informational purposes only. It does not constitute legal, financial, tax, investment, or appraisal advice.
+          </div>
+          <p>Home valuations and Comparative Market Analyses (CMAs) provided through this Site are <strong>estimates based on available market data</strong> and are not formal appraisals. They should not be relied upon as a substitute for a certified appraisal conducted by a licensed appraiser.</p>
+          <p>Market data, statistics, and neighborhood information are sourced from publicly available data and are believed to be accurate but are not guaranteed. Real estate values and market conditions change frequently.</p>
+          <p>Always consult a licensed attorney, certified public accountant, or financial advisor for decisions involving legal, tax, or financial matters related to real estate transactions.</p>
+        </section>
+
+        <!-- 4 -->
+        <section id="trec-disclosures">
+          <span class="section-num">04</span>
+          <h2>TREC Required Disclosures</h2>
+          <p>Cortes & Co. Realty Group is licensed by the <strong>Texas Real Estate Commission (TREC)</strong> and is subject to TREC's rules and regulations. The following notices are required by TREC and are made available on this Site:</p>
+          <ul>
+            <li>
+              <strong>Consumer Protection Notice (CPN):</strong>
+              <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-4-1_0.pdf" target="_blank">Texas Real Estate Commission Consumer Protection Notice</a>
+            </li>
+            <li>
+              <strong>Information About Brokerage Services (IABS):</strong>
+              <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/IABS%201-0_1.pdf" target="_blank">Information About Brokerage Services Form</a>
+            </li>
+          </ul>
+          <div class="highlight-box">
+            <strong>License Information:</strong><br/>
+            Diego Cortes — Licensed Texas Real Estate Sales Agent | TREC License #0707825 | Cortes &amp; Co. Realty Group<br/>
+            Sponsoring Broker: DFW Elite Living, LLC | Joseph Garcia, TREC License #9008371<br/>
+            Brokerage Address: 13155 Noel Rd #900, Dallas, TX 75240<br/>
+            Regulated by the Texas Real Estate Commission<br/>
+            1700 N. Congress Ave., Suite 400, Austin, TX 78701 | (512) 936-3000 | <a href="https://www.trec.texas.gov" target="_blank">www.trec.texas.gov</a>
+          </div>
+        </section>
+
+        <!-- 5 -->
+        <section id="permitted-use">
+          <span class="section-num">05</span>
+          <h2>Permitted Use</h2>
+          <p>You may use this Site for personal, non-commercial purposes to learn about our services and contact us. You agree that you will <strong>not</strong>:</p>
+          <ul>
+            <li>Copy, reproduce, distribute, or republish any content from this Site without our written permission</li>
+            <li>Use the Site for any unlawful purpose or in violation of any applicable federal, state, or local law</li>
+            <li>Attempt to gain unauthorized access to any part of the Site or its related systems</li>
+            <li>Use any automated tool (bots, scrapers, crawlers) to extract data from the Site</li>
+            <li>Submit false, misleading, or fraudulent information through any form on the Site</li>
+            <li>Interfere with or disrupt the operation of the Site or servers or networks connected to the Site</li>
+            <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity</li>
+          </ul>
+          <p>We reserve the right to terminate access to the Site for any user who violates these Terms.</p>
+        </section>
+
+        <!-- 6 -->
+        <section id="intellectual-property">
+          <span class="section-num">06</span>
+          <h2>Intellectual Property</h2>
+          <p>All content on this Site — including but not limited to text, photographs, graphics, logos, blog articles, neighborhood guides, and the Site's design and layout — is the property of <strong>Cortes & Co. Realty Group</strong> or its content suppliers, and is protected by applicable United States copyright, trademark, and other intellectual property laws.</p>
+          <p>The <strong>Cortes & Co. Realty Group</strong> name, logo, and all related marks are trademarks of Diego Cortes / Cortes & Co. Realty Group. You may not use these marks without our prior written permission.</p>
+          <p>You may share links to pages on the Site for personal, non-commercial use. You may not frame, scrape, or reproduce Site content on another website or platform without express written authorization.</p>
+          <p>Property listing data and photography referenced from MLS or third-party sources such as Zillow remain the property of their respective owners and are subject to their respective terms of use.</p>
+        </section>
+
+        <!-- 7 -->
+        <section id="third-party-links">
+          <span class="section-num">07</span>
+          <h2>Third-Party Links & Content</h2>
+          <p>This Site contains links to third-party websites, including Zillow, Niche, D Magazine, Google Reviews, and neighborhood resource sites. These links are provided for your convenience only.</p>
+          <p>We do not control, endorse, or take responsibility for the content, privacy practices, or accuracy of any third-party website. Clicking these links means you are leaving our Site and are subject to the terms and privacy policies of those third-party sites.</p>
+          <p>We are not responsible for the accuracy of neighborhood price data, school ratings, or other information sourced from third parties.</p>
+        </section>
+
+        <!-- 8 -->
+        <section id="user-submissions">
+          <span class="section-num">08</span>
+          <h2>User Submissions & Communications</h2>
+          <p>When you submit information through a contact form, home valuation request, or any other form on the Site, you represent that:</p>
+          <ul>
+            <li>The information you provide is accurate, current, and complete</li>
+            <li>You are the owner of or have authority to provide the property address you submit</li>
+            <li>You are at least 18 years of age</li>
+            <li>You consent to being contacted by Cortes & Co. Realty Group by phone, email, or text regarding your inquiry</li>
+          </ul>
+          <p>By submitting your phone number, you consent to receive calls and text messages from Cortes & Co. Realty Group related to your inquiry. Standard message and data rates may apply. You may opt out at any time by replying STOP to any text message or by contacting us directly.</p>
+          <div class="highlight-box">
+            <strong>No Solicitation:</strong> This Site is not intended to solicit buyers or sellers who are currently under an exclusive agreement with another licensed real estate broker. If you are currently represented by another broker, please disregard any invitation to contact us.
+          </div>
+        </section>
+
+        <!-- 9 -->
+        <section id="disclaimer">
+          <span class="section-num">09</span>
+          <h2>Disclaimers</h2>
+          <p>THE SITE AND ALL CONTENT ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+          <p>We do not warrant that:</p>
+          <ul>
+            <li>The Site will be uninterrupted, error-free, or secure</li>
+            <li>Any information on the Site (including market data, valuations, or neighborhood statistics) is complete, accurate, or current</li>
+            <li>Any defects in the Site will be corrected</li>
+          </ul>
+          <p>Real estate market conditions, property values, and interest rates are subject to change at any time. Any market statistics or home price estimates on this Site are informational only and may not reflect current conditions at the time you read them.</p>
+        </section>
+
+        <!-- 10 -->
+        <section id="limitation">
+          <span class="section-num">10</span>
+          <h2>Limitation of Liability</h2>
+          <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, CORTES & CO. REALTY GROUP, DIEGO CORTES, AND THEIR RESPECTIVE AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THIS SITE, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR BUSINESS INTERRUPTION.</p>
+          <p>Our total liability for any claim arising out of your use of this Site shall not exceed one hundred dollars ($100.00).</p>
+          <p>Some jurisdictions do not allow the exclusion or limitation of certain damages. In such jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
+        </section>
+
+        <!-- 11 -->
+        <section id="indemnification">
+          <span class="section-num">11</span>
+          <h2>Indemnification</h2>
+          <p>You agree to indemnify, defend, and hold harmless Cortes & Co. Realty Group, Diego Cortes, and their respective affiliates, officers, and agents from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to:</p>
+          <ul>
+            <li>Your use of or access to the Site</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any third-party right, including any intellectual property or privacy right</li>
+            <li>Any false or misleading information you submit through the Site</li>
+          </ul>
+        </section>
+
+        <!-- 12 -->
+        <section id="governing-law">
+          <span class="section-num">12</span>
+          <h2>Governing Law & Dispute Resolution</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>State of Texas</strong>, without regard to its conflict of law provisions.</p>
+          <p>Any dispute arising out of or relating to these Terms or your use of the Site shall be resolved exclusively in the state or federal courts located in <strong>Dallas County, Texas</strong>. You consent to personal jurisdiction in those courts.</p>
+          <p>Before initiating formal legal proceedings, we encourage you to contact us first to attempt to resolve any dispute informally.</p>
+        </section>
+
+        <!-- 13 -->
+        <section id="changes">
+          <span class="section-num">13</span>
+          <h2>Changes to These Terms</h2>
+          <p>We reserve the right to modify these Terms of Use at any time. When we make changes, we will update the "Last Updated" date at the top of this page. We may also provide additional notice for material changes.</p>
+          <p>Your continued use of the Site after any changes take effect constitutes your acceptance of the revised Terms. If you do not agree with the revised Terms, please discontinue use of the Site.</p>
+        </section>
+
+        <!-- 14 -->
+        <section id="contact">
+          <span class="section-num">14</span>
+          <h2>Contact Us</h2>
+          <p>If you have any questions about these Terms of Use, please contact us:</p>
+        </section>
+
+        <div class="contact-card">
+          <h3>Cortes & Co. Realty Group</h3>
+          <div class="divider"></div>
+          <p><strong>Sales Agent:</strong> Diego Cortes, Licensed Texas Real Estate Sales Agent | TREC #0707825<br/><strong>Sponsoring Broker:</strong> DFW Elite Living, LLC | Joseph Garcia<br/><strong>Broker TREC #:</strong> 9008371<br/><strong>Broker Address:</strong> 13155 Noel Rd #900, Dallas, TX 75240</p>
+          <p><strong>Website:</strong> <a href="https://cortesandcorealestate.com">cortesandcorealestate.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:4696005205">(469) 600-5205</a></p>
+          <p><strong>Service Area:</strong> Dallas–Fort Worth Metroplex, Texas</p>
+          <div class="divider"></div>
+          <p style="font-size:13px; color:rgba(255,255,255,.45);">Regulated by the Texas Real Estate Commission (TREC) &nbsp;|&nbsp; <a href="https://www.trec.texas.gov" target="_blank">www.trec.texas.gov</a></p>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="policy-sidebar">
+        <div class="sidebar-card">
+          <h3>Table of Contents</h3>
+          <nav class="toc">
+            <ol>
+              <li><a href="#acceptance">Acceptance of Terms</a></li>
+              <li><a href="#about-site">About This Site & Our Services</a></li>
+              <li><a href="#not-legal-advice">No Legal, Financial, or Appraisal Advice</a></li>
+              <li><a href="#trec-disclosures">TREC Required Disclosures</a></li>
+              <li><a href="#permitted-use">Permitted Use</a></li>
+              <li><a href="#intellectual-property">Intellectual Property</a></li>
+              <li><a href="#third-party-links">Third-Party Links & Content</a></li>
+              <li><a href="#user-submissions">User Submissions & Communications</a></li>
+              <li><a href="#disclaimer">Disclaimers</a></li>
+              <li><a href="#limitation">Limitation of Liability</a></li>
+              <li><a href="#indemnification">Indemnification</a></li>
+              <li><a href="#governing-law">Governing Law & Dispute Resolution</a></li>
+              <li><a href="#changes">Changes to These Terms</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes & Co. Realty Group — DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="#">Seller's Guide</a></li>
+          <li><a href="#">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="#">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes & Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="DMCA.html">DMCA</a>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
