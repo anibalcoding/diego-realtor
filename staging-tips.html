@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staging Tips | Diego Cortes, Realtor® | DFW</title>
+<meta name="description" content="A complete home staging guide for DFW sellers. Room-by-room prep, DIY tips, photography advice, and expert staging guidance from Diego Cortes, bilingual Realtor® at Cortes & Co. Realty Group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide-hero {
+    background: var(--navy);
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .guide-hero .section-eyebrow { justify-content: center; }
+  .guide-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .guide-hero h1 em { font-style: italic; color: var(--gold); }
+  .guide-hero p {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .guide-body { padding: 72px 0 80px; }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* sticky sidebar */
+  .guide-sidebar {
+    position: sticky;
+    top: 88px;
+  }
+  .sidebar-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+  }
+  .sidebar-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .sidebar-nav a {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-600);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--gray-100);
+    transition: color .2s;
+  }
+  .sidebar-nav a:last-child { border-bottom: none; }
+  .sidebar-nav a:hover { color: var(--gold); }
+  .sidebar-nav a::before { content: '→ '; opacity: .5; }
+
+  .cta-sidebar {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+  }
+  .cta-sidebar p {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .cta-sidebar strong { color: var(--white); }
+  .cta-sidebar .btn-primary { width: 100%; justify-content: center; font-size: 13px; }
+
+  /* main content */
+  .guide-main h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 52px 0 16px;
+    padding-top: 8px;
+  }
+  .guide-main h2:first-child { margin-top: 0; }
+  .guide-main h2 em { font-style: italic; color: var(--gold); }
+  .guide-main p {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .guide-main strong { color: var(--gray-800); }
+
+  /* tip boxes */
+  .tip-box {
+    background: var(--gold-pale);
+    border: 1.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .tip-box strong { color: var(--navy); }
+
+  /* checklist */
+  .check-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+  .check-list li {
+    font-size: 14px; color: var(--gray-600); padding-left: 24px; position: relative; line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+  }
+
+  /* market callout */
+  .market-callout {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 32px;
+    margin: 28px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .mc-item-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .mc-item-value { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--white); }
+  .mc-item-sub { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+  /* mistake cards */
+  .mistakes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .mistake-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border-top: 3px solid #e85d5d;
+  }
+  .mistake-card h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .mistake-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin: 0; }
+
+  @media (max-width: 900px) {
+    .guide-layout { grid-template-columns: 1fr; }
+    .guide-sidebar { position: static; }
+    .market-callout { grid-template-columns: 1fr 1fr; }
+    .mistakes-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .market-callout { grid-template-columns: 1fr; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="guide-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">DFW Home Sellers</div>
+    <h1>The Complete <em>Staging Guide</em></h1>
+    <p>How to prep, present, and photograph your DFW home so it sells faster, and for more, without spending a fortune.</p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="guide-body">
+  <div class="container">
+    <div class="guide-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="guide-main">
+
+        <h2 id="overview">Staging Isn't Decorating. It's <em>Marketing.</em></h2>
+        <p>In 2026, your listing photos are your first showing. Effectively every buyer starts their search online, narrows to a handful of homes, and only tours a few in person. If your home doesn't grab them on screen, they never walk through the door. Staging is what makes the difference between a listing buyers scroll past and one they drive across town to see.</p>
+        <p>And the DFW market has shifted toward buyers, inventory is up, price reductions are common, and poorly presented homes sit while well-prepped ones move. Staging is no longer optional polish; it's how you compete. The good news: you don't need to spend thousands. Most of what moves the needle is decluttering, cleaning, and smart presentation you can do yourself.</p>
+
+        <div class="market-callout">
+          <div>
+            <div class="mc-item-label">Sells Faster</div>
+            <div class="mc-item-value">~49%</div>
+            <div class="mc-item-sub">of agents report reduced time on market</div>
+          </div>
+          <div>
+            <div class="mc-item-label">Higher Offers</div>
+            <div class="mc-item-value">~30%</div>
+            <div class="mc-item-sub">of agents report a 1%–10% lift (2025 NAR)</div>
+          </div>
+          <div>
+            <div class="mc-item-label">Median Stage Cost</div>
+            <div class="mc-item-value">~$1,500</div>
+            <div class="mc-item-sub">for a full professional service</div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <strong>Diego's tip:</strong> You don't have to choose between "do nothing" and "$5,000 full stage." For most DFW homes in the $300K–$500K range, a weekend of decluttering and cleaning plus a few hundred dollars of strategic touches captures 80% of the benefit.
+        </div>
+
+        <h2 id="roi">The Numbers: <em>Is Staging Worth It?</em></h2>
+        <p>For a mid-market DFW seller, the math is hard to argue with. The median North Texas home sits around $405,000. The 2025 NAR Profile of Home Staging found roughly 30% of agents saw staging lift offers by 1%–10%. Even a conservative 2%–3% bump on a $405K home is <strong>$8,000–$12,000</strong>: against a typical staging spend of a few hundred to a few thousand dollars.</p>
+        <ul class="check-list">
+          <li><strong>It sells faster.</strong> Nearly half of sellers' agents report staged homes spend less time on the market. In a market where stale listings get price-cut, speed protects your price.</li>
+          <li><strong>It drives more traffic.</strong> Staged listings photograph better, get more online views and clicks, and pull more buyers through the door in the critical first 7–14 days.</li>
+          <li><strong>It helps buyers commit.</strong> 83% of buyers' agents say staging makes it easier for buyers to picture the home as their own, and emotionally connected buyers write stronger offers.</li>
+          <li><strong>Vacant homes need it most.</strong> Empty rooms photograph poorly, feel smaller in person, and give buyers nothing to anchor to. If your home is vacant, some form of staging (physical or virtual) is essential before it hits the MLS.</li>
+        </ul>
+        <p>The takeaway isn't "spend the most." It's that <strong>presentation is a marketing lever with measurable return</strong>: and in a buyer's market, skipping it is the expensive choice.</p>
+
+        <h2 id="rooms">Where to Focus: <em>The Rooms That Matter</em></h2>
+        <p>You don't need to stage every room. Buyers and their agents consistently rank the same spaces as most important (2025 NAR): the <strong>living room</strong>, the <strong>primary bedroom</strong>, and the <strong>kitchen</strong>. Put your energy and budget there first. The home office and guest bedrooms matter least, don't over-invest in them.</p>
+        <p><strong>Living room (your #1 priority).</strong> This is the hero shot. Declutter hard, remove personal photos, and pull furniture slightly off the walls to create flow and make the room feel larger. Neutral throw pillows, a clean area rug, and one piece of inoffensive art do more than a roomful of stuff. Maximize natural light, open every blind and curtain.</p>
+        <p><strong>Primary bedroom.</strong> Aim for hotel-calm. A neutral duvet ($60 well spent), matching nightstands, soft lighting, and clear surfaces. Remove exercise equipment, laundry, and anything personal. Buyers should imagine <em>resting</em> here, not see your daily life.</p>
+        <p><strong>Kitchen.</strong> Clear the counters almost completely, appliances, mail, magnets all go. Deep-clean until it shines, fix any dripping faucet or sticky drawer, and add one small touch of life (a bowl of lemons, a single plant). New cabinet hardware ($40–$90) can erase a decade of dated look in two hours.</p>
+        <p><strong>Don't neglect, but don't overdo:</strong> dining room (a simple table setting reads well in photos), bathrooms (spotless, lid down, fresh towels, no personal items), and the entryway (the first thing buyers see in person, clean, bright, welcoming).</p>
+
+        <h2 id="playbook">A Room-by-Room <em>DIY Playbook</em></h2>
+        <p>Most of the highest-impact work costs little more than your time. Work through these in order.</p>
+        <ul class="check-list">
+          <li><strong>Declutter everywhere first.</strong> Pack up roughly a third of your belongings before photos, closets, pantry, garage, countertops, shelves. Buyers open closets and pantries; a half-empty closet reads as "tons of storage." A packed one reads as "not enough room." This single step does more than any purchase.</li>
+          <li><strong>Depersonalize.</strong> Remove family photos, kids' artwork, diplomas, religious or political items, and anything that says "this is <em>our</em> home." You want buyers picturing <em>their</em> life here, not feeling like guests in yours.</li>
+          <li><strong>Deep-clean top to bottom.</strong> Kitchens, bathrooms, baseboards, windows, and floors especially. A genuinely clean home signals a well-maintained one. If you have pets, deodorize thoroughly, you stop smelling it; buyers don't.</li>
+          <li><strong>Maximize light.</strong> Open all blinds and curtains, swap dim bulbs for bright daylight-temperature ones, and make sure every fixture works. Dark rooms feel small and hide a home's best features. A well-placed mirror can bounce light and make a tight room feel open.</li>
+          <li><strong>Neutralize.</strong> Bold accent walls, dated wallpaper, and loud paint shrink your buyer pool. A gallon of neutral paint is one of the cheapest, highest-return upgrades you can make.</li>
+          <li><strong>Handle the small fixes.</strong> Tighten loose handles, fix squeaky or sticking doors, replace burnt-out bulbs, re-caulk grimy tubs, and patch nail holes. Buyers mentally inflate the cost of every visible flaw.</li>
+          <li><strong>Don't forget curb appeal.</strong> The exterior is the buyer's very first impression. Mow, trim, pressure-wash the walkway, add a couple of potted plants, and paint the front door (black, navy, or forest green), about $25 for the biggest curb-appeal-per-dollar upgrade there is.</li>
+          <li><strong>Stage outdoor living space.</strong> In Texas, patios and yards sell. Set up a simple seating area so buyers see the lifestyle, not just the slab.</li>
+        </ul>
+
+        <h2 id="types">Physical vs. Virtual vs. <em>Hybrid Staging</em></h2>
+        <p>There's no single right answer, it depends on whether your home is occupied or vacant and your budget.</p>
+        <ul class="check-list">
+          <li><strong>Physical staging</strong>: Real furniture and décor, either your own (restyled) or rented. Best for occupied homes that just need editing and restyling, and for high-traffic listings where the in-person experience seals the deal. Cost ranges widely: a few hundred dollars for a consultation and DIY restyle, up to several thousand for a full professional stage of a vacant home.</li>
+          <li><strong>Virtual staging</strong>: Furniture and décor added digitally to your listing photos. Cheap (often under $50 per photo) and fast, it makes empty rooms look inviting online and is great for driving clicks. The catch: it only exists in the photos. Buyers who fall for the images will walk into empty rooms in person, so it works best paired with a clean, well-lit (if bare) space. Always make sure virtually staged photos are disclosed as such, it's an honesty and TREC-compliance matter.</li>
+          <li><strong>Hybrid, the smart-budget play</strong>: Physically stage the three hero rooms (living room, primary bedroom, kitchen) where the in-person impression matters most, and virtually stage the rest for online appeal. You get real-world impact where it counts and online polish everywhere else, often at a fraction of a full physical stage.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Diego's tip:</strong> For a vacant DFW home, don't let it hit the MLS with empty rooms, that's the single worst presentation in real estate. Even basic virtual staging beats bare floors in the photos.
+        </div>
+
+        <h2 id="mistakes">Common Staging Mistakes <em>DFW Sellers Make</em></h2>
+        <div class="mistakes-grid">
+          <div class="mistake-card">
+            <h4>Doing nothing because "the market's hot"</h4>
+            <p>It isn't anymore in much of DFW. Unprepared homes now sit and get price-cut while staged ones sell. Presentation matters more in a buyer's market, not less.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Over-personalizing</h4>
+            <p>Family photos, bold collections, and "this is us" décor make it harder for buyers to imagine themselves there. Neutral and inviting beats memorable.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Cluttered or dark photos</h4>
+            <p>Even a well-staged home dies with bad photos. Never skimp here, professional photography is what your staging effort is <em>for</em>.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Staging the photos but not the home</h4>
+            <p>If buyers love the online images then walk into clutter or empty rooms, the disconnect kills the deal. What they see online has to hold up in person.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Over-spending on the wrong rooms</h4>
+            <p>Pouring money into guest bedrooms and the office while the living room and kitchen go untouched. Focus budget on the rooms buyers actually weigh.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Ignoring smell and curb appeal</h4>
+            <p>Pet and cooking odors and a tired exterior turn buyers off before they reach the good stuff. Address both early.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Leaving it too "lived-in" during showings</h4>
+            <p>Dirty dishes, laundry, pet bowls, and personal items break the spell. Keep the home show-ready and step out during showings.</p>
+          </div>
+        </div>
+
+        <h2 id="checklist">Your Pre-Photo-Day <em>Checklist</em></h2>
+        <p>Run through this in the final week before photos and listing. (Photos come first, shoot the home at its best, then keep it that way for showings.)</p>
+        <ul class="check-list">
+          <li>Pack up ~⅓ of belongings; clear all countertops, shelves, and surfaces</li>
+          <li>Remove family photos, personal items, and anything bold or controversial</li>
+          <li>Deep-clean kitchens, bathrooms, baseboards, windows, and floors</li>
+          <li>Deodorize (especially for pets) and air the home out</li>
+          <li>Open every blind and curtain; replace dim/burnt-out bulbs with bright ones</li>
+          <li>Touch up or neutralize bold paint colors</li>
+          <li>Fix squeaky/sticking doors, loose handles, dripping faucets, grimy caulk</li>
+          <li>Add neutral touches to hero rooms: throw pillows, a duvet, an area rug, one plant</li>
+          <li>Set a simple dining table; fresh towels and lid-down in every bathroom</li>
+          <li>Mow, trim, pressure-wash walkways; paint the front door; add potted plants</li>
+          <li>Stage one outdoor seating area</li>
+          <li>Confirm professional photography is booked, your staging investment rides on it</li>
+          <li>Decide on physical, virtual, or hybrid staging (a must if the home is vacant)</li>
+        </ul>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="guide-sidebar">
+        <div class="sidebar-card">
+          <h3>Contents</h3>
+          <nav class="sidebar-nav">
+            <a href="#overview">Why Staging Matters</a>
+            <a href="#roi">The ROI Numbers</a>
+            <a href="#rooms">Rooms That Matter</a>
+            <a href="#playbook">DIY Playbook</a>
+            <a href="#types">Physical vs. Virtual vs. Hybrid</a>
+            <a href="#mistakes">Common Mistakes</a>
+            <a href="#checklist">Pre-Photo-Day Checklist</a>
+          </nav>
+        </div>
+        <div class="cta-sidebar">
+          <p><strong>Getting ready to list?</strong> Diego includes professional photography on every listing and gives sellers room-by-room staging guidance as part of the pre-sale process, no guesswork, no wasted spend.</p>
+          <a href="index.html#sell" class="btn-primary">Get a Free Home Value →</a>
+        </div>
+        <div class="sidebar-card" style="margin-top:20px;">
+          <h3>Helpful Tools</h3>
+          <nav class="sidebar-nav">
+            <a href="index.html#sell">Free Home Valuation</a>
+            <a href="sellers-guide.html">Seller's Guide</a>
+            <a href="index.html#sold">Recent Sales</a>
+            <a href="mortgage-calculator.html">Mortgage Calculator</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes &amp; Co. Realty Group, DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="sellers-guide.html">Seller's Guide</a></li>
+          <li><a href="staging-tips.html">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="Market-report.html">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes &amp; Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="DMCA.html">DMCA</a>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

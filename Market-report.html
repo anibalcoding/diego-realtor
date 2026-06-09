@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFW Market Report | Diego Cortes, Realtor® | June 2026</title>
+<meta name="description" content="Monthly DFW real estate market report by Diego Cortes. Median prices, inventory, days on market, segment analysis, and what it means for buyers and sellers in the Dallas–Fort Worth Metroplex.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide-hero {
+    background: var(--navy);
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .guide-hero .section-eyebrow { justify-content: center; }
+  .guide-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .guide-hero h1 em { font-style: italic; color: var(--gold); }
+  .guide-hero p {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto 14px;
+  }
+  .report-period {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--gold);
+    background: rgba(201,168,76,.12);
+    border: 1px solid rgba(201,168,76,.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    letter-spacing: .05em;
+  }
+
+  .guide-body { padding: 72px 0 80px; }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* sticky sidebar */
+  .guide-sidebar {
+    position: sticky;
+    top: 88px;
+  }
+  .sidebar-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+  }
+  .sidebar-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .sidebar-nav a {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-600);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--gray-100);
+    transition: color .2s;
+  }
+  .sidebar-nav a:last-child { border-bottom: none; }
+  .sidebar-nav a:hover { color: var(--gold); }
+  .sidebar-nav a::before { content: '→ '; opacity: .5; }
+
+  .cta-sidebar {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+  }
+  .cta-sidebar p {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .cta-sidebar strong { color: var(--white); }
+  .cta-sidebar .btn-primary {
+    width: 100%; justify-content: center; font-size: 13px; margin-bottom: 8px;
+  }
+  .cta-sidebar .btn-outline-sm {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,.7);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 6px;
+    padding: 9px 0;
+    transition: all .2s;
+  }
+  .cta-sidebar .btn-outline-sm:hover { color: var(--white); border-color: rgba(255,255,255,.6); }
+
+  /* main content */
+  .guide-main h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 52px 0 16px;
+    padding-top: 8px;
+  }
+  .guide-main h2:first-child { margin-top: 0; }
+  .guide-main h2 em { font-style: italic; color: var(--gold); }
+  .guide-main h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 32px 0 10px;
+    padding-left: 12px;
+    border-left: 3px solid var(--gold);
+  }
+  .guide-main p {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .guide-main strong { color: var(--gray-800); }
+
+  /* tip / info boxes */
+  .tip-box {
+    background: var(--gold-pale);
+    border: 1.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .tip-box strong { color: var(--navy); }
+
+  /* checklist */
+  .check-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+  .check-list li {
+    font-size: 14px; color: var(--gray-600); padding-left: 24px; position: relative; line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+  }
+
+  /* snapshot table */
+  .report-table-wrap { overflow-x: auto; margin: 24px 0; border-radius: 8px; box-shadow: var(--shadow-sm); }
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 540px;
+  }
+  .report-table thead tr { background: var(--navy); }
+  .report-table th {
+    padding: 12px 16px;
+    text-align: left;
+    color: var(--gold);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .report-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-600);
+    line-height: 1.5;
+    vertical-align: top;
+  }
+  .report-table tr:last-child td { border-bottom: none; }
+  .report-table tr:nth-child(even) td { background: var(--cream); }
+  .report-table td:first-child { font-weight: 500; color: var(--gray-800); }
+
+  /* disclaimer */
+  .report-disclaimer {
+    font-size: 12px;
+    color: var(--gray-400);
+    line-height: 1.7;
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-100);
+    font-style: italic;
+  }
+
+  /* charts */
+  .chart-wrap {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 24px 20px 16px;
+    box-shadow: var(--shadow-sm);
+    margin: 24px 0;
+  }
+  .chart-caption {
+    font-size: 12px;
+    color: var(--gray-400);
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  @media (max-width: 900px) {
+    .guide-layout { grid-template-columns: 1fr; }
+    .guide-sidebar { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="guide-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">DFW Real Estate</div>
+    <h1>DFW <em>Market Report</em></h1>
+    <p>Where the Dallas–Fort Worth market stands right now, and what it means for you.</p>
+    <div class="report-period">Reporting period: June 2026 · Updated monthly by Diego Cortes</div>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="guide-body">
+  <div class="container">
+    <div class="guide-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="guide-main">
+
+        <div class="tip-box">
+          <strong>How to read this report:</strong> This is a living snapshot. The market moves every month, so the numbers below reflect the latest available DFW metro data and are refreshed regularly. For a valuation specific to <em>your</em> home or target neighborhood, the metro averages are only a starting point, reach out for a personalized analysis.
+        </div>
+
+        <h2 id="overview">The Headline: <em>A Market Tilting Toward Buyers</em></h2>
+        <p>After several years of bidding wars and waived inspections, the Dallas–Fort Worth market has shifted. Inventory has climbed, homes are taking longer to sell, and price growth has flattened or softened depending on the segment. For buyers who sat out the frenzy, this is the most negotiating room DFW has offered in years. For sellers, it means pricing and presentation matter more than ever, the days of naming a number and watching offers pile up are, for now, behind us.</p>
+        <p>This isn't a crash. DFW continues to lead the nation in building permits, draws 100,000+ relocators a year, and is forming tens of thousands of new households annually. What's happening is a <strong>reset toward balance</strong>: and balance is healthy. Below is where things stand.</p>
+
+        <h2 id="snapshot">DFW Metro Snapshot · <em>June 2026</em></h2>
+
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Current</th>
+                <th>Year-over-Year</th>
+                <th>What it signals</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Median sale price</td>
+                <td>~$385K–$435K*</td>
+                <td>Roughly flat to −2%</td>
+                <td>Prices have stopped climbing; mild softening</td>
+              </tr>
+              <tr>
+                <td>Active inventory</td>
+                <td>~33,000–39,000 listings</td>
+                <td>Up modestly (~3%)</td>
+                <td>More choice than buyers have had in years</td>
+              </tr>
+              <tr>
+                <td>Months of supply</td>
+                <td>~5.2 months</td>
+                <td>Up from ~1.3 in 2022</td>
+                <td>Approaching a balanced market (≈6 months)</td>
+              </tr>
+              <tr>
+                <td>Median days on market</td>
+                <td>~48–64 days</td>
+                <td>Up roughly 6+ days</td>
+                <td>Homes sit longer; urgency has eased</td>
+              </tr>
+              <tr>
+                <td>30-yr fixed mortgage</td>
+                <td>~6.5%</td>
+                <td>Roughly flat</td>
+                <td>The main affordability constraint</td>
+              </tr>
+              <tr>
+                <td>Price per sq. ft. (listings)</td>
+                <td>~$203</td>
+                <td>—</td>
+                <td>Useful for comparing across home sizes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="font-size:13px; color:var(--gray-400); margin-top:-8px;">*Median price varies by source and geography, Dallas proper runs higher than the metro-wide figure, and "list" vs. "sale" price differ. Treat this as a range, not a single number.</p>
+        <p><strong>The quick read:</strong> roughly 5 months of supply and ~50+ days on market put DFW between a seller's and buyer's market, closer to balance than it's been since before the pandemic. Well-priced, well-presented homes still sell; overpriced ones now sit.</p>
+
+        <div class="chart-wrap">
+          <canvas id="chartInventory" height="180"></canvas>
+          <p class="chart-caption">Active inventory (listings) and months of supply · Oct 2024 – Jun 2026 · DFW Metro</p>
+        </div>
+
+        <h2 id="trends">Price Trends <em>at a Glance</em></h2>
+        <p>The story of the last 18 months is <strong>deceleration, not collapse.</strong> Prices surged through 2021–2022, plateaued through 2024, and have drifted slightly downward into 2026 as inventory caught up with demand and high rates trimmed buying power.</p>
+        <p>A key nuance: <strong>the softening isn't uniform.</strong> Entry and mid-tier homes have seen the most price pressure, while the luxury segment has held up better, higher-end buyers are less sensitive to mortgage rates. Condos and townhomes have corrected the most, with the highest months-of-supply of any category.</p>
+
+        <div class="chart-wrap">
+          <canvas id="chartPrice" height="150"></canvas>
+          <p class="chart-caption">DFW median sale price · Q1 2020 – Jun 2026 · Approximate metro-level estimates</p>
+        </div>
+
+        <h2 id="segments">What This Means <em>By Segment</em></h2>
+        <p>Diego works across several distinct DFW markets, and each is behaving differently right now.</p>
+
+        <h3>First-Time &amp; Entry-Level Buyers</h3>
+        <p>This is where the shift helps you most. Entry and mid-tier price points have seen the softest pricing and the biggest jump in choice. With ~5 months of supply, you can actually tour a home twice, ask for an inspection, and negotiate, none of which was realistic in 2022. Sellers of starter homes are increasingly willing to cover closing costs or offer concessions. <strong>The catch is rates:</strong> at ~6.5%, monthly payment, not sticker price, is the real constraint. Get pre-approved first so you know your true budget, and explore rate buydowns and first-time-buyer programs (see the <a href="buyers-guide.html" style="color:var(--gold); text-decoration:underline;">Buyer's Guide</a>).</p>
+
+        <h3>New Construction</h3>
+        <p>Builders are competing hard for buyers in 2026, and they rarely cut the list price. Instead they offer <strong>incentives</strong>: closing-cost credits, design-center upgrades, "flex cash," and rate buydowns (some advertised in the high-4% to 5% range). That creates real opportunity, but the headline incentive isn't the whole story. A $25K incentive on a $400K home is not the same as $25K off the base price once you factor in restrictions, required use of the in-house lender, and total tax rate (watch for MUD/PID districts that inflate the tax bill). Compare <em>net-to-buyer</em>, not face value, and bring your own agent. Builders will steer you to their lender and their contract; representation protects your side. Suburban communities in Forney, Anna, Celina, Princeton, and Mesquite have the most inventory and the most aggressive offers.</p>
+
+        <h3>Land, Lake &amp; Ranch</h3>
+        <p>This segment marches to its own drum. It's less rate-sensitive and less inventory-driven than tract housing, and more about the specific parcel, water rights, acreage, road access, ag exemptions, and usable vs. raw land. Pricing is far less standardized, so metro medians tell you almost nothing here. Note that Texas added a new TREC water-rights disclosure form in early 2026, which matters for rural and acreage transactions. These deals reward local knowledge and patience more than market timing.</p>
+
+        <h2 id="forces">The Forces <em>Behind the Numbers</em></h2>
+        <ul class="check-list">
+          <li><strong>Mortgage rates (~6.5%)</strong> remain the single biggest factor. They've trimmed buying power and thinned the buyer pool, which is exactly why inventory has built up and sellers have lost leverage.</li>
+          <li><strong>Construction leadership.</strong> DFW issued roughly 52,000 permits in 2025, first in the nation for the ninth straight year. This steady new supply is a big reason DFW avoids the inventory crises of coastal markets, and it keeps a lid on price spikes.</li>
+          <li><strong>In-migration &amp; household formation.</strong> 100,000+ relocators a year and 25,000+ new households forming in 2026 underpin long-term demand, even as short-term activity cools.</li>
+          <li><strong>Affordability backlog.</strong> Roughly a third of DFW renters under 35 say they plan to buy within two years, pent-up demand waiting on rates or savings to line up.</li>
+        </ul>
+
+        <h2 id="bottomline">Bottom Line for <em>Buyers &amp; Sellers</em></h2>
+        <p><strong>If you're buying:</strong> This is the most leverage you've had in years. More inventory, fewer competing offers, real negotiating room, and motivated sellers, especially on listings sitting 30+ days and on builder inventory homes. Don't wait for prices to "bottom" perfectly; focus on your monthly payment, lock a rate strategy, and negotiate hard.</p>
+        <p><strong>If you're selling:</strong> Homes are still selling, but the market rewards discipline. Price right out of the gate (overpricing means sitting, then cutting), invest in presentation (see the <a href="staging-tips.html" style="color:var(--gold); text-decoration:underline;">Staging Guide</a>), and expect to negotiate. The seller who prepares wins; the one who prices on 2022 nostalgia chases the market down.</p>
+
+        <p class="report-disclaimer">Sources: Texas Real Estate Research Center, Realtor.com/FRED, NAR, U.S. Census Building Permits Survey, and aggregated DFW MLS data, as of June 2026. Figures are metro-level estimates and will vary by city, neighborhood, and property. This report is informational and not a guarantee of value or future performance.</p>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="guide-sidebar">
+        <div class="sidebar-card">
+          <h3>Contents</h3>
+          <nav class="sidebar-nav">
+            <a href="#overview">The Headline</a>
+            <a href="#snapshot">Metro Snapshot</a>
+            <a href="#trends">Price Trends</a>
+            <a href="#segments">By Segment</a>
+            <a href="#forces">Forces Behind the Numbers</a>
+            <a href="#bottomline">Bottom Line</a>
+          </nav>
+        </div>
+        <div class="cta-sidebar">
+          <p><strong>Want your specific number?</strong> Metro averages don't tell you what your home is worth or what your target neighborhood is doing. Diego provides free, no-obligation analyses built on current comps and live market data.</p>
+          <a href="index.html#sell" class="btn-primary">Get a Free Home Value →</a>
+          <a href="index.html#contact" class="btn-outline-sm">Book a Call →</a>
+        </div>
+        <div class="sidebar-card" style="margin-top:20px;">
+          <h3>Related Guides</h3>
+          <nav class="sidebar-nav">
+            <a href="buyers-guide.html">Buyer's Guide</a>
+            <a href="sellers-guide.html">Seller's Guide</a>
+            <a href="new-construction.html">New Construction Guide</a>
+            <a href="mortgage-calculator.html">Mortgage Calculator</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes &amp; Co. Realty Group, DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="sellers-guide.html">Seller's Guide</a></li>
+          <li><a href="staging-tips.html">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="Market-report.html">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes &amp; Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="DMCA.html">DMCA</a>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+Chart.defaults.font.family = "'DM Sans', system-ui, sans-serif";
+Chart.defaults.color = '#6b7280';
+
+// ── Price trend area chart ──────────────────────────────────────
+const ctxPrice = document.getElementById('chartPrice');
+if (ctxPrice) {
+  new Chart(ctxPrice, {
+    type: 'line',
+    data: {
+      labels: ["Q1 '20","Q3 '20","Q1 '21","Q3 '21","Q1 '22","Q3 '22","Q1 '23","Q3 '23","Q1 '24","Q3 '24","Q1 '25","Q3 '25","Q1 '26","Jun '26"],
+      datasets: [{
+        label: 'Median sale price ($K)',
+        data: [280, 290, 315, 362, 398, 408, 395, 391, 400, 402, 394, 387, 383, 381],
+        borderColor: '#c9a84c',
+        backgroundColor: 'rgba(201,168,76,0.12)',
+        borderWidth: 2.5,
+        fill: true,
+        tension: 0.4,
+        pointRadius: 3,
+        pointBackgroundColor: '#c9a84c',
+        pointBorderColor: '#fff',
+        pointBorderWidth: 1.5
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: ctx => ' $' + ctx.parsed.y + 'K' }
+        }
+      },
+      scales: {
+        y: {
+          min: 250,
+          ticks: { callback: v => '$' + v + 'K', font: { size: 11 } },
+          grid: { color: 'rgba(0,0,0,0.05)' }
+        },
+        x: {
+          ticks: { font: { size: 11 } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+}
+
+// ── Inventory + months-of-supply combo chart ────────────────────
+const ctxInv = document.getElementById('chartInventory');
+if (ctxInv) {
+  new Chart(ctxInv, {
+    type: 'bar',
+    data: {
+      labels: ["Oct '24","Nov","Dec","Jan '25","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan '26","Feb","Mar","Apr","May","Jun '26"],
+      datasets: [
+        {
+          label: 'Active inventory (listings)',
+          data: [24100,23200,21800,23500,26800,29400,31200,32100,33000,33800,34100,33400,34200,32600,31300,33400,35200,36100,37000,38200,38500],
+          backgroundColor: 'rgba(201,168,76,0.65)',
+          borderColor: 'rgba(201,168,76,0.85)',
+          borderWidth: 1,
+          yAxisID: 'yInv',
+          order: 2
+        },
+        {
+          label: 'Months of supply',
+          data: [3.2,3.0,2.9,3.1,3.4,3.8,4.0,4.1,4.2,4.3,4.4,4.3,4.4,4.2,4.1,4.3,4.6,4.8,5.0,5.1,5.2],
+          type: 'line',
+          borderColor: '#2a9d8f',
+          backgroundColor: 'transparent',
+          borderWidth: 2.5,
+          borderDash: [6, 3],
+          pointRadius: 3,
+          pointBackgroundColor: '#2a9d8f',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 1.5,
+          tension: 0.4,
+          yAxisID: 'ySupply',
+          order: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index' },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          align: 'start',
+          labels: { font: { size: 12 }, boxWidth: 14, padding: 18, usePointStyle: true }
+        }
+      },
+      scales: {
+        yInv: {
+          type: 'linear',
+          position: 'left',
+          ticks: { callback: v => (v/1000).toFixed(0) + 'k', font: { size: 11 } },
+          grid: { color: 'rgba(0,0,0,0.05)' }
+        },
+        ySupply: {
+          type: 'linear',
+          position: 'right',
+          min: 0, max: 7,
+          ticks: { callback: v => v.toFixed(1) + ' mo', font: { size: 11 } },
+          grid: { display: false }
+        },
+        x: {
+          ticks: { font: { size: 10 }, maxRotation: 40 },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+}
+</script>
+<script src="app.js"></script>
+</body>
+</html>
+
+<!-- ============================================================
+     MONTHLY REFRESH TEMPLATE, for Diego/Anibal
+     Update these each reporting period, then re-pull the chart:
+     1. Reporting period date (top of page + sources line)
+     2. Metro Snapshot table: median price, inventory, months supply,
+        DOM, mortgage rate, price/sqft
+     3. Price-trend chart data (see chart file)
+     4. Any segment shifts (incentive ranges, hot suburb list)
+     5. Re-check mortgage rate, it moves weekly
+     Data sources to check monthly:
+     - Texas Real Estate Research Center (recenter.tamu.edu)
+     - FRED DFW series (MEDLISPRI19100, etc.)
+     - Local MLS / brokerage monthly recaps
+     ============================================================ -->

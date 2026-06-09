@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller's Guide | Diego Cortes, Realtor® | DFW</title>
+<meta name="description" content="A complete home seller's guide for the DFW Metroplex. Pricing strategy, closing costs, disclosure obligations, and expert tips from Diego Cortes, bilingual Realtor® at Cortes & Co. Realty Group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .guide-hero {
+    background: var(--navy);
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  .guide-hero .section-eyebrow { justify-content: center; }
+  .guide-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .guide-hero h1 em { font-style: italic; color: var(--gold); }
+  .guide-hero p {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .guide-body { padding: 72px 0 80px; }
+
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* sticky sidebar */
+  .guide-sidebar {
+    position: sticky;
+    top: 88px;
+  }
+  .sidebar-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 20px;
+  }
+  .sidebar-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .sidebar-nav a {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-600);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--gray-100);
+    transition: color .2s;
+  }
+  .sidebar-nav a:last-child { border-bottom: none; }
+  .sidebar-nav a:hover { color: var(--gold); }
+  .sidebar-nav a::before { content: '→ '; opacity: .5; }
+
+  .cta-sidebar {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 28px;
+    text-align: center;
+  }
+  .cta-sidebar p {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .cta-sidebar strong { color: var(--white); }
+  .cta-sidebar .btn-primary { width: 100%; justify-content: center; font-size: 13px; }
+
+  /* main content */
+  .guide-main h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin: 52px 0 16px;
+    padding-top: 8px;
+  }
+  .guide-main h2:first-child { margin-top: 0; }
+  .guide-main h2 em { font-style: italic; color: var(--gold); }
+  .guide-main p {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  .guide-main strong { color: var(--gray-800); }
+
+  /* step cards */
+  .steps-list { display: flex; flex-direction: column; gap: 20px; margin: 24px 0; }
+  .step-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 24px 28px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--gold);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 36px; height: 36px;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600; font-size: 14px;
+    flex-shrink: 0;
+  }
+  .step-body h4 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .step-body p { font-size: 14px; color: var(--gray-600); line-height: 1.7; margin: 0; }
+
+  /* tip boxes */
+  .tip-box {
+    background: var(--gold-pale);
+    border: 1.5px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+  .tip-box strong { color: var(--navy); }
+
+  /* checklist */
+  .check-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+  .check-list li {
+    font-size: 14px; color: var(--gray-600); padding-left: 24px; position: relative; line-height: 1.6;
+  }
+  .check-list li::before {
+    content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+  }
+
+  /* market callout */
+  .market-callout {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 32px;
+    margin: 28px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .mc-item-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  .mc-item-value { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--white); }
+  .mc-item-sub { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+  /* mistake cards */
+  .mistakes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .mistake-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border-top: 3px solid #e85d5d;
+  }
+  .mistake-card h4 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .mistake-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin: 0; }
+
+  @media (max-width: 900px) {
+    .guide-layout { grid-template-columns: 1fr; }
+    .guide-sidebar { position: static; }
+    .market-callout { grid-template-columns: 1fr 1fr; }
+    .mistakes-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .market-callout { grid-template-columns: 1fr; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+    <ul class="nav-links">
+      <li><a href="index.html#sell">Sell</a></li>
+      <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-phone">(469) 600-5205</div>
+      <a href="index.html#contact" class="btn-primary">Book a Call</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="guide-hero">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;">DFW Home Sellers</div>
+    <h1>The Complete <em>Seller's Guide</em></h1>
+    <p>From setting the right price to handing over the keys, everything you need to know about selling your home in the Dallas–Fort Worth Metroplex.</p>
+  </div>
+</section>
+
+<!-- ── BODY ── -->
+<section class="guide-body">
+  <div class="container">
+    <div class="guide-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="guide-main">
+
+        <h2 id="overview">Why Selling in DFW Requires a <em>Strategy</em></h2>
+        <p>Dallas–Fort Worth is one of the most active real estate markets in the country, but "active" doesn't mean "easy." The sellers who walk away with the most money aren't the ones who got lucky, they're the ones who priced correctly out of the gate, prepped their home properly, and had an agent who knew how to market and negotiate.</p>
+        <p>The market has shifted. Buyer's-agent compensation is now negotiated deal-by-deal rather than assumed, inventory has risen in many DFW submarkets, and overpriced homes sit while well-priced ones still move fast. This guide walks you through every stage of selling, from understanding your true net proceeds to disclosures, staging, offers, and closing, so there are no surprises when it counts.</p>
+
+        <div class="market-callout">
+          <div>
+            <div class="mc-item-label">Median Home Price</div>
+            <div class="mc-item-value">$412K</div>
+            <div class="mc-item-sub">DFW · Q1 2026</div>
+          </div>
+          <div>
+            <div class="mc-item-label">Avg. Days on Market</div>
+            <div class="mc-item-value">20</div>
+            <div class="mc-item-sub">In 2026</div>
+          </div>
+          <div>
+            <div class="mc-item-label">List-to-Sale Ratio</div>
+            <div class="mc-item-value">98.7%</div>
+            <div class="mc-item-sub">Diego's 2026 average</div>
+          </div>
+        </div>
+
+        <h2 id="steps">The 9-Step Home <em>Selling Process</em></h2>
+        <p>Here's what the journey from "thinking about selling" to "funds in your account" actually looks like in DFW.</p>
+
+        <div class="steps-list">
+          <div class="step-card">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Get a Real Valuation, Not a Zillow Estimate</h4>
+              <p>Automated estimates (Zestimates, etc.) are a starting point, not a strategy. They don't account for your finishes, upgrades, condition, lot, or what's actually selling on your block right now. A proper Comparative Market Analysis (CMA) looks at recent comparable sales, active competition, and current buyer demand to land on a defensible list price. Pricing is the single biggest lever you control, get it right and the market does the rest.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Choose Your Listing Agent</h4>
+              <p>Your listing agent prices, markets, negotiates, and manages the transaction through closing. Don't choose on commission alone, the cheapest listing fee often means the weakest marketing and the smallest buyer pool. Interview at least two or three agents. Ask how they price, how they market, how they handle multiple offers, and what their list-to-sale ratio and average days on market actually are.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Set the Right Price</h4>
+              <p>Overpricing is the most expensive mistake a seller can make. Homes priced above market get the most attention in their first week, for the wrong reasons, then go stale, draw lowball offers, and ultimately sell for <em>less</em> than if they'd been priced right initially. The first two weeks on market generate the most qualified traffic. Price to capture that window, not to "leave room to negotiate."</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Prep, Stage &amp; Photograph</h4>
+              <p>Buyers form an opinion in the first few seconds online. Declutter, deep-clean, handle obvious repairs, and stage so each room reads clearly in photos and in person. Then invest in professional photography, the listing photos are your home's first showing, and 90%+ of buyers start online. This is where presentation translates directly into offers.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h4>Go Live &amp; Market the Listing</h4>
+              <p>Once live on the MLS, your listing syndicates to Zillow, Realtor.com, Redfin, and dozens of other sites. Strong marketing goes further: social campaigns, an agent's buyer network, email blasts to interested parties, and well-timed open houses. The goal is maximum qualified eyeballs in the first 7–14 days, when demand is highest.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">6</div>
+            <div class="step-body">
+              <h4>Show the Home</h4>
+              <p>Keep the home show-ready and be flexible with access, the easier it is to tour, the more offers you'll see. In a fast market, buyers want same-day or next-day showings. Step out during showings so buyers can picture themselves living there, and let the listing agent gather feedback to fine-tune if needed.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">7</div>
+            <div class="step-body">
+              <h4>Review &amp; Negotiate Offers</h4>
+              <p>Price is just one term. A strong offer also has solid financing (or cash), a reasonable option period, a workable closing date, and few or no concession demands. Your agent helps you weigh net proceeds against certainty of closing, sometimes a slightly lower, cleaner cash offer beats a higher one loaded with contingencies. In multiple-offer situations, your agent runs the strategy to drive the best terms.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">8</div>
+            <div class="step-body">
+              <h4>Option Period, Inspection &amp; Repairs</h4>
+              <p>Texas contracts include a buyer "option period", typically 7–10 days during which the buyer can inspect and terminate. Expect a repair request after the inspection. Not every item is your obligation; your agent helps you decide what to fix, what to credit, and what to push back on, based on materiality and your leverage. Appraisal happens here too, if it comes in low, you'll negotiate again.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num">9</div>
+            <div class="step-body">
+              <h4>Close &amp; Get Paid</h4>
+              <p>Texas closings are handled by a title company. The title company clears title, prepares the settlement statement, pays off your existing mortgage, deducts closing costs, and disburses your net proceeds. Closing usually takes 30–60 minutes to sign. Funds are typically disbursed the same day or next business day after everything funds and records.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="pricing"><em>Pricing Strategy</em> &amp; Pre-Sale Prep</h2>
+        <p>The two things most within your control, price and presentation, determine the majority of your outcome.</p>
+        <ul class="check-list">
+          <li><strong>Price against current competition, not last year's peak.</strong> Comps from 60–90 days ago in a shifting market can mislead. Your agent should weight recent and pending sales heavily and adjust for condition, upgrades, and lot.</li>
+          <li><strong>Understand the price-band psychology.</strong> Buyers search in brackets ($375K–$400K, $400K–$425K). Pricing at $415K when comps support $399K can push you out of an entire pool of buyers. Sometimes pricing slightly under a round number captures more traffic and triggers competing offers.</li>
+          <li><strong>Don't "test" a high price.</strong> A stale listing tells buyers something is wrong. Each price drop signals weakness and invites lowballs. It's almost always better to price right once.</li>
+          <li><strong>Stage to the buyer, not to your taste.</strong> Neutralize bold paint, depersonalize, maximize light, and arrange furniture to show flow and scale. Light staging often returns far more than it costs.</li>
+          <li><strong>Handle the cheap, visible fixes first.</strong> Fresh paint, clean grout, working light bulbs, fixed cabinet doors, tidy landscaping, and pressure-washed walkways. Buyers mentally inflate the cost of every flaw they see.</li>
+          <li><strong>Consider a pre-listing inspection.</strong> Knowing your foundation, roof, and HVAC condition before you list lets you fix issues, price accordingly, and avoid a renegotiation blindside during the buyer's option period.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Diego's tip:</strong> The biggest dollars are won or lost in the first two weeks. A home that's priced right, prepped, and professionally photographed before it ever hits the MLS consistently outperforms one that launches "to see what happens" and gets corrected later. Launch strong.
+        </div>
+
+        <h2 id="costs">Understanding <em>Seller Closing Costs</em> in Texas</h2>
+        <p>Many sellers focus on the sale price, but what matters is your <strong>net</strong>: what actually hits your account after costs and your mortgage payoff. In Texas, total seller costs typically run <strong>6%–10% of the sale price</strong>, with commission as the largest piece.</p>
+        <ul class="check-list">
+          <li><strong>Real estate commissions</strong>: Usually the biggest cost, roughly 5%–6% combined and typically 60%–75% of total seller costs. Since the 2024 NAR settlement, the listing commission and any buyer's-agent compensation are negotiated separately rather than assumed. All of it is negotiable.</li>
+          <li><strong>Owner's title insurance</strong>: By Texas custom the seller pays the owner's policy (negotiable in a buyer's market). Rates are set by the Texas Department of Insurance and are identical at every title company. Rates dropped ~6.2% effective March 1, 2026, expect roughly $2,650 on a $500K sale, ~$2,900–$3,100 on a $600K sale.</li>
+          <li><strong>Prorated property taxes</strong>: Texas taxes are paid in arrears, so at closing you credit the buyer for your portion of the year (the days you owned the home). On a $7,000 annual bill, a July closing means crediting roughly $4,000. It's an adjustment, not a "fee."</li>
+          <li><strong>Mortgage payoff</strong>: Your remaining loan balance, plus any prepayment interest, is paid off from proceeds at closing.</li>
+          <li><strong>HOA transfer/resale fees</strong>: $200–$500 if applicable; who pays is negotiable.</li>
+          <li><strong>Escrow / title closing fees</strong>: Document prep, recording, courier, and settlement fees. Usually a few hundred dollars.</li>
+          <li><strong>Buyer concessions</strong>: In a softer market, buyers often ask for closing-cost help or a credit; this comes out of your proceeds.</li>
+          <li><strong>No state transfer tax</strong>: Texas charges no real estate transfer tax, saving sellers thousands compared to states like New York or California.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Net proceeds estimate:</strong> Most DFW sellers net roughly <strong>91%–94% of the sale price</strong> after costs (before mortgage payoff). On a $450,000 sale, budget approximately $27,000–$45,000 in total seller costs depending on commission and concessions. Ask your agent for a <strong>seller net sheet</strong> before you list, it starts at sale price, subtracts commission, title, prorated taxes, HOA, and concessions, then subtracts your loan payoff to show exactly what comes to you.
+        </div>
+
+        <h2 id="disclosure">Your <em>Disclosure Obligations</em> as a Texas Seller</h2>
+        <p>Texas law requires most sellers of residential property to provide a written <strong>Seller's Disclosure Notice</strong> under Texas Property Code § 5.008, typically the TREC form. This is not optional paperwork; it's the most important document in the transaction after the contract.</p>
+        <ul class="check-list">
+          <li><strong>What it covers</strong>: Known conditions and defects across structural components (foundation, roof, walls, floors), mechanical systems (HVAC, plumbing, electrical, water heater), water/moisture and flooding history, environmental hazards (termites, asbestos, lead paint), legal issues, and HOA information.</li>
+          <li><strong>Complete it honestly, to the best of your knowledge</strong>: You're disclosing what you know. You don't have to be an expert, but you can't conceal known problems.</li>
+          <li><strong>"As-is" doesn't cancel disclosure</strong>: Even in an as-is sale, you must still honestly disclose known defects. As-is governs condition, not honesty.</li>
+          <li><strong>Timing matters</strong>: Provide the notice on or before the contract is signed. If it's delivered late, the buyer gets a 7-day window to terminate.</li>
+          <li><strong>Some sellers are exempt</strong>: Certain transactions (some estates/probate, foreclosures, and limited situations) may be exempt, but exemptions are narrow. Confirm before assuming one applies to you.</li>
+          <li><strong>The cost of getting it wrong is high</strong>: Failing to disclose known material defects can expose you to claims for fraud, negligent misrepresentation, and Texas Deceptive Trade Practices Act (DTPA) violations, which can carry up to three times actual damages plus attorney fees for knowing violations.</li>
+          <li><strong>Heads-up: the form is changing</strong>: TREC proposed expanded disclosure requirements in early 2026 (insurance coverage/insurability, water rights via a new Water Notice form, standby generators, and more). Until new forms are officially adopted, the current notice applies, your agent will make sure you're on the right version.</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong>Diego's tip:</strong> When in doubt, disclose. A defect you flag up front is a negotiation; a defect a buyer discovers after closing is a lawsuit. Honest, thorough disclosure protects your sale and protects you.
+        </div>
+
+        <h2 id="mistakes">Common Mistakes <em>DFW Sellers Make</em></h2>
+        <div class="mistakes-grid">
+          <div class="mistake-card">
+            <h4>Overpricing to "leave room"</h4>
+            <p>The first two weeks bring the most qualified buyers. An inflated price wastes that window, the listing goes stale, and you end up chasing the market down, often netting less than a correct price would have.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Skimping on photos and prep</h4>
+            <p>Buyers shop online first. Dark, cluttered, or amateur photos kill interest before a showing ever happens. Professional photography and basic staging pay for themselves many times over.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Being inflexible on showings</h4>
+            <p>Every showing you decline is a potential offer you'll never see. In a fast market, restricting access to "weekends only" thins your buyer pool dramatically.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Taking the highest offer automatically</h4>
+            <p>The biggest number isn't always the best deal. Weak financing, a long option period, or heavy concession demands can sink a high offer. Net proceeds and certainty of closing matter more than the headline price.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Letting emotion drive negotiation</h4>
+            <p>It's your home, but to the buyer it's a transaction. Taking inspection requests or offer terms personally leads to standoffs that cost you the deal. Let your agent keep it objective.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Under-disclosing</h4>
+            <p>Trying to hide a known issue almost always backfires, through inspection, appraisal, or a post-closing claim. Disclose fully and price accordingly.</p>
+          </div>
+          <div class="mistake-card">
+            <h4>Forgetting the net</h4>
+            <p>Sellers fixate on sale price and forget commission, title, prorated taxes, payoff, and concessions. Always work from a net sheet so you know your real number before you list.</p>
+          </div>
+        </div>
+
+        <h2 id="questions">Questions to Ask <em>Before You List</em></h2>
+        <ul class="check-list">
+          <li>What's my realistic list price based on current comps and pending sales, not last year's peak?</li>
+          <li>What's my estimated net after all costs and my mortgage payoff? (Ask for a net sheet.)</li>
+          <li>What's your marketing plan beyond just putting it on the MLS?</li>
+          <li>What are your average days on market and list-to-sale ratio?</li>
+          <li>Is professional photography (and staging guidance) included?</li>
+          <li>How do you handle multiple offers to maximize my terms?</li>
+          <li>What repairs or prep would give me the best return before listing?</li>
+          <li>Should I do a pre-listing inspection?</li>
+          <li>How is buyer's-agent compensation being handled on my sale post-NAR settlement?</li>
+          <li>What's the current TREC disclosure form, and what do I need to disclose for my property?</li>
+        </ul>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="guide-sidebar">
+        <div class="sidebar-card">
+          <h3>Contents</h3>
+          <nav class="sidebar-nav">
+            <a href="#overview">DFW Market Overview</a>
+            <a href="#steps">The 9-Step Process</a>
+            <a href="#pricing">Pricing &amp; Prep</a>
+            <a href="#costs">Seller Closing Costs</a>
+            <a href="#disclosure">Disclosure Obligations</a>
+            <a href="#mistakes">Common Mistakes</a>
+            <a href="#questions">Questions to Ask</a>
+          </nav>
+        </div>
+        <div class="cta-sidebar">
+          <p><strong>Ready to find out what your home is worth?</strong> Diego offers free, no-pressure home valuations and listing consultations for DFW sellers, backed by real market data, not an algorithm.</p>
+          <a href="index.html#sell" class="btn-primary">Get a Free Home Value →</a>
+        </div>
+        <div class="sidebar-card" style="margin-top:20px;">
+          <h3>Helpful Tools</h3>
+          <nav class="sidebar-nav">
+            <a href="index.html#sell">Free Home Valuation</a>
+            <a href="mortgage-calculator.html">Mortgage Calculator</a>
+            <a href="relocation-guide.html">Relocation Guide</a>
+            <a href="index.html#sold">Recent Sales</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><a href="index.html"><img src="websitephotos/logo-dark.png" alt="Logo"></a></div>
+        <p class="footer-about">Cortes &amp; Co. Realty Group, DFW's trusted bilingual real estate team since 2018. Helping buyers, sellers, and investors make smart moves across the Dallas–Fort Worth Metroplex.</p>
+        <div class="footer-contact-item">📍 1300 S Polk St Suite 295, Dallas, TX 75224</div>
+        <div class="footer-contact-item">📞 (469) 600-5205</div>
+        <div class="footer-contact-item">✉ dcortesrealty@gmail.com</div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/diegocortesrealestate/" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#1877f2; color:#fff;">f</a>
+          <a href="https://www.instagram.com/diegocortes_realestate/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.zillow.com/profile/Diego%20Cortes" target="_blank" rel="noopener noreferrer" class="social-icon" style="background:#006aff; color:#fff;">Z</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Buy</h4>
+        <ul class="footer-links">
+          <li><a href="buyers-guide.html">Buyer's Guide</a></li>
+          <li><a href="mortgage-calculator.html">Mortgage Calculator</a></li>
+          <li><a href="relocation-guide.html">Relocation Guide</a></li>
+          <li><a href="new-construction.html">New Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sell</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#sell">Free Home Valuation</a></li>
+          <li><a href="sellers-guide.html">Seller's Guide</a></li>
+          <li><a href="staging-tips.html">Staging Tips</a></li>
+          <li><a href="index.html#sold">Recent Sales</a></li>
+          <li><a href="Market-report.html">Market Reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Neighborhoods</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#neighborhoods">Uptown</a></li>
+          <li><a href="index.html#neighborhoods">Highland Park</a></li>
+          <li><a href="index.html#neighborhoods">Lakewood</a></li>
+          <li><a href="index.html#neighborhoods">Preston Hollow</a></li>
+          <li><a href="index.html#neighborhoods">Knox-Henderson</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cortes &amp; Co. Realty Group · Diego Cortes, REALTOR® · Equal Housing Opportunity</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="DMCA.html">DMCA</a>
+        <a href="accessibility.html">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
