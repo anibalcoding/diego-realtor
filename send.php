@@ -44,6 +44,23 @@ if ($form_type === 'seller') {
     $body .= "Looking for:  {$looking_for}\n";
     $body .= "Notes:\n{$notes}\n";
 
+} elseif ($form_type === 'instagram') {
+    $first_name = clean($_POST['first_name'] ?? '');
+    $last_name  = clean($_POST['last_name'] ?? '');
+    $email      = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+    $phone      = clean($_POST['phone'] ?? '');
+    $intent     = clean($_POST['intent'] ?? '');
+    $notes      = clean($_POST['notes'] ?? '');
+
+    $subject = "New Instagram Lead — {$first_name} {$last_name}";
+
+    $body  = "New inquiry from your Instagram landing page:\n\n";
+    $body .= "Name:       {$first_name} {$last_name}\n";
+    $body .= "Email:      {$email}\n";
+    $body .= "Phone:      {$phone}\n";
+    $body .= "Looking to: {$intent}\n";
+    $body .= "Message:\n{$notes}\n";
+
 } else {
     header('Location: index.html');
     exit;

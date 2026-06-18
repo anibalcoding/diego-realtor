@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Diego Cortes | Cortes &amp; Co. Realty Group</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Work With Diego Cortes, Realtor®">
+<meta property="og:description" content="Buying, selling, or investing in DFW? Let's connect. Free consultation, no pressure.">
+<meta property="og:image" content="websitephotos/diego-main.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    background: var(--navy);
+    min-height: 100vh;
+  }
+
+  .ig-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px 20px 60px;
+  }
+
+  .ig-logo {
+    margin-bottom: 28px;
+  }
+
+  .ig-logo img {
+    height: 10rem;
+    width: auto;
+  }
+
+  .ig-card {
+    background: var(--white);
+    border-radius: 12px;
+    max-width: 460px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  }
+
+  .ig-card-header {
+    background: var(--navy-mid);
+    padding: 32px 32px 26px;
+    text-align: center;
+    border-bottom: 1px solid rgba(201,168,76,.2);
+  }
+
+  .ig-photo-wrap {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 14px;
+    border: 3px solid var(--gold);
+    flex-shrink: 0;
+  }
+
+  .ig-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .ig-name {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .ig-title {
+    font-size: 13px;
+    color: rgba(255,255,255,.55);
+    margin-bottom: 20px;
+    letter-spacing: .02em;
+  }
+
+  .ig-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .ig-stat-value {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .ig-stat-label {
+    font-size: 10px;
+    color: rgba(255,255,255,.45);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .ig-card-body {
+    padding: 28px 32px 32px;
+  }
+
+  .ig-headline {
+    font-family: var(--font-display);
+    font-size: 21px;
+    color: var(--gray-800);
+    margin-bottom: 6px;
+  }
+
+  .ig-sub {
+    font-size: 14px;
+    color: var(--gray-600);
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .ig-form .form-field {
+    margin-bottom: 14px;
+  }
+
+  .ig-form label {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gray-600);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .ig-form input,
+  .ig-form select,
+  .ig-form textarea {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--gray-800);
+    background: var(--cream);
+    outline: none;
+    transition: border-color .2s, background .2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .ig-form input:focus,
+  .ig-form select:focus,
+  .ig-form textarea:focus {
+    border-color: var(--gold);
+    background: var(--white);
+  }
+
+  .ig-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .ig-form select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6055' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 34px;
+    cursor: pointer;
+  }
+
+  .ig-form select option[value=""][disabled] {
+    color: var(--gray-400);
+  }
+
+  .ig-form textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.5;
+  }
+
+  .ig-form .form-optin {
+    margin: 16px 0 4px;
+  }
+
+  .ig-form .optin-label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--gray-600);
+    line-height: 1.55;
+  }
+
+  .ig-form .optin-label input[type="checkbox"] {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: var(--gold);
+    cursor: pointer;
+  }
+
+  .ig-form .optin-label a {
+    color: var(--gold);
+    text-decoration: underline;
+  }
+
+  .ig-submit {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 18px;
+    letter-spacing: .02em;
+  }
+
+  .ig-disclaimer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray-400);
+    margin-top: 10px;
+  }
+
+  .ig-footer {
+    margin-top: 28px;
+    text-align: center;
+    color: rgba(255,255,255,.38);
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .ig-footer a {
+    color: rgba(255,255,255,.55);
+  }
+
+  .ig-footer a:hover {
+    color: var(--gold);
+  }
+
+  .ig-divider {
+    display: inline-block;
+    margin: 0 8px;
+    opacity: .4;
+  }
+
+  @media (max-width: 480px) {
+    .ig-page { padding: 28px 16px 48px; }
+    .ig-card-header { padding: 26px 20px 22px; }
+    .ig-card-body { padding: 22px 20px 28px; }
+    .ig-form .form-row { grid-template-columns: 1fr; gap: 0; }
+    .ig-stats { gap: 18px; }
+    .ig-stat-value { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<main class="ig-page">
+
+  <div class="ig-logo">
+    <img src="websitephotos/logo-dark.png" alt="Cortes &amp; Co. Realty Group">
+  </div>
+
+  <div class="ig-card">
+
+    <div class="ig-card-header">
+      <div class="ig-photo-wrap">
+        <img src="websitephotos/diego-main.jpg" alt="Diego Cortes, Realtor">
+      </div>
+      <div class="ig-name">Diego Cortes, Realtor®</div>
+      <div class="ig-title">Cortes &amp; Co. Realty Group &nbsp;·&nbsp; DFW Metroplex</div>
+      <div class="ig-stats">
+        <div class="ig-stat">
+          <div class="ig-stat-value">5.0★</div>
+          <div class="ig-stat-label">Google Rating</div>
+        </div>
+        <div class="ig-stat">
+          <div class="ig-stat-value">50+</div>
+          <div class="ig-stat-label">Closed Deals</div>
+        </div>
+        <div class="ig-stat">
+          <div class="ig-stat-value">2018</div>
+          <div class="ig-stat-label">Since</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ig-card-body">
+      <div class="ig-headline">Let's Make It Happen</div>
+      <p class="ig-sub">Buying, selling, or investing in DFW? Fill out the form and I will personally reach out — free, no pressure.</p>
+
+      <form class="ig-form" action="send.php" method="POST">
+        <input type="hidden" name="form_type" value="instagram">
+        <input type="hidden" name="redirect" value="index.html">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-field">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Doe" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="jane@email.com" required>
+        </div>
+
+        <div class="form-field">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="(469) 962-4109">
+        </div>
+
+        <div class="form-field">
+          <label>I'm looking to&hellip;</label>
+          <select name="intent" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="buy">Buy a home</option>
+            <option value="sell">Sell my home</option>
+            <option value="invest">Invest in real estate</option>
+            <option value="new-construction">New construction</option>
+            <option value="questions">Just have questions</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label>Message <span style="font-weight:400; text-transform:none; letter-spacing:0;">(optional)</span></label>
+          <textarea name="notes" placeholder="Budget, timeline, area you're interested in…"></textarea>
+        </div>
+
+        <div class="form-optin">
+          <label class="optin-label">
+            <input type="checkbox" name="sms_consent">
+            <span>I agree to be contacted by Cortes&amp;Co Realty Group LLC via call, email, and text for real estate services. To opt out, reply "stop" at any time. Message and data rates may apply. <a href="privacy-policy.html">Privacy Policy</a></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary ig-submit">Let's Connect &rarr;</button>
+        <p class="ig-disclaimer">No spam. No pressure. Your info stays private.</p>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="ig-footer">
+    <a href="tel:4699624109">(469) 962-4109</a>
+    <span class="ig-divider">&middot;</span>
+    <a href="mailto:dcortesrealty@gmail.com">dcortesrealty@gmail.com</a>
+    <br>
+    <a href="index.html">Visit Full Website</a>
+  </div>
+
+</main>
+
+</body>
+</html>
