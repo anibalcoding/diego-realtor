@@ -68,6 +68,7 @@ if ($form_type === 'seller') {
 
 $headers  = "From: website@diegocortesrealty.com\r\n";
 $headers .= "Reply-To: {$email}\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 $sent = mail($to, $subject, $body, $headers);
